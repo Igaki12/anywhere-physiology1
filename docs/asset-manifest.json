@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/anywhere-physiology1/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-physiology1/static/js/main.79262810.js",
+    "main.js": "/anywhere-physiology1/static/js/main.9324ca6f.js",
+    "static/media/titleImg.png": "/anywhere-physiology1/static/media/titleImg.e633e13be9a33b2521a8.png",
     "static/media/ecg36.png": "/anywhere-physiology1/static/media/ecg36.a495736c0134417ccb3e.png",
     "static/media/ecg28.png": "/anywhere-physiology1/static/media/ecg28.2c6ebc9adea9b47f5a42.png",
     "static/media/ecg32.png": "/anywhere-physiology1/static/media/ecg32.f222c7a7232ee5777a0c.png",
@@ -14,7 +15,6 @@
     "static/media/portalHypertension.png": "/anywhere-physiology1/static/media/portalHypertension.62dfe5ba16785007f50c.png",
     "static/media/ecg19.png": "/anywhere-physiology1/static/media/ecg19.c2ad8add3e268d3e9568.png",
     "static/media/atrialFibrillation.png": "/anywhere-physiology1/static/media/atrialFibrillation.8cf8f25ef89fe6c7553c.png",
-    "static/media/titleImg.png": "/anywhere-physiology1/static/media/titleImg.f97b1afc288809b23ff0.png",
     "static/media/supraventricularTachycardia.png": "/anywhere-physiology1/static/media/supraventricularTachycardia.f80aac2d16c4385abcd7.png",
     "static/media/digestiveSecretion.png": "/anywhere-physiology1/static/media/digestiveSecretion.602d8936de610e3140e7.png",
     "static/media/atrialFlutter.png": "/anywhere-physiology1/static/media/atrialFlutter.52bae38d9bce1cf7aefd.png",
@@ -134,10 +134,10 @@
     "static/media/avBlock1.png": "/anywhere-physiology1/static/media/avBlock1.e1d7f56b3b3075bbb97a.png",
     "index.html": "/anywhere-physiology1/index.html",
     "main.2255ca1a.css.map": "/anywhere-physiology1/static/css/main.2255ca1a.css.map",
-    "main.79262810.js.map": "/anywhere-physiology1/static/js/main.79262810.js.map"
+    "main.9324ca6f.js.map": "/anywhere-physiology1/static/js/main.9324ca6f.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.79262810.js"
+    "static/js/main.9324ca6f.js"
   ]
 }

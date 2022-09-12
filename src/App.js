@@ -37,7 +37,7 @@ function App() {
     loadHistory,
   } = useHistory()
   const history = showHistory()
-  const thisAppNameTag = 'anywhere-2seiriNMU'
+  const thisAppNameTag = 'anywhere-physiology1'
   // ここからWebStorageを利用した設定の引継ぎ
   let loadData = {
     app: `${thisAppNameTag}`,
@@ -84,7 +84,7 @@ function App() {
           Ver.1.2
         </Badge>
         <Badge m={1} mt="0" borderRadius="full" px="2" colorScheme="teal">
-          第2生理学
+          第1生理学
         </Badge>
       </Flex>
 
