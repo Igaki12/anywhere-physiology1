@@ -2,6 +2,9 @@ import { useState } from 'react'
 
 import exam20201 from './img/question/exam20201.png'
 import motorNeuron from './img/answer/motorNeuron.png'
+import recycleNeurotransmitter from './img/answer/recycleNeurotransmitter.png'
+import stretchReflex from './img/answer/stretchReflex.png'
+// import from './img/answer/.png'
 // import from './img/answer/.png'
 
 export const useQuestionList = () => {
@@ -17,18 +20,21 @@ export const useQuestionList = () => {
             '一次運動野において、特に大きなものをベッツ細胞と呼ぶこともある出力細胞の名称を答えよ。',
           choices: [],
           answerImg: [],
-          answer: 'てすと',
-          commentary: 'てすと',
+          answer: '錐体細胞',
+          commentary:
+            '一次運動野からの出力細胞は錐体細胞と呼ばれ、出力先によってⅤ層の大型/中型錐体細胞・Ⅲ層の中型/小型錐体細胞・Ⅵ層の錐体細胞に分かれる。特に錐体路へ出力するⅤ層の大型錐体細胞はBetzの巨大錐体細胞とよばれる。',
         },
         {
           detailInfo: '',
           questionImg: [exam20201],
           questionSentence:
-            '図で、ガラス電極を挿入して逆行性軸索輸送の速度を計測したところ、伝達物質が大脳皮質に到達するまでに延髄錐体で1.2ミリ秒、大脳脚で2.2ミリ秒かかった。延髄錐体と大脳脚の距離が12mmであるとき、この間のニューロンの伝達速度を求めよ。また、このニューロンはfast型かslow型か、根拠とともに答えよ（記述）',
+            '図で、ガラス電極を挿入して逆行性軸索輸送の速度を計測したところ、伝達物質が大脳皮質に到達するまでに延髄錐体で1.2ミリ秒、大脳脚で2.2ミリ秒かかった。延髄錐体と大脳脚の距離が12mmであるとき、この間のニューロンの伝達速度を求めよ（単答）。また、このニューロンはfast型かslow型か、根拠とともに答えよ（記述）。',
           choices: [],
           answerImg: [],
-          answer: '',
-          commentary: '',
+          answer:
+            '伝達速度は12m/sec。　伝達速度が20m/secより遅いため、slow型。',
+          commentary:
+            '12mmの大脳脚-延髄錐体間を通過するのに1ミリ秒かかったので、伝達速度は12m/sec。軸索の伝達速度が20m/secより早ければ早い錐体路細胞fastPTN,遅ければ遅い錐体路細胞slowPTNとよばれる。',
         },
         {
           detailInfo: '',
@@ -46,8 +52,9 @@ export const useQuestionList = () => {
           questionSentence: '(a)で用いられる神経伝達物質は何か。',
           choices: [],
           answerImg: [],
-          answer: '',
-          commentary: '',
+          answer: 'グルタミン酸？',
+          commentary:
+            'グルタミン酸は、中枢神経で興奮性シナプス伝達を起こす代表的な神経伝達物質である。',
         },
         {
           detailInfo: '',
@@ -65,8 +72,9 @@ export const useQuestionList = () => {
           questionSentence: '(b)で用いられる神経伝達物質は何か。',
           choices: [],
           answerImg: [],
-          answer: '',
-          commentary: '',
+          answer: 'アセチルコリン',
+          commentary:
+            '活動電位が運動ニューロン終末まで伝わると、神経終末から神経伝達物質としてアセチルコリンがシナプス間隙に放出される。筋線維のシナプス後膜にはニコチン型アセチルコリン受容体が存在する',
         },
         {
           detailInfo: '',
@@ -84,9 +92,11 @@ export const useQuestionList = () => {
           questionSentence:
             '(a)と(b)の神経物質は異なる方法でシナプス間隙から除去される。その方法をそれぞれ文章で説明せよ。',
           choices: [],
-          answerImg: [],
-          answer: '',
-          commentary: '',
+          answerImg: [recycleNeurotransmitter],
+          answer:
+            '(a)グルタミン酸はシナプス前部や周囲グリア細胞へ回収される。(b)アセチルコリンはアセチルコリンエステラーゼAChEによって分解され、コリンとして再利用される。',
+          commentary:
+            'グルタミン酸の膜輸送体：グルタミン酸トランスポーターEAAT。シナプス前部へ回収された神経伝達物質は、小胞膜輸送体によって再度シナプス小胞へ充填される。',
         },
         {
           detailInfo: '',
@@ -94,27 +104,33 @@ export const useQuestionList = () => {
           questionSentence:
             '(c)の器官の名称および役割について、文章で説明せよ。',
           choices: [],
-          answerImg: [],
-          answer: '',
+          answerImg: [motorNeuron],
+          answer:
+            '(c)は多分筋紡錘で、伸展受容器として筋が引き伸ばされている度合いを中枢へ伝える。',
           commentary: '',
         },
         {
           detailInfo: '',
           questionImg: [],
-          questionSentence: '',
+          questionSentence:
+            '筋紡錘でみられる伸張反射について、文章で説明せよ。',
           choices: [],
-          answerImg: [],
-          answer: '',
+          answerImg: [stretchReflex],
+          answer:
+            '伸張反射は筋紡錘→Ⅰa線維→α運動ニューロン→引き伸ばされた筋肉が収縮する経路（自原性興奮）でおこる単シナプス性反射である。',
           commentary: '',
         },
         {
           detailInfo: '',
           questionImg: [],
-          questionSentence: '',
+          questionSentence:
+            '伸張反射は単シナプス反射である。その理由を答えよ。',
           choices: [],
-          answerImg: [],
-          answer: '',
-          commentary: '',
+          answerImg: [stretchReflex],
+          answer:
+            '筋紡錘からの感覚線維の興奮をできるだけ素早くそのまま運動ニューロンへ伝える必要があるから？',
+          commentary:
+            '同時に拮抗筋を弛緩させる相反性抑制も発生するが、こちらは筋紡錘伸張による興奮信号を抑制信号へ変える必要があるため、必ず介在ニューロンが存在する。',
         },
 
         // {
