@@ -4,7 +4,7 @@ import exam20201 from './img/question/exam20201.png'
 import motorNeuron from './img/answer/motorNeuron.png'
 import recycleNeurotransmitter from './img/answer/recycleNeurotransmitter.png'
 import stretchReflex from './img/answer/stretchReflex.png'
-// import from './img/answer/.png'
+import NMJ from './img/answer/NMJ.png'
 // import from './img/answer/.png'
 
 export const useQuestionList = () => {
@@ -63,15 +63,16 @@ export const useQuestionList = () => {
             '図で、筋細胞の膜電位が-70mVのとき、シナプス電流はどちら向きに流れるか、根拠とともに答えよ。（記述）',
           choices: [],
           answerImg: [],
-          answer: '',
-          commentary: '',
+          answer:
+            'ニコチン型アセチルコリン受容体は非選択的陽イオンチャネルなので、内向き',
+          commentary: '非選択的陽イオンチャネルの平衡電位は0mV',
         },
         {
           detailInfo: '',
           questionImg: [exam20201],
           questionSentence: '(b)で用いられる神経伝達物質は何か。',
           choices: [],
-          answerImg: [],
+          answerImg: [NMJ],
           answer: 'アセチルコリン',
           commentary:
             '活動電位が運動ニューロン終末まで伝わると、神経終末から神経伝達物質としてアセチルコリンがシナプス間隙に放出される。筋線維のシナプス後膜にはニコチン型アセチルコリン受容体が存在する',
@@ -82,8 +83,9 @@ export const useQuestionList = () => {
           questionSentence:
             '骨格筋が脱分極し、再び静止電位に戻るまでの機序を答えよ。（記述）',
           choices: [],
-          answerImg: [],
-          answer: '',
+          answerImg: [NMJ],
+          answer:
+            '受容体が神経伝達物質を受けると、非選択的陽イオンチャネルが活性化し脱分極を起こし、これが細胞膜と連続しているT細管によって骨格筋の隅々まで信号が伝わる。約5ミリ秒後には受容体に結合したアセチルコリンが分解され、チャネルが閉じ、膜電位は静止膜電位に戻る。',
           commentary: '',
         },
         {
