@@ -5,6 +5,7 @@ import motorNeuron from './img/answer/motorNeuron.png'
 import recycleNeurotransmitter from './img/answer/recycleNeurotransmitter.png'
 import stretchReflex from './img/answer/stretchReflex.png'
 import NMJ from './img/answer/NMJ.png'
+import skeletalMuscle from './img/answer/skeletalMuscle.png'
 // import from './img/answer/.png'
 
 export const useQuestionList = () => {
