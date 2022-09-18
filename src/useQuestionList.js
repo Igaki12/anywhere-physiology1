@@ -17,6 +17,14 @@ import hairCell from './img/answer/hairCell.png'
 import dermatome from './img/answer/dermatome.png'
 import exam20203 from './img/question/exam20203.png'
 import mGluR6 from './img/answer/mGluR6.png'
+import sensitization from './img/answer/sensitization.png'
+import prismAdaptation from './img/answer/prismAdaptation.png'
+import motorLearning from './img/answer/motorLearning.png'
+import LTP from './img/answer/LTP.png'
+import LTD from './img/answer/LTD.png'
+import longMemory from './img/answer/longMemory.png'
+import basalGanglia from './img/answer/basalGanglia.png'
+import exam20204 from './img/question/exam20204.png'
 
 // import from './img/answer/.png'
 
@@ -341,26 +349,115 @@ export const useQuestionList = () => {
           commentary:
             'オン型双極細胞は、光がオンの時に脱分極。視細胞は暗い場所で脱分極しグルタミン酸を放出する。mGluR6は代謝型グルタミン酸受容体。TRPチャネルは非選択的陽イオンチャネル。',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   choices: [],
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   choices: [],
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '問題3(a)~(b)',
+          questionImg: [],
+          questionSentence:
+            '記憶のうち、短期記憶は( a )とも呼ばれる。一方、長期記憶のうち陳述的記憶の中には、知識や意味といった事実に関する記憶である意味記憶や、場所や時間などの属性が付加した出来事に関する記憶である( b )記憶が存在する。空欄(a)(b)に入る適切な語句をかけ',
+          choices: [],
+          answerImg: [longMemory],
+          answer: '(a)作業記憶/ワーキングメモリ　(b)エピソード記憶',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題3(c)~(g)',
+          questionImg: [],
+          questionSentence:
+            '非陳述的記憶の中には、条件刺激と無条件刺激を一定の時間間隔で対提示することにより成立する( c )や、動物の自発的反応により成立する( d )がある。また、非陳述的記憶にはこの他にも、同じ刺激の反復によって反応が減弱する( e )や、逆に増強する( f )が存在する。アメフラシのえら引っ込め反射を司る促通性介在ニューロンの神経伝達物質は( g )である。空欄(c)~(g)に入る適切な語句をかけ',
+          choices: [],
+          answerImg: [sensitization],
+          answer:
+            '(c)古典的条件づけ　(d)オペラント条件付け　(e)慣れ　(f)感作　(g)セロトニン',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題3(h)~(p)',
+          questionImg: [],
+          questionSentence:
+            'シナプス伝達の増強・減弱が長時間続く現象をそれぞれ、( h )・( i )という。これはシナプスの( j )と関わりが深い。(h)は、テタヌス刺激を加えることで( k )型受容体の( l )によるブロックが外れて( m )が細胞内に流入することで生じる。一方、小脳における(i)では、( n )と( o )をほぼ同時に活性化すると、(n)と( p )との間のシナプス伝達効率が一定期間低下する。空欄(h)~(p)に入る適切な語句をかけ',
+          choices: [],
+          answerImg: [LTP, LTD],
+          answer:
+            '(h)長期増強LTP　(i)長期抑圧LTD　(j)可塑性　(k)NMDA型受容体　(l)Mg²⁺　(m)Ca²⁺　(n)平行繊維　(o)登上線維　(p)プルキンエ細胞',
+          commentary: '長期増強<->長期抑圧、シナプスの可塑性<->弾性',
+        },
+        {
+          detailInfo: '問題4(1)',
+          questionImg: [],
+          questionSentence:
+            '大脳基底核の直接系が働くと、ニューロン活動はどう変化するか',
+          choices: [],
+          answerImg: [basalGanglia],
+          answer:
+            '直接系（直接路）は視床の活動を抑制する基底核出力部を抑制する（二重抑制）ため、基底核出力部の活動は抑制され、視床や大脳皮質の活動は亢進する。',
+          commentary: '大脳基底核は視床下核以外基本的に出力が抑制性。',
+        },
+        {
+          detailInfo: '問題4(2)',
+          questionImg: [],
+          questionSentence:
+            '大脳基底核の直接系が働くと、筋活動はどう変化するか',
+          choices: [],
+          answerImg: [basalGanglia],
+          answer: '筋緊張低下、運動亢進、不随意運動（舞踏運動）など',
+          commentary: '→ハンチントン病',
+        },
+        {
+          detailInfo: '問題4(3)(4)',
+          questionImg: [],
+          questionSentence:
+            '黒質緻密部における神経伝達物質を答えよ。また、この物質が不足することで起こる疾患を答えよ。',
+          choices: [],
+          answerImg: [basalGanglia],
+          answer: 'ドーパミン、パーキンソン病',
+          commentary: '治療時にはL-DOPAを使用',
+        },
+
+        {
+          detailInfo: '問題4(5)',
+          questionImg: [],
+          questionSentence:
+            '運動過多症のなかで、筋緊張の低下を伴う疾患は何か。',
+          choices: [],
+          answerImg: [basalGanglia],
+          answer: 'ハンチントン病',
+          commentary:
+            '常染色体優性遺伝で、舞踏運動（顔面や四肢などに起こる速やかで不随意な異常運動）や痴呆などの精神症状を伴う。筋緊張が過度に低下している。線条体の異常により間接路（間接系）が機能しないのが原因。',
+        },
+        {
+          detailInfo: '問題5(1)',
+          questionImg: [exam20204],
+          questionSentence:
+            '図の横軸は試行回数、縦軸は誤差である。プリズム眼鏡を装着すると誤差が生じるが、試行回数を増やすと誤差が減少する。この現象をなんというか。',
+          choices: [],
+          answerImg: [prismAdaptation],
+          answer: 'プリズム適応',
+          commentary:
+            '小脳の主要な機能のひとつ。外部や身体内部からの感覚入力に合わせて、運動の向きや大きさなどを調整していく',
+        },
+        {
+          detailInfo: '問題5(2)',
+          questionImg: [exam20204],
+          questionSentence:
+            'プリズム適応は、運動系の変化によって起こる。その根拠を文章で説明せよ',
+          choices: [],
+          answerImg: [motorLearning],
+          answer:
+            '右手はプリズム眼鏡装着後にプリズム適応の反動？で逆方向に誤差が生じているが、プリズム適応のなかった左手ではプリズム眼鏡装着後でも誤差が生じなかったから。',
+          commentary:
+            '運動の結果をフィードバックとして次の運動の制御に利用している（運動学習）',
+        },
+        {
+          detailInfo: '問題5(3)',
+          questionImg: [exam20204],
+          questionSentence:
+            'もし、プリズム適応が感覚系の変化によるものであるとすれば、結果はどうなると考えられるか。（図を用いても良いが、文章での説明は必須）',
+          choices: [],
+          answerImg: [],
+          answer:
+            'もし視覚情報を補正して適応しているのであれば、右手試行時のプリズム適応が左手で試行する場合にも補正されるため、プリズム適応装着後の左手での試行が右手と同じように逆方向に誤差が生じるようになる。',
+          commentary: '',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
