@@ -8,6 +8,8 @@ import NMJ from './img/answer/NMJ.png'
 import skeletalMuscle from './img/answer/skeletalMuscle.png'
 import excitationContractionCoupling from './img/answer/excitationContractionCoupling.png'
 import alphaGammaLinkage from './img/answer/alphaGammaLinkage.png'
+import electromyogram from './img/answer/electromyogram.png'
+import exam20202 from './img/question/exam20202.png'
 
 // import from './img/answer/.png'
 
@@ -192,6 +194,98 @@ export const useQuestionList = () => {
             '骨格筋に合わせて筋紡錘の長さを変えることで、感度を一定範囲に保つ。',
         },
 
+        {
+          detailInfo: '(15)',
+          questionImg: [exam20202],
+          questionSentence:
+            '図は誘発筋電図で、横軸は時間、縦軸は筋電位である。aの波をなんというか？',
+          choices: [],
+          answerImg: [electromyogram],
+          answer: 'M波',
+          commentary:
+            '骨格筋を支配する神経を電気刺激すると、複合的な活動電位が誘発される（→誘発筋電図）。M波はα運動神経線維が刺激されたときにみられる早い波で、主に強い刺激を加えたときにみられる。',
+        },
+        {
+          detailInfo: '(16)',
+          questionImg: [exam20202],
+          questionSentence: 'bの波をなんというか？',
+          choices: [],
+          answerImg: [electromyogram],
+          answer: 'H波',
+          commentary:
+            '骨格筋を支配する神経を電気刺激すると、複合的な活動電位が誘発される（→誘発筋電図）。H波はⅠa群線維（筋紡錘→中枢）が刺激されたときにみられる遅い波で、主に弱い刺激を加えたときにみられる。',
+        },
+        {
+          detailInfo: '(17)',
+          questionImg: [exam20202],
+          questionSentence: 'bの波が遅れて発生する理由を文章で説明せよ',
+          choices: [],
+          answerImg: [electromyogram],
+          answer:
+            'bの波(H波)はⅠa群線維→（脊髄前角）→α運動神経線維→筋肉の経路で伝わる活動電位で、aの波のα運動神経線維→筋肉の経路で伝わる波に比べて伝わる距離が長く、活動電位が遅れて伝わる。',
+          commentary: '図は誘発筋電図。',
+        },
+        {
+          detailInfo: '(18)',
+          questionImg: [exam20202],
+          questionSentence:
+            '刺激強度を上げるとbの波が消失する理由について、以下の語句を用いて文章で説明せよ。　（語句）Ⅰa群線維・活動電位・運動線維・不応期',
+          choices: [],
+          answerImg: [electromyogram],
+          answer:
+            'bの波はⅠa群線維から運動線維を通り活動電位を伝える経路だが、刺激強度を挙げると運動線維自体が刺激されるようになり、その不応期にⅠa群線維からのbの波(H波)が到達すると消失してしまう。',
+          commentary: '図は誘発筋電図。',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   choices: [],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   choices: [],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   choices: [],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   choices: [],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   choices: [],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
         // {
         //   detailInfo: '',
         //   questionImg: [],
