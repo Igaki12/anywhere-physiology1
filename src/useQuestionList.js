@@ -16,6 +16,7 @@ import nociception from './img/answer/nociception.png'
 import hairCell from './img/answer/hairCell.png'
 import dermatome from './img/answer/dermatome.png'
 import exam20203 from './img/question/exam20203.png'
+import mGluR6 from './img/answer/mGluR6.png'
 
 // import from './img/answer/.png'
 
@@ -318,22 +319,27 @@ export const useQuestionList = () => {
             'cGMP依存性チャネルは細胞内cGMP濃度の上昇によって開く、視細胞膜にあるイオンチャネルで、主にNa⁺とCa²⁺を通す。',
         },
         {
-          detailInfo: '問題2()',
+          detailInfo: '問題2(8)',
           questionImg: [],
-          questionSentence: '',
+          questionSentence:
+            'ロドプシンが光刺激を受け取ってから視細胞が過分極応答するまでの機序について文章で説明せよ',
           choices: [],
-          answerImg: [],
-          answer: '',
-          commentary: '',
+          answerImg: [photoreception],
+          answer:
+            '光によりロドプシンがメタロドプシンⅡへと活性化され、メタロドプシンⅡがトランスデューシンのGDPをGTPに変えて活性化し、ホスホジエステラーゼが活性化されることで、cGMPが加水分解されるようになり、細胞内cGMP濃度が下がることでcGMP依存性チャネルが閉じ、Na⁺やCa²⁺が細胞内へ流入しなくなり、視細胞は過分極応答を示す。',
+          commentary: '光が当たると過分極、当たらないと脱分極。',
         },
         {
-          detailInfo: '問題2()',
+          detailInfo: '問題2(9)',
           questionImg: [],
-          questionSentence: '',
+          questionSentence:
+            'オン型双極細胞がグルタミン酸を受け取ってから過分極を生じるまでの機序について、文章で説明せよ',
           choices: [],
-          answerImg: [],
-          answer: '',
-          commentary: '',
+          answerImg: [mGluR6],
+          answer:
+            '視細胞からグルタミン酸放出が増加すると、mGlu6が活性化され、それによりG₀が活性化され、G₀がTRPM1チャネルを閉じる事で双極細胞は過分極する。',
+          commentary:
+            'オン型双極細胞は、光がオンの時に脱分極。視細胞は暗い場所で脱分極しグルタミン酸を放出する。mGluR6は代謝型グルタミン酸受容体。TRPチャネルは非選択的陽イオンチャネル。',
         },
         // {
         //   detailInfo: '',
