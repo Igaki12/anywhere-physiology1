@@ -10,6 +10,12 @@ import excitationContractionCoupling from './img/answer/excitationContractionCou
 import alphaGammaLinkage from './img/answer/alphaGammaLinkage.png'
 import electromyogram from './img/answer/electromyogram.png'
 import exam20202 from './img/question/exam20202.png'
+import sensoryReceptors from './img/answer/sensoryReceptors.png'
+import photoreception from './img/answer/photoreception.png'
+import nociception from './img/answer/nociception.png'
+import hairCell from './img/answer/hairCell.png'
+import dermatome from './img/answer/dermatome.png'
+import exam20203 from './img/question/exam20203.png'
 
 // import from './img/answer/.png'
 
@@ -236,26 +242,99 @@ export const useQuestionList = () => {
             'bの波はⅠa群線維から運動線維を通り活動電位を伝える経路だが、刺激強度を挙げると運動線維自体が刺激されるようになり、その不応期にⅠa群線維からのbの波(H波)が到達すると消失してしまう。',
           commentary: '図は誘発筋電図。',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   choices: [],
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   choices: [],
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '問題2(1)',
+          questionImg: [exam20203],
+          questionSentence:
+            'マイスネル小体、ルフィニ終末、パチニ小体、メルケル細胞の受容野の広さ（広い or 狭い）、順応の早さ（早い or 遅い）、役割について、表の空欄を埋めよ。',
+          choices: [],
+          answerImg: [sensoryReceptors],
+          answer:
+            '（マイスネル小体）受容野狭い、順応早い、圧や低周波振動を感知する。（ルフィニ終末）受容野広い、順応遅い、皮膚の伸展変形を感知する。（パチニ小体）受容野広い、順応早い、深部圧・高周波振動を感知する。（メルケル細胞）受容野狭い、順応遅い、軽い接触を感知する。',
+          commentary:
+            '浅部にあるマイスネル小体RA1・メルケル細胞SA1は受容野が狭い1型、深部にあるパチニ小体RA2・ルフィニ小体SA2が受容野の広い2型。被膜で覆われたマイスネル小体とパチニ小体は圧・周波感知に優れ順応が早い。',
+        },
+        {
+          detailInfo: '問題2(2)',
+          questionImg: [],
+          questionSentence: '皮膚分節（デルマトーム）とは何か、文章で説明せよ',
+          choices: [],
+          answerImg: [dermatome],
+          answer: '一つの脊髄分節が感覚を伝える皮膚の領域のこと。',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題2(3)',
+          questionImg: [],
+          questionSentence: '関連痛が生じる理由について、文章で説明せよ',
+          choices: [],
+          answerImg: [dermatome],
+          answer:
+            '皮膚デルマトームの領域由来の上方と内臓由来の情報が、同じニューロンに収束しており、脳に伝達される際に内臓ではなく皮膚からのものであると脳が誤認識してしまうことが原因。',
+          commentary: '参考：関連痛',
+        },
+        {
+          detailInfo: '問題2(4)',
+          questionImg: [],
+          questionSentence: '温度覚および痛覚の伝導路をなんというか？',
+          choices: [],
+          answerImg: [],
+          answer: '外側脊髄視床路',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題2(5)',
+          questionImg: [],
+          questionSentence:
+            '二次痛の原因となる受容器の名称およびそこから出力される求心性線維の名称を答えよ',
+          choices: [],
+          answerImg: [nociception],
+          answer: '受容器：ポリモーダル受容器、求心性線維：C線維（無髄）',
+          commentary:
+            '同じ侵害性刺激に対して別の侵害受容器が信号を伝達するのだが、有髄Aδ線維（→一次痛）と無髄C線維（→二次痛）で伝達速度が異なることが原因で痛みを複数感じることになる。',
+        },
+        {
+          detailInfo: '問題2(6)',
+          questionImg: [],
+          questionSentence:
+            '蝸牛の有毛細胞において、動毛が適方向に屈曲してから神経伝達物質が放出するまでの機序について、以下の書き出しに続く形で、文章で説明せよ。（解答）動毛が適方向に屈曲すると～、',
+          choices: [],
+          answerImg: [hairCell],
+          answer:
+            '動毛が適方向に屈曲すると機械受容器チャネルが開き、K⁺が細胞外の内リンパ液から細胞内へ流入し、脱分極が生じて、電位依存性Ca²⁺チャネルが開き、シナプス小胞から神経伝達物質が放出される。',
+          commentary:
+            '機械受容器はMETチャネル複合体とよばれる。内リンパ液はK⁺濃度が高い。',
+        },
+        {
+          detailInfo: '問題2(7)',
+          questionImg: [],
+          questionSentence:
+            '視細胞が暗所で脱分極する機序について、以下の語句を用いて文章で説明せよ。（語句）cGMP依存性チャネル、cGMP、グアニル酸シクラーゼ',
+          choices: [],
+          answerImg: [photoreception],
+          answer:
+            '光がない暗所では視物質ロドプシンが活性化されず、ホスホジエステラーゼが活性化されないので、グアニル酸シクラーゼによって合成されたcGMPが分解されず、cGMP依存性チャネルが開口しNa⁺やCa²⁺が流入し脱分極する。',
+          commentary:
+            'cGMP依存性チャネルは細胞内cGMP濃度の上昇によって開く、視細胞膜にあるイオンチャネルで、主にNa⁺とCa²⁺を通す。',
+        },
+        {
+          detailInfo: '問題2()',
+          questionImg: [],
+          questionSentence: '',
+          choices: [],
+          answerImg: [],
+          answer: '',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題2()',
+          questionImg: [],
+          questionSentence: '',
+          choices: [],
+          answerImg: [],
+          answer: '',
+          commentary: '',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],

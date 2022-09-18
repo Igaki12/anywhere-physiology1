@@ -1,24 +1,30 @@
 {
   "files": {
     "main.css": "/anywhere-physiology1/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-physiology1/static/js/main.5a71c318.js",
+    "main.js": "/anywhere-physiology1/static/js/main.12642f5f.js",
+    "static/media/dermatome.png": "/anywhere-physiology1/static/media/dermatome.6e24a69f17ab07dc5375.png",
     "static/media/titleImg.png": "/anywhere-physiology1/static/media/titleImg.e633e13be9a33b2521a8.png",
     "static/media/NMJ.png": "/anywhere-physiology1/static/media/NMJ.8a85e3ecdd09ba499083.png",
+    "static/media/photoreception.png": "/anywhere-physiology1/static/media/photoreception.2c7d521e036977791a1f.png",
     "static/media/skeletalMuscle.png": "/anywhere-physiology1/static/media/skeletalMuscle.9a11f196a7e97c097e92.png",
     "static/media/excitationContractionCoupling.png": "/anywhere-physiology1/static/media/excitationContractionCoupling.7273951285d9eaf5a9c0.png",
     "static/media/motorNeuron.png": "/anywhere-physiology1/static/media/motorNeuron.180191492d55e4c65c84.png",
     "static/media/stretchReflex.png": "/anywhere-physiology1/static/media/stretchReflex.18a97d21f830dd88e00a.png",
+    "static/media/sensoryReceptors.png": "/anywhere-physiology1/static/media/sensoryReceptors.61415c6b41765044d35f.png",
+    "static/media/hairCell.png": "/anywhere-physiology1/static/media/hairCell.c4d5f990bd9a0ab5b24c.png",
     "static/media/recycleNeurotransmitter.png": "/anywhere-physiology1/static/media/recycleNeurotransmitter.69b0de96b2125a5df665.png",
     "static/media/alphaGammaLinkage.png": "/anywhere-physiology1/static/media/alphaGammaLinkage.6d4e14245833a765f1a4.png",
+    "static/media/nociception.png": "/anywhere-physiology1/static/media/nociception.534cd1f39b4c98166913.png",
     "static/media/electromyogram.png": "/anywhere-physiology1/static/media/electromyogram.0796b4cd45aaaa3d1b6d.png",
     "static/media/exam20201.png": "/anywhere-physiology1/static/media/exam20201.81b8db9b291c307909ba.png",
+    "static/media/exam20203.png": "/anywhere-physiology1/static/media/exam20203.ee026b2b27fbe8cc3425.png",
     "static/media/exam20202.png": "/anywhere-physiology1/static/media/exam20202.058567b02717f0f67710.png",
     "index.html": "/anywhere-physiology1/index.html",
     "main.2255ca1a.css.map": "/anywhere-physiology1/static/css/main.2255ca1a.css.map",
-    "main.5a71c318.js.map": "/anywhere-physiology1/static/js/main.5a71c318.js.map"
+    "main.12642f5f.js.map": "/anywhere-physiology1/static/js/main.12642f5f.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.5a71c318.js"
+    "static/js/main.12642f5f.js"
   ]
 }
