@@ -33,7 +33,7 @@ import EEG from './img/answer/EEG.png'
 import circadianClockControl from './img/answer/circadianClockControl.png'
 import sarcomere from './img/answer/sarcomere.png'
 import lightReflex from './img/answer/lightReflex.png'
-import cerebralCortex from './img/answer/cerebralCortex.png'
+// import cerebralCortex from './img/answer/cerebralCortex.png'
 import aphasia from './img/answer/aphasia.png'
 
 // import from './img/answer/.png'
