@@ -13,6 +13,7 @@ import {
   // useDisclosure,
   Collapse,
   Tooltip,
+  Skeleton,
 } from '@chakra-ui/react'
 import { ArrowDownIcon, RepeatIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import { ResultBar } from './ResultBar'
@@ -39,7 +40,7 @@ export const QuestionsLog = ({
     if (history[history.length - 1].remainingQuestionList.length === 0) {
       toast({
         position: 'top-right',
-        title: 'Good Job!',
+        title: 'GOOD JOB',
         description: '全ての問題が終わりました！',
         status: 'success',
         duration: 9000,
@@ -110,6 +111,7 @@ export const QuestionsLog = ({
                         src={image}
                         alt="写真読み込みエラー"
                         key={index + imageNum + 'QuestionImage'}
+                        fallback={<Skeleton height="100px" />}
                       />
                     ))}
                   <Box p="6">
@@ -160,17 +162,24 @@ export const QuestionsLog = ({
                 <Box
                   maxW="2xl"
                   mb={'100px'}
-                  borderWidth="1px"
+                  borderWidth="2px"
+                  borderColor={'red.100'}
                   borderRadius="lg"
                   overflow="hidden"
                   bg={'red.100'}
                   key={index + 'AnswerBox'}
                 >
-                  {question.answerImg.map((image) => (
-                    <Image src={image} alt="写真読み込みエラー" />
-                  ))}
+                  <Box w={'100%'} bgColor="white" m={0} p="0">
+                    {question.answerImg.map((image) => (
+                      <Image
+                        src={image}
+                        alt="写真読み込みエラー"
+                        fallback={<Skeleton height="100px" />}
+                      />
+                    ))}
+                  </Box>
 
-                  <Box p="6" pb={0}>
+                  <Box p="4" pb={0}>
                     <Box display="flex" alignItems="baseline">
                       <Badge variant="solid" colorScheme="red">
                         解答
@@ -205,6 +214,7 @@ export const QuestionsLog = ({
                       >
                         <IconButton
                           colorScheme={'red'}
+                          opacity="0.3"
                           variant="ghost"
                           aria-label="review this question"
                           onClick={() => {
@@ -218,7 +228,7 @@ export const QuestionsLog = ({
                               isClosable: true,
                             })
                           }}
-                          icon={<RepeatIcon />}
+                          icon={<RepeatIcon boxSize={'1.5em'} color="black" />}
                         />
                       </Tooltip>
                     </Flex>
@@ -254,8 +264,9 @@ export const QuestionsLog = ({
               (image, imageNum) => (
                 <Image
                   src={image}
-                  alt="ERROR:この文章が見えた時は作成者に報告してください"
+                  alt="画像読み込みエラー"
                   key={imageNum + 'QuestionImage'}
+                  fallback={<Skeleton height="100px" />}
                 />
               ),
             )}
@@ -352,17 +363,24 @@ export const QuestionsLog = ({
             {history[history.length - 1].isAnswered ? (
               <Box
                 maxW="2xl"
-                borderWidth="1px"
+                borderWidth="2px"
+                borderColor={'red.100'}
                 borderRadius="lg"
                 overflow="hidden"
                 bg={'red.100'}
                 // className="DownSlideIn"
               >
-                {history[history.length - 1].askingQuestion.answerImg.map(
-                  (image) => (
-                    <Image src={image} alt="写真読み込みエラー" />
-                  ),
-                )}
+                <Box w={'100%'} bgColor="white" m={0} p="0">
+                  {history[history.length - 1].askingQuestion.answerImg.map(
+                    (image) => (
+                      <Image
+                        src={image}
+                        alt="写真読み込みエラー"
+                        fallback={<Skeleton height="100px" />}
+                      />
+                    ),
+                  )}
+                </Box>
 
                 <Box p="6" pb={0}>
                   <Box display="flex" alignItems="baseline">
@@ -500,6 +518,7 @@ export const QuestionsLog = ({
                     >
                       <IconButton
                         colorScheme={'red'}
+                        opacity="0.3"
                         variant="ghost"
                         aria-label="review this question"
                         onClick={() => {
@@ -518,7 +537,7 @@ export const QuestionsLog = ({
                             isClosable: true,
                           })
                         }}
-                        icon={<RepeatIcon />}
+                        icon={<RepeatIcon color="black" boxSize={'1.5em'} />}
                       />
                     </Tooltip>
                   </Flex>
