@@ -26,6 +26,11 @@ import longMemory from './img/answer/longMemory.png'
 import basalGanglia from './img/answer/basalGanglia.png'
 import exam20204 from './img/question/exam20204.png'
 import associationArea from './img/answer/associationArea.png'
+import taste from './img/answer/taste.png'
+import sleepingData from './img/answer/sleepingData.png'
+import olfactory from './img/answer/olfactory.png'
+import EEG from './img/answer/EEG.png'
+import circadianClockControl from './img/answer/circadianClockControl.png'
 
 // import from './img/answer/.png'
 
@@ -505,6 +510,136 @@ export const useQuestionList = () => {
             '(p)行動　(q)実行　(r)眼球運動　(s)性格　(t)作業　(u)ブローカー　(v)視覚的注意　(w)失語',
           commentary:
             '前頭連合野は前頭葉で運動皮質よりも前の部分である。視覚的注意の障害：絵を見せてその中に描かれている内容を求めると、その一部が気になり、絵を分析的・系統的に見ることができない。ブローカー野は左半球の第三前頭回後方に位置し、運動性言語野とよばれる。→フィニアスゲージの症例',
+        },
+        {
+          detailInfo: '問題8(1)(2)',
+          questionImg: [],
+          questionSentence:
+            '哺乳類の概日時計システムに関して、内因性リズムの位相を環境に同調させる3要素と、それぞれについてそれを担う器官を答えよ。',
+          choices: [],
+          answerImg: [circadianClockControl],
+          answer:
+            '網膜の光受容器（入力系）、視交叉上核の時計発振系、松果体のリズム発現系（出力系/例えばメラトニン分泌）',
+          commentary:
+            'これら三要素が内因性リズムの位相を環境の明暗周期に同調させる。網膜では第三の光受容細胞であるメラノプシン発現網膜神経節細胞が輝度を感知し、視交叉上核では網膜からの光シグナルで中枢時計の光リセットが行われ、松果体では中枢時計の影響を受け夜間にメラトニンの合成・分泌が行われる。',
+        },
+        {
+          detailInfo: '問題8(3)',
+          questionImg: [],
+          questionSentence:
+            '哺乳類の概日時計システムに関して、内因性リズムの位相を環境に同調させる3要素の、各要素間の連絡について簡潔に説明せよ。',
+          choices: [],
+          answerImg: [circadianClockControl],
+          answer:
+            '網膜→視交叉上核はグルタミン酸などの興奮性アミノ酸（神経伝達物質）、視交叉上核→松果体は交感神経系ノルアドレナリン放出によって連絡が行われる。',
+          commentary:
+            '網膜-視床下部路と上顎神経節がそれぞれ連絡経路として活躍する。',
+        },
+        {
+          detailInfo: '問題9',
+          questionImg: [],
+          questionSentence:
+            'レム睡眠とノンレム睡眠の違いについて、(1)脳波の観点から述べよ。',
+          choices: [],
+          answerImg: [EEG],
+          answer:
+            'レム睡眠では低電位で不規則なθ波やPGO spikesが見られるが、ノンレム睡眠（徐波睡眠）では眠りに特徴的な紡錘突発波と徐波が見られる',
+          commentary:
+            'ノンレム睡眠では低周波大振幅の脳波、レム睡眠は高周波不規則の脳波。θ波（高周波不規則）は浅いノンレム睡眠とレム睡眠でみられ、レム睡眠では海馬の記憶再編成の過程で生じるといわれている。',
+        },
+        {
+          detailInfo: '問題9',
+          questionImg: [],
+          questionSentence:
+            'レム睡眠とノンレム睡眠の違いについて、(2)呼吸の観点から述べよ。',
+          choices: [],
+          answerImg: [sleepingData],
+          answer: 'レム睡眠ではノンレム睡眠と比較して、呼吸数が10%~20%増加する',
+          commentary:
+            'レム睡眠中は首から下の筋肉は弛緩しているが、ストーリー性の夢を見ているため歯ぎしり・寝言・夜尿などを伴い急激な自律神経変化が起こる。呼吸数は増加する。',
+        },
+        {
+          detailInfo: '問題9',
+          questionImg: [],
+          questionSentence:
+            'レム睡眠とノンレム睡眠の違いについて、(3)脈拍の観点から述べよ。',
+          choices: [],
+          answerImg: [sleepingData],
+          answer: 'レム睡眠はノンレム睡眠と比較して、脈拍数が10%程度増加する',
+          commentary:
+            'レム睡眠中は首から下の筋肉は弛緩しているが、ストーリー性の夢を見ているため歯ぎしり・寝言・夜尿などを伴い急激な自律神経変化が起こる。脈拍数は増加する。',
+        },
+        {
+          detailInfo: '問題9',
+          questionImg: [],
+          questionSentence:
+            'レム睡眠とノンレム睡眠の違いについて、(4)血圧の観点から述べよ。',
+          choices: [],
+          answerImg: [sleepingData],
+          answer:
+            'レム睡眠はノンレム睡眠と比較して、血圧が急激に変化するようになる(±10mmHg)',
+          commentary:
+            'レム睡眠中は首から下の筋肉は弛緩しているが、ストーリー性の夢を見ているため歯ぎしり・寝言・夜尿などを伴い急激な自律神経変化が起こる。血圧は前後のノンレム睡眠と比較して急激に上がるか、急激に下がる。',
+        },
+        {
+          detailInfo: '問題9',
+          questionImg: [],
+          questionSentence:
+            'レム睡眠とノンレム睡眠の違いについて、(5)筋活動の観点から述べよ。',
+          choices: [],
+          answerImg: [],
+          answer:
+            'レム睡眠では首や胴部の筋肉の弛緩（筋緊張の消失）・急速眼球運動REMがみられる。ノンレム睡眠では睡眠が深いほど筋緊張の減少がみられるが、急速眼球運動はみられない。',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題9',
+          questionImg: [],
+          questionSentence:
+            'レム睡眠とノンレム睡眠の違いについて、(1)目覚めの観点から述べよ。',
+          choices: [],
+          answerImg: [EEG],
+          answer:
+            'レム睡眠中に目覚めると気分が良く、はつらつとしているが、ノンレム睡眠中に目覚めるとぼおっとしていて、記憶喪失のような状態になる。',
+          commentary:
+            'レム睡眠中は覚醒状態・浅いノンレム睡眠でみられるθ波主体のため、目覚めが良い？',
+        },
+        {
+          detailInfo: '問題9',
+          questionImg: [],
+          questionSentence:
+            'レム睡眠とノンレム睡眠の違いについて、(7)夢の観点から述べよ。',
+          choices: [],
+          answerImg: [],
+          answer:
+            'レム睡眠中はストーリーをもった視覚的な夢中心であるのに対して、ノンレム睡眠中は瞬間的に映像・考え・空想などが現れることが多い。',
+          commentary:
+            'レム睡眠中は脳が覚醒に近い状態にあり記憶の再構成が行われている。ノンレム睡眠中は大脳皮質神経細胞が一斉に抑制されている（前障が一部を選択的に発火させる）',
+        },
+
+        {
+          detailInfo: '問題10',
+          questionImg: [],
+          questionSentence:
+            '本能行動に関わるホルモンについて、次のうちから5つ選び、それぞれの産生部位・受容部位および作用機序について文章で説明せよ。[アディポネクチン、アルファフェトタンパク質、エストラジオール、エポキシエイコサトリエン酸、オキシトシン、オレキシン、キスペプチン、グレリン、テストステロン、レプチン]',
+          choices: [],
+          answerImg: [],
+          answer:
+            'それぞれボタンを押すと確認できます→アディポネクチン、アルファフェトタンパク質、エストラジオール、エポキシエイコサトリエン酸、オキシトシン、オレキシン、キスペプチン、グレリン、テストステロン、レプチン',
+          commentary:
+            'オキシトシンはオレキシンと名前が似ているが効果が真逆（オキシトシンは摂食抑制/オレキシンは摂食促進）',
+        },
+        {
+          detailInfo: '問題11',
+          questionImg: [],
+          questionSentence:
+            '嗅覚と味覚の受容メカニズムの違いを文章で説明せよ。',
+          choices: [],
+          answerImg: [olfactory, taste],
+          answer:
+            '嗅覚ではにおい分子が結合したGPCR（Gs）によって、細胞内cAMPが増加し、cAMP依存型陽イオンチャネルが開口することで脱分極・細胞内Ca²⁺増加が起こり、Cl⁻チャネルが活性化することで活動電位が発生する。活動電位は篩板を抜け嗅球の糸球体で僧房細胞・房飾細胞などの二次ニューロンへ伝達される。一方味覚のうち旨味・甘味・苦味は味物質がGPCRに受容されるとPLCが活性化され、IP₃が産生され、IP₃が小胞体のIP₃受容体に結合しCa²⁺を放出させ、非選択的陽イオンチャネルが開口し、脱分極が起こる。活動電位によりセロトニンが伝達物質として味蕾のすぐ基底部で二次ニューロンへ伝達される。',
+          commentary:
+            '塩味・酸味はイオンチャネル型受容体→電位依存型Ca²⁺チャネルによってシナプス小胞内の神経伝達物質が開口分泌される。',
         },
         // {
         //   detailInfo: '問題7',
