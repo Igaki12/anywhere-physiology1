@@ -31,6 +31,10 @@ import sleepingData from './img/answer/sleepingData.png'
 import olfactory from './img/answer/olfactory.png'
 import EEG from './img/answer/EEG.png'
 import circadianClockControl from './img/answer/circadianClockControl.png'
+import sarcomere from './img/answer/sarcomere.png'
+import lightReflex from './img/answer/lightReflex.png'
+import cerebralCortex from './img/answer/cerebralCortex.png'
+import aphasia from './img/answer/aphasia.png'
 
 // import from './img/answer/.png'
 
@@ -472,7 +476,7 @@ export const useQuestionList = () => {
           choices: [],
           answerImg: [],
           answer:
-            '(1)口唇傾向（手に取ったものを全て口に持って行ってしまう）・物体失認・短期記憶障害・尿便失禁・食欲亢進・情動の欠如（温和化）・精神盲（視覚性失認）の中から5つ　(2)クリーヴァー・ビューシー症候群　(3)感覚刺激の価値評価（報酬性か嫌悪性）に関与している？　(4)猫に対して25秒間の扁桃体の電気刺激を行うと、唸り声を発し頭部を下げ、耳伏せ、瞳孔拡大、立毛が見られるようになり、35秒間の電気刺激後では情動性のより高い反応であるヒッシングを発する。',
+            '(1)口唇傾向（手に取ったものを全て口に持って行ってしまう）・視覚失認症・性欲亢進・短期記憶障害・尿便失禁・食欲亢進・情動の欠如（温和化）・精神盲（視覚性失認）の中から5つ　(2)クリーヴァー・ビューシー症候群　(3)感覚刺激の価値評価（報酬性か嫌悪性）に関与している？　(4)猫に対して25秒間の扁桃体の電気刺激を行うと、唸り声を発し頭部を下げ、耳伏せ、瞳孔拡大、立毛が見られるようになり、35秒間の電気刺激後では情動性のより高い反応であるヒッシングを発する。',
           commentary: '',
         },
         {
@@ -647,6 +651,182 @@ export const useQuestionList = () => {
         //   questionSentence:
         //     '',
         //   choices: [],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+      ],
+    },
+    {
+      groupTag: '2016本試',
+      groupContents: [
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '骨格筋について間違っているものを全て選べ（全て正しい場合もある）',
+          choices: [
+            '横紋筋である',
+            '随意筋である',
+            '多核である',
+            '運動ニューロンが支配している',
+            'サルコメアがある',
+          ],
+          answerImg: [],
+          answer: 'すべて正しい',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '筋線維について間違っているものを全て選べ（全て正しい場合もある）',
+          choices: [
+            'I帯は屈折率低い',
+            'A帯には太いフィラメントがある',
+            '太いフィラメントはミオシンである',
+            '細いフィラメントはアクチンである',
+            '筋線維が集まって筋原線維になる',
+          ],
+          answerImg: [sarcomere],
+          answer: '筋線維が集まって筋原線維になる',
+          commentary:
+            '筋原線維が集まって筋線維（複数の筋原線維 + T細管 + 筋小胞体）になる',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '反射の特徴について間違っているものを全て選べ（全て正しい場合もある）',
+          choices: [
+            '意識しなくても起こる',
+            '同じパターンの反応が起こる',
+            '感覚刺激の発生が必要',
+            '刺激があれば必ずおこる',
+            '脊椎動物でもおこる',
+          ],
+          answerImg: [],
+          answer: '感覚刺激の発生が必要？',
+          commentary: '根拠不明',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '脳幹の働きとして間違っているものを全て選べ（全て正しい場合もある）',
+          choices: [
+            '頭部顔面の運動パターン',
+            '頚反射',
+            '歩行',
+            '姿勢',
+            '眼球運動',
+          ],
+          answerImg: [],
+          answer: 'すべて正しい',
+          commentary:
+            '頭部に関わる反射は脳幹を経由する。また、姿勢の調節には前庭器入力が必要。歩行運動の基本的なリズムとパターンを作る神経回路は脊髄内に存在するが、歩行神経回路を駆動する領域は脳幹に存在する。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '瞳孔対光反射に直接関係ないものを全て選べ（全て関係ある場合もある）',
+          choices: ['網膜', '毛様体', '視蓋前域', '動眼神経核', 'EW核'],
+          answerImg: [lightReflex],
+          answer: '動眼神経核',
+          commentary: '動眼神経副核：Edinger-Westphal核',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'ウェルニッケ失語の患者で良好なものを全て選べ（全て良好でない場合もある）',
+          choices: ['呼称', '復唱', '理解', '自発発話', '読字'],
+          answerImg: [aphasia],
+          answer: '自発発話',
+          commentary:
+            'ウェルニッケ野は感覚性言語野とも呼ばれ、視覚や聴覚からの言語情報を理解できない。多弁で流暢に話すが、その内容が意味のないものになる。呼称や復唱も傷害される。ちなみにウェルニッケ脳症とはビタミンB₁不足による乳頭体の異常で、ウェルニッケ野とは無関係。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '味覚に関して間違っているものを全て選べ（全て正しい場合もある）',
+          choices: [
+            '甘味は代謝型受容体である',
+            '苦味は代謝型受容体である',
+            '酸味はイオンチャネル型受容体である',
+            '塩味は代謝型受容体である',
+            '旨味は代謝型受容体である',
+          ],
+          answerImg: [taste],
+          answer: '塩味は代謝型受容体である',
+          commentary: '塩味はイオンチャネル型受容体である',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '視床下部腹内側核が損傷したとき起こるものを全て選べ（全て起こらない場合もある）',
+          choices: ['尿崩症', '無食', '過食', '性欲亢進', '体温上昇'],
+          answerImg: [],
+          answer: '過食',
+          commentary:
+            '視床下部腹内側VMHは満腹中枢とも呼ばれ、グルコース受容ニューロンがグルコースに反応して摂食抑制を行う。また、雌の性行動を亢進する。尿崩症の原因となるバソプレシンは視床下部室傍核・視索上核から分泌される。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '次のうち潜在記憶でないものを全て選べ（全て正しい場合もある）',
+          choices: [
+            '意味記憶',
+            '手続き記憶',
+            'プライミング',
+            'オペラント条件付け',
+            '感作',
+          ],
+          answerImg: [longMemory],
+          answer: '意味記憶',
+          commentary: '陳述できる記憶は非潜在記憶',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '痛覚を伝える早い線維を全て選べ（全て正しい場合もある）',
+          choices: ['Aα', 'Aβ', 'Aδ', 'B', 'C'],
+          answerImg: [sensoryReceptors],
+          answer: 'Aδ',
+          commentary: 'Aは有髄線維、Cは無髄線維。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'Kluver-Bucy症候群の症状として不適なものを全て選べ（全て正しい場合もある）',
+          choices: ['口唇傾向', '性欲亢進', '情動性反応', '温和になる'],
+          answerImg: [],
+          answer: '情動性反応',
+          commentary:
+            'クリーヴァー・ビューシー症候群は扁桃体が破壊されることによる疾患で、口唇傾向（手に取ったものを全て口に持って行ってしまう）・視覚失認症・短期記憶障害・尿便失禁・食欲亢進・情動の欠如（温和化）・精神盲（視覚性失認）・性欲亢進を伴う。',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     'について間違っているものを全て選べ（全て正しい場合もある）',
+        //   choices: ['', '', '', '', ''],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     'について間違っているものを全て選べ（全て正しい場合もある）',
+        //   choices: ["","","","",""],
         //   answerImg: [],
         //   answer: '',
         //   commentary: '',
