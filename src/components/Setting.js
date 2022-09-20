@@ -25,6 +25,7 @@ import {
   useDisclosure,
   Flex,
   Spacer,
+  Skeleton,
 } from '@chakra-ui/react'
 import {
   CheckCircleIcon,
@@ -156,6 +157,7 @@ export const Setting = ({
           p="1"
           mb={-14}
           borderRadius="lg"
+          fallback={<Skeleton height={'sm'} />}
         />
         <Flex ml={4} mr="4">
           {checkMsg === '条件を満たした質問が存在しません' ? (

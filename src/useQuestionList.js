@@ -33,8 +33,12 @@ import EEG from './img/answer/EEG.png'
 import circadianClockControl from './img/answer/circadianClockControl.png'
 import sarcomere from './img/answer/sarcomere.png'
 import lightReflex from './img/answer/lightReflex.png'
-// import cerebralCortex from './img/answer/cerebralCortex.png'
 import aphasia from './img/answer/aphasia.png'
+import typeOfMuscle from './img/answer/typeOfMuscle.png'
+import tetanus from './img/answer/tetanus.png'
+import conduction from './img/answer/conduction.png'
+import cerebralCortex from './img/answer/cerebralCortex.png'
+import actionPotential from './img/answer/actionPotential.png'
 
 // import from './img/answer/.png'
 
@@ -811,12 +815,84 @@ export const useQuestionList = () => {
           commentary:
             'クリーヴァー・ビューシー症候群は扁桃体が破壊されることによる疾患で、口唇傾向（手に取ったものを全て口に持って行ってしまう）・視覚失認症・短期記憶障害・尿便失禁・食欲亢進・情動の欠如（温和化）・精神盲（視覚性失認）・性欲亢進を伴う。',
         },
+        {
+          detailInfo: '問題2(1)',
+          questionImg: [],
+          questionSentence:
+            '運動ニューロンが興奮するとその興奮は軸索を伝わり軸索終末まで到達する。すると、神経筋接合部では終板電位を生じ、筋線維が閾値に達すると筋線維が興奮して、その結果筋線維は収縮する。(1)運動ニューロンで生じる活動電位の生成機構について説明せよ。',
+          answerImg: [actionPotential],
+          answer:
+            '電位依存性のNa⁺チャネルが開いてNa⁺が流入し、周囲の更なるNa⁺チャネルの活性化が引き起こされ、これによりさらに細胞膜の脱分極が進む。こうした機構ではNa⁺チャネルが連鎖的に活性化し、膜電位は一気にそのピークへ向かい、活動電位が発生する。一度活性化したNa⁺チャネルはすぐ不活性化されるので、Na⁺の流入はその後止まり、代わって電位依存性のK⁺チャネルが開き、外向きにK⁺が流れることで細胞膜は再分極し、内向き整流性K⁺チャネルの働きにより静止電位となって安定する。',
+          commentary:
+            'Na⁺やCa²⁺チャネルが主に脱分極方向へ、K⁺チャネルなどが再分極へ寄与する。',
+        },
+        {
+          detailInfo: '問題2(2)',
+          questionImg: [],
+          questionSentence:
+            '運動ニューロンが興奮するとその興奮は軸索を伝わり軸索終末まで到達する。すると、神経筋接合部では終板電位を生じ、筋線維が閾値に達すると筋線維が興奮して、その結果筋線維は収縮する。(2)活動電位の軸索伝導には、（有髄・無髄に関わらず）3つの様式がある。3つとも答えよ。',
+          answerImg: [conduction],
+          answer: '不減衰伝導・両方向伝導・絶縁伝導',
+          commentary:
+            '一度発生した活動電位は途中で消滅することはない（不減衰伝導）。活動電位は細胞膜を両方向に伝わりうる（両方向性伝導）。活動電位が隣接する神経線維間で乗り移ることはない（絶縁伝導）有髄線維では跳躍伝導も見られる。',
+        },
+        {
+          detailInfo: '問題2(3)',
+          questionImg: [],
+          questionSentence:
+            '運動ニューロンが興奮するとその興奮は軸索を伝わり軸索終末まで到達する。すると、神経筋接合部では終板電位を生じ、筋線維が閾値に達すると筋線維が興奮して、その結果筋線維は収縮する。(3)有髄線維における興奮伝導に跳躍伝導がある。跳躍伝導がどのような伝導か説明せよ',
+          answerImg: [conduction],
+          answer:
+            '髄鞘（ミエリン）が絶縁体となるため、局所電流がランビエ絞輪間で流れることになる。このため局所電流による活動電位の発生も、ランビエ絞輪の部分で飛び飛びに起こることになり、無髄線維に比べて早く活動電位が伝えられる。',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題2(4)',
+          questionImg: [],
+          questionSentence:
+            '運動ニューロンが興奮するとその興奮は軸索を伝わり軸索終末まで到達する。すると、神経筋接合部では終板電位を生じ、筋線維が閾値に達すると筋線維が興奮して、その結果筋線維は収縮する。(4)神経筋接合部では終板電位が生じるメカニズムを以下の文に続けて説明せよ。（解答）活動電位が軸索終末まで到達すると、...',
+          answerImg: [NMJ],
+          answer:
+            '活動電位が軸索終末まで到達すると、軸索終末のCa²⁺チャネルが開き、Ca²⁺が流入することで、シナプス小胞が細胞膜に結合しアセチルコリンが放出され、運動終板にあるニコチン型アセチルコリン受容体に結合すると、Na⁺チャネルが開き、脱分極が生じる。',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題2(5)',
+          questionImg: [],
+          questionSentence:
+            '運動ニューロンが興奮するとその興奮は軸索を伝わり軸索終末まで到達する。すると、神経筋接合部では終板電位を生じ、筋線維が閾値に達すると筋線維が興奮して、その結果筋線維は収縮する。(5)筋収縮が生じるメカニズムを以下の文に続けて説明せよ。（解答）筋線維が興奮すると、...',
+          answerImg: [skeletalMuscle, excitationContractionCoupling],
+          answer:
+            'T管を通して、活動電位が細胞内に伝導する。triadで隣接する筋小胞体で、DHP受容体の構造変化によってCa²⁺放出チャネル（リアノジン受容体）が開き、Ca²⁺が細胞内に放出される。Ca²⁺がトロポニンに結合し、ATPを分解しながらアクチンがミオシンに滑り込むことによって、クロスブリッジがスライドし、筋収縮が生じる。',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題2(6)(a)~(f)',
+          questionImg: [],
+          questionSentence:
+            '次の文の空欄を埋めよ：筋収縮には、一回の活動電位に従って発生する( a )、適当な間隔で2個の刺激によって大きな収縮が生じる( b )、非伝導性の収縮で様々の化学物質、薬物や低温度などによっておこる可逆的な収縮( c )、不可逆的な持続収縮で筋のタンパク質が変性し筋実質が短縮状態になった( d )がある。(c)と(d)の代表的なものとしてそれぞれ(e)(f)がある。',
+          answerImg: [tetanus],
+          answer:
+            'a.単収縮　b.加重　c.拘縮　d.硬直　e.カフェイン拘縮　f.死硬直',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題2(6)(g)~(o)',
+          questionImg: [],
+          questionSentence:
+            '次の文の空欄を埋めよ：筋長を変化させずに収縮することを( g )収縮といい、筋力を一定に保って収縮させることを( h )収縮という。運動ニューロンとそれが支配する筋線維群をまとめて( i )と呼ばれている。(i)を大別するとS型とF型に分けられる。S型では運動ニューロンの伝達速度が( j )、発生する筋力が( k )が、繰り返し収縮することに対し( l )。一方、F型（特にFF型）では運動ニューロンの伝達速度が( m )、発生する筋力が( n )、繰り返し収縮することに対して( o )',
+          answerImg: [typeOfMuscle],
+          answer:
+            'g.等尺性　h.等張性　i.運動単位　j.遅く　k.弱い　l.強い　m.早く　n.強い　o.弱い',
+          commentary:
+            'S型はⅠ型(type 1)とも呼ばれ、遅筋に分類される。F型はⅡ型(type 2)とも呼ばれ、速筋に分類される。',
+        },
+
         // {
         //   detailInfo: '',
         //   questionImg: [],
         //   questionSentence:
-        //     'について間違っているものを全て選べ（全て正しい場合もある）',
-        //   choices: ['', '', '', '', ''],
+        //     '',
         //   answerImg: [],
         //   answer: '',
         //   commentary: '',
