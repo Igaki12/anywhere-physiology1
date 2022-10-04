@@ -45,6 +45,9 @@ import myelin from './img/answer/myelin.png'
 import mechanoreceptor from './img/answer/mechanoreceptor.png'
 import column from './img/answer/column.png'
 import cAMP from './img/answer/cAMP.png'
+import olfactorySynapse from './img/answer/olfactorySynapse.png'
+import olfactoryExam from './img/answer/olfactoryExam.png'
+import exam20211 from './img/question/exam20211.png'
 
 // import from './img/answer/.png'
 
@@ -163,6 +166,52 @@ export const useQuestionList = () => {
           answer: '(3)Aδ　(4)C　(5)二次痛　(6)デルマトーム　(7)関連痛',
           commentary:
             'A線維は有髄（αほど太く、δほど細い）、C線維は無髄。一次痛は鋭く、素早い痛みで、二次痛は持続的でうずくような、ときに灼熱痛と形容される疼痛。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [exam20211],
+          questionSentence:
+            '嗅細胞における受容器電位発生メカニズムを説明する図を参考に、空欄を埋めて文章を完成させなさい。アルファベットは図中と一致している。　におい分子が受容体タンパク質（R）に受容され、これとカップルしている( 1 )が活性化される。この活性化は次に( 2 )に伝えられ、その結果、ATPから( 3 )が生まれる。(3)は、細胞膜に存在している( 4 )に直接働きかけて開口させることにより細胞内へ( 5 )や( 6 )が流入し、細胞を電気的に興奮させる。その(6)は( 7 )を活性化する。その結果、( 8 )が細胞外へ流出して受容器電位応答を増幅する。',
+          answerImg: [olfactory],
+          answer:
+            '(1)Gタンパク質/Golf　(2)アデニル酸シクラーゼ　(3)cAMP　(4)cAMP作動性カチオンチャネル　(5)Na⁺　(6)Ca²⁺　(7)Cl⁻チャネル　(8)Cl⁻　',
+          commentary:
+            '嗅細胞ではGPCRがセカンドメッセンジャーであるcAMPを産生し、直接非選択性陽イオンチャネルを活性化する。個々のにおい分子に応答する受容体の組み合わせパターンの違いで、多くのにおいを識別している',
+        },
+        {
+          detailInfo: '',
+          questionImg: [olfactory],
+          questionSentence:
+            '図を参考に、嗅覚の順応のメカニズムを説明しなさい。また、順応の意義とは何か。',
+          answerImg: [],
+          answer:
+            '【メカニズム】cAMP作動性カチオンチャネルから流入したCa²⁺がアデニル酸シクラーゼ活性を抑制したり、cAMPを分解する酵素PDEの活性を促進したり、イオンチャネルを細胞内から抑制したりすることによって、電流応答が減弱（順応）していく。【順応の意義】感度を下げずに感覚細胞のダイナミックレンジを広くすることで、濃度の高いにおいの中でも通常の濃度の時と同じように細かいにおいの変化をすぐに感知し、周囲の環境の変化をすぐに知ることで危険を回避することができる。',
+          commentary:
+            '感覚順応により、幅広い（100倍近い）濃度の差でも、感度を変えずに濃度の違いを認識する事ができる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '正しいものを選べ。',
+          choices: [
+            '１つのにおい分子が１種の受容体に結合する。',
+            'ある受容細胞には複数の受容体が存在する。',
+            '１つの受容体が複数のにおい分子に結合する。',
+          ],
+          answerImg: [olfactorySynapse],
+          answer: '１つの受容体が複数のにおい分子に結合する。',
+          commentary:
+            '嗅細胞の嗅覚受容体はヒトの場合約350種類で構成されるが、それでも1万～10万種を超えるにおい分子を特定するには足りない。→（介在ニューロンの側方抑制などにより）応答する受容体の組み合わせパターンの違いによって、多くのにおいを識別している',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '嗅細胞において、におい刺激を与えた際に受容器電位が最も大きくなるのは、嗅細胞のどの位置に刺激を与えたときか。',
+          answerImg: [olfactoryExam],
+          answer: '線毛/繊毛',
+          commentary:
+            '嗅細胞のcAMP依存性陽イオンチャネルが繊毛部分に局在している→嗅覚受容体もおそらく繊毛部分に局在している。鼻腔では表面を粘膜が覆っており、嗅線毛はその中で浮いているためにおい分子をキャッチしやすい。',
         },
         // {
         //   detailInfo: '',

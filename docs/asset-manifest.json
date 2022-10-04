@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-physiology1/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-physiology1/static/js/main.6fa770a1.js",
+    "main.js": "/anywhere-physiology1/static/js/main.75886191.js",
     "static/media/dermatome.png": "/anywhere-physiology1/static/media/dermatome.6e24a69f17ab07dc5375.png",
     "static/media/titleImg.png": "/anywhere-physiology1/static/media/titleImg.e633e13be9a33b2521a8.png",
     "static/media/NMJ.png": "/anywhere-physiology1/static/media/NMJ.8a85e3ecdd09ba499083.png",
@@ -20,6 +20,7 @@
     "static/media/myelin.png": "/anywhere-physiology1/static/media/myelin.2f7676358d4b4d1ebfba.png",
     "static/media/LTP.png": "/anywhere-physiology1/static/media/LTP.b9c9c07ce73a47ce7464.png",
     "static/media/recycleNeurotransmitter.png": "/anywhere-physiology1/static/media/recycleNeurotransmitter.69b0de96b2125a5df665.png",
+    "static/media/olfactorySynapse.png": "/anywhere-physiology1/static/media/olfactorySynapse.d356713b6b5433c42963.png",
     "static/media/circadianClockControl.png": "/anywhere-physiology1/static/media/circadianClockControl.bedfc85d8197b9ddf034.png",
     "static/media/longMemory.png": "/anywhere-physiology1/static/media/longMemory.0ec28630f25975d65817.png",
     "static/media/lightReflex.png": "/anywhere-physiology1/static/media/lightReflex.546ce9e75a2ca08e44ad.png",
@@ -34,10 +35,12 @@
     "static/media/associationArea.png": "/anywhere-physiology1/static/media/associationArea.c4a52eab0c22f7d2440f.png",
     "static/media/mechanoreceptor.png": "/anywhere-physiology1/static/media/mechanoreceptor.bcd4b0f709022c5d51ac.png",
     "static/media/cerebralCortex.png": "/anywhere-physiology1/static/media/cerebralCortex.ed8ef87d8c08327d59d2.png",
+    "static/media/exam20211.png": "/anywhere-physiology1/static/media/exam20211.37ab3eedd5c3bf6516a6.png",
     "static/media/conduction.png": "/anywhere-physiology1/static/media/conduction.94b0223f1df38f78c8d7.png",
     "static/media/prismAdaptation.png": "/anywhere-physiology1/static/media/prismAdaptation.67f3a03fa4f65e6fb389.png",
     "static/media/LTD.png": "/anywhere-physiology1/static/media/LTD.ebd3e870af1ed2beb177.png",
     "static/media/electromyogram.png": "/anywhere-physiology1/static/media/electromyogram.0796b4cd45aaaa3d1b6d.png",
+    "static/media/olfactoryExam.png": "/anywhere-physiology1/static/media/olfactoryExam.0ea1b0dc4143f4a2a179.png",
     "static/media/tetanus.png": "/anywhere-physiology1/static/media/tetanus.2cd2671833f4864c2bf5.png",
     "static/media/EEG.png": "/anywhere-physiology1/static/media/EEG.9ca9f4c222a83ea45450.png",
     "static/media/basalGanglia.png": "/anywhere-physiology1/static/media/basalGanglia.4b06e347dc959b3eb666.png",
@@ -50,10 +53,10 @@
     "static/media/exam20202.png": "/anywhere-physiology1/static/media/exam20202.058567b02717f0f67710.png",
     "index.html": "/anywhere-physiology1/index.html",
     "main.2255ca1a.css.map": "/anywhere-physiology1/static/css/main.2255ca1a.css.map",
-    "main.6fa770a1.js.map": "/anywhere-physiology1/static/js/main.6fa770a1.js.map"
+    "main.75886191.js.map": "/anywhere-physiology1/static/js/main.75886191.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.6fa770a1.js"
+    "static/js/main.75886191.js"
   ]
 }
