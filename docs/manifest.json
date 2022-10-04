@@ -1,6 +1,6 @@
 {
-  "short_name": "１生対策",
-  "name": "どこでも試験対策・第一生理学",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",

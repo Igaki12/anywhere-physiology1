@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-physiology1/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-physiology1/static/js/main.926a7f69.js",
+    "main.js": "/anywhere-physiology1/static/js/main.eb8a1b8c.js",
     "static/media/dermatome.png": "/anywhere-physiology1/static/media/dermatome.6e24a69f17ab07dc5375.png",
     "static/media/titleImg.png": "/anywhere-physiology1/static/media/titleImg.e633e13be9a33b2521a8.png",
     "static/media/NMJ.png": "/anywhere-physiology1/static/media/NMJ.8a85e3ecdd09ba499083.png",
@@ -17,16 +17,22 @@
     "static/media/aphasia.png": "/anywhere-physiology1/static/media/aphasia.af343386976003db80c4.png",
     "static/media/sensoryReceptors.png": "/anywhere-physiology1/static/media/sensoryReceptors.61415c6b41765044d35f.png",
     "static/media/hairCell.png": "/anywhere-physiology1/static/media/hairCell.c4d5f990bd9a0ab5b24c.png",
+    "static/media/myelin.png": "/anywhere-physiology1/static/media/myelin.2f7676358d4b4d1ebfba.png",
     "static/media/LTP.png": "/anywhere-physiology1/static/media/LTP.b9c9c07ce73a47ce7464.png",
     "static/media/recycleNeurotransmitter.png": "/anywhere-physiology1/static/media/recycleNeurotransmitter.69b0de96b2125a5df665.png",
     "static/media/circadianClockControl.png": "/anywhere-physiology1/static/media/circadianClockControl.bedfc85d8197b9ddf034.png",
     "static/media/longMemory.png": "/anywhere-physiology1/static/media/longMemory.0ec28630f25975d65817.png",
     "static/media/lightReflex.png": "/anywhere-physiology1/static/media/lightReflex.546ce9e75a2ca08e44ad.png",
+    "static/media/PIPathway.png": "/anywhere-physiology1/static/media/PIPathway.e2be526ade37fc2ca5b5.png",
+    "static/media/neuronDiameter.png": "/anywhere-physiology1/static/media/neuronDiameter.179e1dd13c3eee2c3b06.png",
     "static/media/sensitization.png": "/anywhere-physiology1/static/media/sensitization.7cf6ed5e30a85ef9080c.png",
+    "static/media/cAMP.png": "/anywhere-physiology1/static/media/cAMP.928baf4eef230dd34a1a.png",
     "static/media/alphaGammaLinkage.png": "/anywhere-physiology1/static/media/alphaGammaLinkage.6d4e14245833a765f1a4.png",
     "static/media/nociception.png": "/anywhere-physiology1/static/media/nociception.534cd1f39b4c98166913.png",
     "static/media/taste.png": "/anywhere-physiology1/static/media/taste.e846d2b5a5d1daa92a06.png",
+    "static/media/column.png": "/anywhere-physiology1/static/media/column.66956d7fecdbb7d06588.png",
     "static/media/associationArea.png": "/anywhere-physiology1/static/media/associationArea.c4a52eab0c22f7d2440f.png",
+    "static/media/mechanoreceptor.png": "/anywhere-physiology1/static/media/mechanoreceptor.bcd4b0f709022c5d51ac.png",
     "static/media/cerebralCortex.png": "/anywhere-physiology1/static/media/cerebralCortex.ed8ef87d8c08327d59d2.png",
     "static/media/conduction.png": "/anywhere-physiology1/static/media/conduction.94b0223f1df38f78c8d7.png",
     "static/media/prismAdaptation.png": "/anywhere-physiology1/static/media/prismAdaptation.67f3a03fa4f65e6fb389.png",
@@ -44,10 +50,10 @@
     "static/media/exam20202.png": "/anywhere-physiology1/static/media/exam20202.058567b02717f0f67710.png",
     "index.html": "/anywhere-physiology1/index.html",
     "main.2255ca1a.css.map": "/anywhere-physiology1/static/css/main.2255ca1a.css.map",
-    "main.926a7f69.js.map": "/anywhere-physiology1/static/js/main.926a7f69.js.map"
+    "main.eb8a1b8c.js.map": "/anywhere-physiology1/static/js/main.eb8a1b8c.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.926a7f69.js"
+    "static/js/main.eb8a1b8c.js"
   ]
 }

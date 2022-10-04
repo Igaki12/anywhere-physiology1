@@ -39,12 +39,141 @@ import tetanus from './img/answer/tetanus.png'
 import conduction from './img/answer/conduction.png'
 import cerebralCortex from './img/answer/cerebralCortex.png'
 import actionPotential from './img/answer/actionPotential.png'
+import PIPathway from './img/answer/PIPathway.png'
+import neuronDiameter from './img/answer/neuronDiameter.png'
+import myelin from './img/answer/myelin.png'
+import mechanoreceptor from './img/answer/mechanoreceptor.png'
+import column from './img/answer/column.png'
+import cAMP from './img/answer/cAMP.png'
 
 // import from './img/answer/.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
     // ここに問題のリストを記述(選択式の場合は[0]に正解択をいれた配列をつくる)
+    {
+      groupTag: '2021本試',
+      groupContents: [
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '活動電位の発生について、脱分極してから静止電位に戻るまでの過程を説明しなさい。',
+          answerImg: [actionPotential],
+          answer:
+            '脱分極を誘導した電位依存性Na⁺チャネルがすぐに不活化され、電位依存性（遅延整流性）K⁺チャネルが開き、再分極の後リークK⁺チャネルによって静止電位に戻っていく。',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'アセチルコリンを合成する酵素は( 1 )、分解する酵素は( 2 )である。また、グルタミン酸を除去するものは( 3 )である。',
+          answerImg: [recycleNeurotransmitter],
+          answer:
+            '(1)コリンアセチルトランスフェラーゼ、(2)アセチルコリンエステラーゼ、(3)グルタミン酸トランスポーター',
+          commentary:
+            'アセチルコリン（とモノアミンの一部）のみコリンへ分解されて再合成される。グルタミン酸・GABA・グリシン・モノアミンはトランスポーター（膜輸送体）により細胞内へ輸送され、再び小胞体へ蓄えられる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '細胞内シグナル伝達のcAMP経路について、リガンドが結合してから特定のタンパク質がリン酸化されるまでの過程を説明しなさい。',
+          answerImg: [cAMP],
+          answer:
+            'Gsのαサブユニットがアデニル酸シクラーゼを刺激し、アデニル酸シクラーゼによってcAMPが産生される。cAMPによりcAMP依存性プロテインキナーゼA(PKA)が活性化され、PKAがタンパク質のセリンやトレオニン残基に特異的に作用してリン酸化を行う。',
+          commentary:
+            'アデニル酸シクラーゼACを活性化するGタンパク質はGs。cAMPはセカンドメッセンジャー。リン酸化により遺伝子転写や、酵素活性などが調節される。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '細胞内シグナル伝達のホスファチジルイノシトール経路について、リガンドが結合してから小胞体よりカルシウムイオンが放出されるまでの過程を説明しなさい。',
+          answerImg: [PIPathway],
+          answer:
+            'GqなどのαサブユニットがホスホリパーゼC(PLC)を活性化し、PLCがイノシトールリン脂質をイノシトール3リン酸とジアシルグリセロールに加水分解する（ PIP₂ → IP₃ + DG ）。このうちIP₃が小胞体のIP₃受容体に結合することで、小胞体内から細胞質へCa²⁺が放出される。',
+          commentary:
+            'ホスホリパーゼCを活性化するGタンパク質はGq,G11。加水分解されたDGはCa²⁺とともにプロテインキナーゼC(PKC)を活性化する。→カルモジュリン依存性キナーゼとPKCが標的タンパク質をリン酸化することで生理作用を発揮する。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '有髄神経線維でのみ生じる活動電位の素早い伝導は何か。また、末梢神経系の髄鞘を形成するグリア細胞は何か。',
+          answerImg: [myelin],
+          answer: '跳躍伝導、シュワン細胞',
+          commentary:
+            '中枢神経系の髄鞘はオリゴデンドロサイト（1対多）、末梢神経系ではシュワン細胞（1対1）。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】皮膚感覚受容器は( 1 )と( 2 )により分類することができる。( 1 )が早いものはRA、遅いものはSAである。また、( 2 )が広いものがⅠ型、狭いものがⅡ型である。皮膚の機械受容器を分類すると、RA1は( 3 )、RA2は( 4 )、SA1は( 5 )、SA2は( 6 )があてはまる。',
+          answerImg: [mechanoreceptor],
+          answer:
+            '(1)順応　(2)受容野　(3)マイスネル小体　(4)パチニ小体　(5)メルケル細胞　(6)ルフィニ小体',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】皮膚感覚受容器は適刺激によって、機械受容器・温度受容器・侵害受容器に分類することもできる。このうち、温度受容器には( 7 )チャネルが存在し、温度受容に関与する。(7)チャネルは温度だけでなく、( 8 )にも反応する。',
+          answerImg: [nociception],
+          answer: '(7)TRP、(8)化学物質',
+          commentary:
+            'TRPチャネルは温度や化学物質に反応するイオンチャネル。侵害受容器には他にもNa⁺チャネル、ATP受容体（組織障害にともない末梢細胞から放出されるATPで活性化）が発現している。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '体性感覚は( 1 )と( 2 )に分類することができる。',
+          answerImg: [],
+          answer: '表在感覚、深部感覚',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '一次体性感覚野の機能単位は何か',
+          answerImg: [column],
+          answer: '円柱構造（コラム）',
+          commentary:
+            '一次体性感覚野は中心後回ともよばれる。体部位局在性がある。視床からの入力は皮質Ⅳ層（やⅤ層）へ投射される。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】痛みに関して、受容野が狭く、痛みがどこにあるのかを知らせる( 1 )ニューロンと、痛みの強度を知らせる( 2 )ニューロンが存在する。',
+          answerImg: [nociception],
+          answer: '(1)特異的侵害受容　(2)広作動域',
+          commentary:
+            '特異的侵害受容ニューロンNociceptive specific neuron(NS)は受容野が狭く、痛みがどこにあるのか知らせる（皮膚と内臓からの入力が収束するので、関連痛を引き起こす）。広作動域ニューロンWide dynamic range neuron(WDR)は痛みの強度を知らせる（繰り返し刺激により中枢性感作ワインドアップが生じる）。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】侵害刺激を受けると、まず機械受容器や温度受容器から( 3 )線維によって刺激が伝達され、鋭い痛みを感じる。その後、ポリモーダル侵害受容器から( 4 )線維によって刺激が伝達され、より持続性のうずくような( 5 )を感じる。また、内臓の痛みを同じ脊髄に入力する( 6 )内の皮膚の痛みとして感じることがある。これを( 7 )という。',
+          answerImg: [nociception, neuronDiameter],
+          answer: '(3)Aδ　(4)C　(5)二次痛　(6)デルマトーム　(7)関連痛',
+          commentary:
+            'A線維は有髄（αほど太く、δほど細い）、C線維は無髄。一次痛は鋭く、素早い痛みで、二次痛は持続的でうずくような、ときに灼熱痛と形容される疼痛。',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+      ],
+    },
     {
       groupTag: '2020本試',
       groupContents: [
@@ -907,21 +1036,6 @@ export const useQuestionList = () => {
         //   answer: '',
         //   commentary: '',
         // },
-      ],
-    },
-    {
-      groupTag: '2021本試',
-      groupContents: [
-        {
-          detailInfo: '',
-          questionImg: [],
-          questionSentence:
-            'について間違っているものを全て選べ（全て正しい場合もある）',
-          choices: ['て', 'す', 'と'],
-          answerImg: [],
-          answer: 'てすと',
-          commentary: '',
-        },
       ],
     },
   ])
