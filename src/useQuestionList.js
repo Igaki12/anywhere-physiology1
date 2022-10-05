@@ -48,6 +48,7 @@ import cAMP from './img/answer/cAMP.png'
 import olfactorySynapse from './img/answer/olfactorySynapse.png'
 import olfactoryExam from './img/answer/olfactoryExam.png'
 import exam20211 from './img/question/exam20211.png'
+import tasteBuds from './img/answer/tasteBuds.png'
 
 // import from './img/answer/.png'
 
@@ -213,6 +214,69 @@ export const useQuestionList = () => {
           commentary:
             '嗅細胞のcAMP依存性陽イオンチャネルが繊毛部分に局在している→嗅覚受容体もおそらく繊毛部分に局在している。鼻腔では表面を粘膜が覆っており、嗅線毛はその中で浮いているためにおい分子をキャッチしやすい。',
         },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】味受容器である( 1 )には味細胞と( 2 )が存在する。味受容体は味細胞の( 3 )部位に存在する。',
+          answerImg: [tasteBuds],
+          answer: '(1)味蕾　(2)基底細胞　(3)微絨毛　',
+          commentary:
+            '個々の味蕾は50~100個の味細胞taste cellと基底細胞で構成され、つぼみ（蕾）のような形を呈する。味細胞は基底細胞から分化し、約10日で新しい細胞と置き換わる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [tasteBuds],
+          questionSentence:
+            '【空欄を埋めよ】味細胞は大きくⅠ～Ⅳ型の細胞に分類される。Ⅰ型は支持細胞として他の細胞の機能を補助する。Ⅱ型細胞とⅢ型細胞は味細胞である。Ⅱ型細胞の受容体のタイプは( 4 )受容体か代謝型( 5 )受容体であり、( 6 )味、( 7 )味、( 8 )味を検出し、味刺激により放出する伝達物質は( 9 )である。一方、Ⅲ型細胞は( 10 )味と( 11 )味を検出するが、その際、味物質がイオンチャネルに直接作用する。Ⅲ型細胞は伝達物質として( 12 )を放出する。Ⅳ型の細胞はⅠ～Ⅲ型の細胞の前駆細胞である。',
+          answerImg: [taste],
+          answer:
+            '(4)Gタンパク共役型/GPCR　(5)グルタミン酸　(6)(7)(8)甘味・苦味・旨味　(9)ATP　(10)(11)塩味・酸味　(12)セロトニン',
+          commentary:
+            '甘味・苦味・旨味はイオンチャネル型ではなく代謝型受容体で、共役するGタンパク質はGα-gust(α-ガストデューシン)。旨味受容体はアミノ酸のなかでもグルタミン酸に強く応答する。味細胞から味神経線維へのシナプス伝達にはセロトニンが使われ、味蕾中のⅡ型細胞が味刺激に応答して放出したATPを、Ⅲ型細胞が受容して活性化され、Ⅲ型細胞が主にセロトニンを放出することで味神経線維を活性化する。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '間違っているものを選べ',
+          choices: [
+            '甘味は代謝型受容体である',
+            '苦味は代謝型受容体である',
+            '酸味はイオンチャネル型受容体である',
+            '旨味はイオンチャネル型受容体である',
+            '塩味はイオンチャネル型受容体である',
+          ],
+          answerImg: [taste],
+          answer: '旨味はイオンチャネル型受容体である',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '味の情報伝達がにおいの情報伝達よりも複雑だといわれる理由について記述せよ。',
+          answerImg: [olfactorySynapse, tasteBuds],
+          answer:
+            'におい分子1種類に対応する嗅細胞が嗅球で統合・調節されて、におい情報が神経へ伝達されるのに対して、味細胞はそれぞれの細胞で味質に対する応答性に違いがあったり、複数の味質に応答するものがあったりする上、一つの味蕾にある複数種類の味細胞が協調して活性化するから。',
+          commentary:
+            '参考：ラベルドライン理論（特異的な味覚情報を送る）、アクロスファイバー理論（複雑な味覚情報を送る）。',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
         // {
         //   detailInfo: '',
         //   questionImg: [],
