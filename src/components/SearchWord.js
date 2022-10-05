@@ -135,6 +135,19 @@ export const SearchWord = ({
         isClosable: true,
       })
       inputEl.current.value = ''
+    } else if (
+      inputEl.current &&
+      inputEl.current.value &&
+      inputEl.current.value.length > 0
+    ) {
+      toast({
+        position: 'top-right',
+        title: '問題が見つかりません',
+        description: `キーワード【${inputEl.current.value}】に一致する問題が見つかりませんでした。ヒント：全角/半角の区別、大文字/小文字の区別、漢字/ひらがな　など`,
+        status: 'error',
+        duration: 12000,
+        isClosable: true,
+      })
     } else {
       return
     }
