@@ -49,6 +49,10 @@ import olfactorySynapse from './img/answer/olfactorySynapse.png'
 import olfactoryExam from './img/answer/olfactoryExam.png'
 import exam20211 from './img/question/exam20211.png'
 import tasteBuds from './img/answer/tasteBuds.png'
+import visualPathway from './img/answer/visualPathway.png'
+import retina from './img/answer/retina.png'
+import opticReceptor from './img/answer/opticReceptor.png'
+import opticPathway from './img/answer/opticPathway.png'
 
 // import from './img/answer/.png'
 
@@ -257,9 +261,41 @@ export const useQuestionList = () => {
             '味の情報伝達がにおいの情報伝達よりも複雑だといわれる理由について記述せよ。',
           answerImg: [olfactorySynapse, tasteBuds],
           answer:
-            'におい分子1種類に対応する嗅細胞が嗅球で統合・調節されて、におい情報が神経へ伝達されるのに対して、味細胞はそれぞれの細胞で味質に対する応答性に違いがあったり、複数の味質に応答するものがあったりする上、一つの味蕾にある複数種類の味細胞が協調して活性化するから。',
+            'におい分子に対応する嗅細胞が嗅球で統合・調節されて、におい情報が神経へ伝達されるのに対して、味細胞はそれぞれの細胞で味質に対する応答性に違いがあったり、複数の味質に応答するものがあったりする上、一つの味蕾にある複数種類の味細胞が協調して活性化するから。',
           commentary:
             '参考：ラベルドライン理論（特異的な味覚情報を送る）、アクロスファイバー理論（複雑な味覚情報を送る）。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】網膜から大脳皮質へ至る経路のうち、一次視覚野へ投射するものを( 1 )、上丘から視床枕を経て主に一次視覚野以外の視覚野へ至るものを( 2 )という。',
+          answerImg: [opticPathway],
+          answer: '(1)膝状体視覚系路　(2)膝状体外視覚系路',
+          commentary:
+            '膝状体視覚系路は、光刺激を網膜→視床（外側膝状体）→一次視覚野→高次視覚野の経路で伝える。主に視覚情報を認知・認識するための経路。膝状体外視覚系路は網膜→上丘→視床枕→一次視覚野以外の視覚野の経路で、眼球運動などへ利用される。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '杆体が光を吸収すると、( 1 )がメタロドプシンⅡに変化し、メタロドプシンⅡがトランスデューシンの( 2 )を( 3 )に変えることでトランスデューシンが活性化する。活性化したトランスデューシンにより( 4 )が活性化され、( 5 )が加水分解される。細胞内の(5)濃度の低下により(5)依存性チャネルが閉じ、杆体は( 6 )応答を示す。オン型双極細胞では視細胞からの( 7 )放出減少によりmGluR6活性が下がり、Gタンパク質が不活性化する。それにより( 8 )が開き、( 9 )する。',
+          answerImg: [opticReceptor, retina],
+          answer:
+            '(1)ロドプシン　(2)GDP　(3)GTP　(4)ホスホジエステラーゼ/PDE　(5)cGMP　(6)過分極　(7)グルタミン酸　(8)TRPM₁チャネル　(9)脱分極',
+          commentary:
+            '視細胞は光刺激を受けると過分極し、グルタミン酸放出を減少させる。オン型双極細胞は光がオンのとき、代謝型グルタミン酸受容体mGluR6の作用により脱分極を起こす。反対に、オフ型双極細胞は光がオフのときにイオンチャネル型グルタミン酸受容体iGluRの働きにより脱分極を起こす（光がオンだと過分極する）。トランスデューシンとはGタンパク質の一種で、活性化されるとホスホジエステラーゼPDEを活性化する。ホスホジエステラーゼはcGMPの分解酵素。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '一次視覚野から高次視覚野への経路のうち、頭頂皮質へ向かう経路は( 1 )であり、視覚対象の( 2 )や( 3 )を知るための情報を処理する。下側頭皮質へ向かう経路は( 4 )であり、視覚対象の( 5 )や( 6 )を知るための情報を処理する。',
+          answerImg: [visualPathway],
+          answer:
+            '(1)背側経路/頭頂葉経路　(2)(3)位置・動き　(4)腹側経路/側頭葉経路　(5)(6)形・色',
+          commentary:
+            '背側経路（頭頂皮質へ向かう経路）は空間視経路とも呼ばれ、◇対象の位置や動きを知るための情報を処理している。腹側経路（下側頭皮質へ向かう経路）は物体視経路ともよばれ、物体の形や色など、視覚対象が何であるかを知るための情報を処理している。',
         },
         // {
         //   detailInfo: '',
