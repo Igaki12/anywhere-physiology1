@@ -297,14 +297,16 @@ export const useQuestionList = () => {
           commentary:
             '背側経路（頭頂皮質へ向かう経路）は空間視経路とも呼ばれ、◇対象の位置や動きを知るための情報を処理している。腹側経路（下側頭皮質へ向かう経路）は物体視経路ともよばれ、物体の形や色など、視覚対象が何であるかを知るための情報を処理している。',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【】部分が正しい場合には〇を、間違っている場合には正しい語句をかけ。）有毛細胞は機械受容器チャネルを介して【Na⁺が流入】することにより脱分極する。',
+          answerImg: [hairCell],
+          answer: 'K⁺が流入',
+          commentary:
+            '内リンパ液は高K⁺・低Na⁺・低Ca²⁺であり、基底膜が振動すると有毛細胞の不動毛の先端のチャネルが開き、K⁺が流入する。',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
