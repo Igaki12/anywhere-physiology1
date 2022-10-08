@@ -57,6 +57,7 @@ import VOR from './img/answer/VOR.png'
 import tonotopy from './img/answer/tonotopy.png'
 import MSOlive from './img/answer/MSOlive.png'
 import COWS from './img/answer/COWS.png'
+import toroponin from './img/answer/toroponin.png'
 
 // import from './img/answer/.png'
 
@@ -369,6 +370,17 @@ export const useQuestionList = () => {
             '(1)有毛細胞　(2)中心階　(3)内リンパ液　(4)外リンパ液　(5)Ca²⁺　(6)高周波音　(7)低周波音',
           commentary:
             '内リンパ液はK⁺が豊富でCa²⁺が少ないため、感覚毛のMETチャネルには好都合で細胞体の電位依存性Ca²⁺チャネルには適さない。有毛細胞はらせん神経節ニューロンにシナプスし、聴覚伝導路に伝えられる。各周波数の刺激に対する感度は基底板の性質の他、外有毛細胞による側方抑制によっても強調される。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '活動電位が伝わってから骨格筋収縮が起こるまでの機構について説明しなさい。（語句：T管、筋小胞体、リアノジン受容体、ATP、トロポニン、カルシウム、アクチン、ミオシン、滑り込み）',
+          answerImg: [excitationContractionCoupling, toroponin],
+          answer:
+            '活動電位はT管（横行小管）の電位依存性Ca²⁺チャネル(DHPチャネル)の構造を変化させ、T管と三つ組をつくる筋小胞体のリアノジン受容体からCa²⁺を細胞質へ放出させる。アクチンとミオシンの結合を阻害するトロポミオシン末端のトロポニンにCa²⁺が結合すると、トロポニン-トロポミオシンの抑制作用が取り除かれ、アクチンとミオシンの相互作用が始まる。ミオシンはATPと結合するとアクチンから離れ、ATPの加水分解で得たエネルギーでアクチンのプラス側に滑り込むことにより、筋節を短縮させる。',
+          commentary:
+            'アクチン-ミオシンの筋収縮メカニズムは滑り説とよばれ、1秒間に5回程度のペースで繰り返される。',
         },
         // {
         //   detailInfo: '',
