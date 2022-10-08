@@ -53,6 +53,10 @@ import visualPathway from './img/answer/visualPathway.png'
 import retina from './img/answer/retina.png'
 import opticReceptor from './img/answer/opticReceptor.png'
 import opticPathway from './img/answer/opticPathway.png'
+import VOR from './img/answer/VOR.png'
+import tonotopy from './img/answer/tonotopy.png'
+import MSOlive from './img/answer/MSOlive.png'
+import COWS from './img/answer/COWS.png'
 
 // import from './img/answer/.png'
 
@@ -306,6 +310,65 @@ export const useQuestionList = () => {
           answer: 'K⁺が流入',
           commentary:
             '内リンパ液は高K⁺・低Na⁺・低Ca²⁺であり、基底膜が振動すると有毛細胞の不動毛の先端のチャネルが開き、K⁺が流入する。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【】部分が正しい場合には〇を、間違っている場合には正しい語句をかけ。）内側上オリーブ核は遅延回路を使って【両耳間強度差】を検出する',
+          answerImg: [MSOlive],
+          answer: '両耳間時間差ITD',
+          commentary: '両耳間強度差は外側上オリーブ核LSOのはたらき',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【】部分が正しい場合には〇を、間違っている場合には正しい語句をかけ。）蝸牛の有毛細胞は【不動毛側】に傾くと脱分極する。',
+          answerImg: [hairCell],
+          answer: '基底小体の方向/適方向',
+          commentary:
+            '有毛細胞の感覚毛は、全体の方向性を決定する1本の長い動毛と、動毛を頂点として規則的に配列する50~100本の不動毛からなる。蝸牛の有毛細胞では動毛は退化し原器である基底小体のみ存在する。有毛細胞は、すべて動毛/基底小体の方向（→適方向）に屈曲したときにMETチャネルが開き脱分極し、逆方向に屈曲したときに過分極する。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【】部分が正しい場合には〇を、間違っている場合には正しい語句をかけ。）前庭動眼反射によって頭部の回転と【同じ方向】へ眼が回転する',
+          answerImg: [VOR],
+          answer: '逆方向',
+          commentary:
+            '視線を保持するため、頭の回転とは逆方向に眼を回転させる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【】部分が正しい場合には〇を、間違っている場合には正しい語句をかけ。）右耳に冷水を注入するとカロリック反応により【右向き】に眼振が生じる',
+          answerImg: [COWS],
+          answer: '左向き',
+          commentary: 'COWS',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【】部分が正しい場合には〇を、間違っている場合には正しい語句をかけ。）音の周波数局在は【下丘から大脳皮質】に至るまでみられる。',
+          answerImg: [tonotopy],
+          answer: '蝸牛から大脳皮質',
+          commentary:
+            '全ての聴覚信号は下丘を通して伝わるが、周波数局在性は蝸牛から大脳皮質にかけて（聴覚伝導路すべてで）存在している。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】蝸牛の( 1 ) の感覚毛は( 2 )の( 3 )に浸かっており、細胞体は( 4 )中にある。(1)が脱分極すると、電位依存性のチャネルが開くことで( 5 )が細胞内に流入し、シナプス小胞からの神経伝達物質放出を促す。蝸牛において各周波数の刺激は基底板の固有の位置で最大の振幅を生じる。底部では( 6 ) を、頂部では( 7 )を感知している',
+          answerImg: [],
+          answer:
+            '(1)有毛細胞　(2)中心階　(3)内リンパ液　(4)外リンパ液　(5)Ca²⁺　(6)高周波音　(7)低周波音',
+          commentary:
+            '内リンパ液はK⁺が豊富でCa²⁺が少ないため、感覚毛のMETチャネルには好都合で細胞体の電位依存性Ca²⁺チャネルには適さない。有毛細胞はらせん神経節ニューロンにシナプスし、聴覚伝導路に伝えられる。各周波数の刺激に対する感度は基底板の性質の他、外有毛細胞による側方抑制によっても強調される。',
         },
         // {
         //   detailInfo: '',
