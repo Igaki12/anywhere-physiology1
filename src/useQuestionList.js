@@ -58,6 +58,7 @@ import tonotopy from './img/answer/tonotopy.png'
 import MSOlive from './img/answer/MSOlive.png'
 import COWS from './img/answer/COWS.png'
 import toroponin from './img/answer/toroponin.png'
+import tendonReflex from './img/answer/tendonReflex.png'
 
 // import from './img/answer/.png'
 
@@ -414,14 +415,17 @@ export const useQuestionList = () => {
           commentary:
             'ia線維もα線維も太く有髄のAα線維に分類され、伝導がはやい。',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '腱反射について説明しなさい。また、自原抑制・多シナプス性反射である理由を説明しなさい。',
+          answerImg: [tendonReflex],
+          answer:
+            '腱反射とは、ゴルジ腱器官の伸展刺激に対して、同名筋の収縮を抑制し、拮抗筋の収縮を促進する反射。筋の聴力を一定に維持する作用を持ち、同名筋（や協同筋）の収縮を抑制する（→自原抑制）。伸展刺激にしたがってα運動ニューロンを抑制するため、介在ニューロンが必要（→多シナプス性反射）。',
+          commentary:
+            'これらの特徴から、伸張反射に対して逆伸張反射とよばれることもある。',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
