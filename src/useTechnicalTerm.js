@@ -544,10 +544,10 @@ export const useTechnicalTerm = () => {
       explanation:
         'GABAは神経伝達物質のひとつで、グルタミン酸からグルタミン酸脱炭酸酵素GADによって合成される。イオンチャネル型のA受容体と代謝型のB受容体が存在し、いずれも抑制性シナプス伝達を担う。イオンチャネル型受容体はCl⁻チャネルで、細胞内Cl⁻濃度が高い幼弱期では脱分極応答を示す。代謝型B受容体は自己受容体autoreceptorとしてフィードバック抑制に関わる',
     },
-    {
-      term: [''],
-      explanation: '',
-    },
+    // {
+    //   term: [''],
+    //   explanation: '',
+    // },
     // {
     //   term:[''],
     //   explanation:'',
