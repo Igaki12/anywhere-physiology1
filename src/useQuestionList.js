@@ -59,6 +59,10 @@ import MSOlive from './img/answer/MSOlive.png'
 import COWS from './img/answer/COWS.png'
 import toroponin from './img/answer/toroponin.png'
 import tendonReflex from './img/answer/tendonReflex.png'
+import pupillaryLightReflex from './img/answer/pupillaryLightReflex.png'
+import PTN from './img/answer/PTN.png'
+import eyeMovement from './img/answer/eyeMovement.png'
+import cerebellum from './img/answer/cerebellum.png'
 
 // import from './img/answer/.png'
 
@@ -426,6 +430,69 @@ export const useQuestionList = () => {
           commentary:
             'これらの特徴から、伸張反射に対して逆伸張反射とよばれることもある。',
         },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '眼球運動には( 1 )を目的として行う前庭動眼反射、視運動性反応と( 2 )を目的として行う衝動性眼球運動、追跡眼球運動、輻輳・開散運動がある。輻輳・開散運動は( 3 )眼球運動である。',
+          answerImg: [eyeMovement],
+          answer: '(1)視線保持　(2)中心窩視　(3)非共役性　',
+          commentary: '衝動性眼球運動はサッケードともよばれる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '瞳孔対光反射について。明るいとき、瞳孔は( 1 )、瞳孔括約筋は( 2 )し、瞳孔散大筋は( 3 )する。',
+          answerImg: [pupillaryLightReflex, lightReflex],
+          answer: '(1)小さく　(2)収縮　(3)弛緩',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'ガラス電極を挿入して逆行性軸索輸送の速度を計測したところ、伝達物質が大脳皮質に到達するまでに延髄錐体で1.2ミリ秒、大脳脚で2.2ミリ秒かかった。延髄錐体と大脳脚の距離が12mmであるとき、この間のニューロンの伝達速度を求めよ。また、これはfastPTN / slowPTNのどちらか、根拠とともに答えよ。',
+          answerImg: [PTN],
+          answer: '伝達速度は12m/s　→20m/s未満だからslow PTN',
+          commentary:
+            'PTN:pyramidal tract neuron（錐体路細胞＝皮質脊髄路細胞）錐体路細胞は軸索の興奮伝達速度の違いによる区分がなされ、早い錐体路細胞fastPTNでは20m/sec以上、遅い錐体路細胞slowPTNでは20m/sec未満の伝達速度。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '小脳への入力線維には、顆粒細胞とゴルジ細胞に終止する( 1 )や、全ての抑制性細胞に終止する( 2 )がある。小脳皮質唯一の出力細胞は( 3 )であり、これは( 4 )作動性細胞である。また、顆粒細胞は( 5 )作動性である。',
+          answerImg: [cerebellum],
+          answer:
+            '(1)苔状線維　(2)登上線維　(3)プルキンエ細胞　(4)GABA　(5)グルタミン酸　',
+          commentary:
+            '小脳への入力線維は苔状線維と登上線維に区分される。GABAは抑制性シグナル伝達、グルタミン酸は興奮性シグナル伝達を担う。',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
         // {
         //   detailInfo: '',
         //   questionImg: [],
@@ -456,7 +523,7 @@ export const useQuestionList = () => {
           questionSentence:
             '図で、ガラス電極を挿入して逆行性軸索輸送の速度を計測したところ、伝達物質が大脳皮質に到達するまでに延髄錐体で1.2ミリ秒、大脳脚で2.2ミリ秒かかった。延髄錐体と大脳脚の距離が12mmであるとき、この間のニューロンの伝達速度を求めよ（単答）。また、このニューロンはfast型かslow型か、根拠とともに答えよ（記述）。',
           choices: [],
-          answerImg: [],
+          answerImg: [PTN],
           answer:
             '伝達速度は12m/sec。　伝達速度が20m/secより遅いため、slow型。',
           commentary:
