@@ -63,6 +63,9 @@ import pupillaryLightReflex from './img/answer/pupillaryLightReflex.png'
 import PTN from './img/answer/PTN.png'
 import eyeMovement from './img/answer/eyeMovement.png'
 import cerebellum from './img/answer/cerebellum.png'
+import reinforcementLearning from './img/answer/reinforcementLearning.png'
+import microZone from './img/answer/microZone.png'
+import cerebellumLearning from './img/answer/cerebellumLearning.png'
 
 // import from './img/answer/.png'
 
@@ -469,14 +472,45 @@ export const useQuestionList = () => {
           commentary:
             '小脳への入力線維は苔状線維と登上線維に区分される。GABAは抑制性シグナル伝達、グルタミン酸は興奮性シグナル伝達を担う。',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '小脳の機能単位は何か。',
+          answerImg: [microZone],
+          answer: 'ゾーン（帯域）',
+          commentary:
+            '小脳は前後方向にモジュール構造：ゾーン（帯域）を構成しており、zoneはさらに微小領域マイクロゾーンにわけられる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '大脳基底核の直接路は運動を( 1 )し、間接路は( 2 )する。間接路が働くと、( 3 )の細胞活動が上昇し、視床の動きは( 4 )される。大脳基底核疾患のうち、黒質緻密部の( 5 )作動性ニューロンの欠落により運動が減少する疾患を( 6 )という。',
+          answerImg: [basalGanglia],
+          answer:
+            '(1)促進　(2)抑制　(3)視床下核　(4)抑制　(5)ドーパミン　(6)パーキンソン病　',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '運動学習における小脳と大脳基底核の役割を、違いを示して説明しなさい。',
+          answerImg: [cerebellumLearning, reinforcementLearning],
+          answer:
+            '小脳では、運動を繰り返す間に感覚情報におけるオンライン誤差を検出して、長期抑圧LTDに基づいてその誤差を予測的に減少させる「誤差学習/error learning」に関与している。大脳基底核では、外界の手がかりに応じた適切な行動を、報酬・懲罰経験を通じて選択していく「強化学習/reward based reinforcement learning」に関与している。',
+          commentary:
+            '小脳での運動学習の典型例として、プリズム適応が挙げられる。小脳では平行線維と登上線維（教師信号）を同時に活性化すると平行線維のシナプス伝達効率が低下する長期抑圧LTDによって、運動指令が書き換えられていく。大脳基底核では予想に反して報酬が得られた/得られなかった場合にドーパミンニューロンが活動し、報酬予測誤差を最小化するように予測を更新していくことで、最大報酬を得る行動を最適化する。小脳ではフィードフォワード制御によって、大脳基底核ではドーパミンによるアクセル-ブレーキ制御によって運動制御を行っている。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】小脳における長期抑圧について、( 1 )と( 2 )がほぼ同時に活性化されることで( 3 )と( 4 )のシナプス伝達効率が一定期間低下する。',
+          answerImg: [cerebellumLearning],
+          answer: '(1)(2)平行線維・登上線維　(3)平行線維　(4)プルキンエ線維　',
+          commentary: '',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
