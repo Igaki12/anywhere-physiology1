@@ -66,6 +66,7 @@ import cerebellum from './img/answer/cerebellum.png'
 import reinforcementLearning from './img/answer/reinforcementLearning.png'
 import microZone from './img/answer/microZone.png'
 import cerebellumLearning from './img/answer/cerebellumLearning.png'
+import BrodmannArea from './img/answer/BrodmannArea.png'
 
 // import from './img/answer/.png'
 
@@ -509,16 +510,17 @@ export const useQuestionList = () => {
             '【空欄を埋めよ】小脳における長期抑圧について、( 1 )と( 2 )がほぼ同時に活性化されることで( 3 )と( 4 )のシナプス伝達効率が一定期間低下する。',
           answerImg: [cerebellumLearning],
           answer: '(1)(2)平行線維・登上線維　(3)平行線維　(4)プルキンエ線維　',
-          commentary: '',
+          commentary: 'このときの登上線維からの入力信号を教師信号という',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: 'ブロードマン地図について説明しなさい',
+          answerImg: [BrodmannArea],
+          answer: '大脳皮質を、6層の層構造によって区分けしたもの。',
+          commentary:
+            'この地図は各層の厚さ・神経細胞の密度などを基にした視覚的な分類だが、一次視覚野は17野、一次運動野は4野など、大脳皮質の機能局在とかなり一致している。',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
