@@ -67,6 +67,8 @@ import reinforcementLearning from './img/answer/reinforcementLearning.png'
 import microZone from './img/answer/microZone.png'
 import cerebellumLearning from './img/answer/cerebellumLearning.png'
 import BrodmannArea from './img/answer/BrodmannArea.png'
+import emotion from './img/answer/emotion.png'
+import drugDependence from './img/answer/drugDependence.png'
 
 // import from './img/answer/.png'
 
@@ -520,6 +522,46 @@ export const useQuestionList = () => {
           answer: '大脳皮質を、6層の層構造によって区分けしたもの。',
           commentary:
             'この地図は各層の厚さ・神経細胞の密度などを基にした視覚的な分類だが、一次視覚野は17野、一次運動野は4野など、大脳皮質の機能局在とかなり一致している。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】脳には3つの連合野がある。( 1 )では空間認知など、( 2 )では物体認知や相貌認知など、( 3 )では行動の制御と計画などを行っている。失語症のうち、左前頭葉の損傷で生じ、話し言葉は理解できるが意味の通った言語を発することができなくなるものを( 4 )、左側頭葉の損傷で生じ、聞いた言葉の理解ができなくなるものを( 5 )という。',
+          answerImg: [associationArea],
+          answer:
+            '(1)頭頂連合野　(2)側頭連合野　(3)前頭連合野　(4)ブローカー失語症　(5)ウェルニッケ失語症　',
+          commentary:
+            'ブローカー失語症は運動性失語、ウェルニッケ失語症は感覚性失語症ともよばれる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '情動の3つの過程は、( 1 )、( 2 )、( 3 )である。',
+          answerImg: [emotion],
+          answer:
+            '1.感覚刺激の価値評価　2.情動表出　3.情動の主観的体験(feeling)',
+          commentary:
+            '情動とは、愛情・憎悪・嫌悪・喜悦・羞恥心・羨望・罪悪感・恐怖・不安などを指す。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '薬物使用は嗜癖に進行する可能性がある。依存性薬物は( 1 )で細胞外( 2 )濃度を上昇させることが示されている。',
+          answerImg: [drugDependence],
+          answer: '(1)側坐核　(2)ドーパミン',
+          commentary:
+            '側坐核はラットの報酬回路の一部で、ドーパミンニューロンから刺激を受けて腹側淡蒼球などへシグナルを送る。コカイン・ヘロイン・ニコチンなどは報酬回路に作用する。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '飲水行動に関して、第三脳室腹側部(AV3V)を構成する3つのものを答えよ。',
+          answerImg: [],
+          answer: '終板脈管器官OVLT・脳弓下器官SFO・中心視索前核MnPO',
+          commentary: 'AV3Vの浸透圧受容ニューロンが渇き感発生に重要',
         },
         // {
         //   detailInfo: '',
