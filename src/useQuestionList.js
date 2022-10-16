@@ -73,6 +73,11 @@ import feedingCenter from './img/answer/feedingCenter.png'
 import drinkingBehaviorICF from './img/answer/drinkingBehaviorICF.png'
 import drinkingBehaviorECF from './img/answer/drinkingBehaviorECF.png'
 import exam20212 from './img/question/exam20212.png'
+import maleAction from './img/answer/maleAction.png'
+import kisspeptin from './img/answer/kisspeptin.png'
+import humanGender from './img/answer/humanGender.png'
+import foodCenter from './img/answer/foodCenter.png'
+import femaleAction from './img/answer/femaleAction.png'
 
 // import from './img/answer/.png'
 
@@ -89,7 +94,7 @@ export const useQuestionList = () => {
             '活動電位の発生について、脱分極してから静止電位に戻るまでの過程を説明しなさい。',
           answerImg: [actionPotential],
           answer:
-            '脱分極を誘導した電位依存性Na⁺チャネルがすぐに不活化され、電位依存性（遅延整流性）K⁺チャネルが開き、再分極の後リークK⁺チャネルによって静止電位に戻っていく。',
+            '脱分極を誘導した電位依存性Na⁺チャネルがすぐに不活化され、電位依存性（遅延整流性）K⁺チャネルが開き、再分極し静止電位付近に戻る。',
           commentary: '',
         },
         {
@@ -315,7 +320,7 @@ export const useQuestionList = () => {
           answer:
             '(1)背側経路/頭頂葉経路　(2)(3)位置・動き　(4)腹側経路/側頭葉経路　(5)(6)形・色',
           commentary:
-            '背側経路（頭頂皮質へ向かう経路）は空間視経路とも呼ばれ、◇対象の位置や動きを知るための情報を処理している。腹側経路（下側頭皮質へ向かう経路）は物体視経路ともよばれ、物体の形や色など、視覚対象が何であるかを知るための情報を処理している。',
+            '背側経路（頭頂皮質へ向かう経路）は空間視経路とも呼ばれ、視覚対象の位置や動きを知るための情報を処理している。腹側経路（下側頭皮質へ向かう経路）は物体視経路ともよばれ、物体の形や色など、視覚対象が何であるかを知るための情報を処理している。',
         },
         {
           detailInfo: '',
@@ -589,22 +594,55 @@ export const useQuestionList = () => {
           commentary:
             '視床下部外側野は摂食中枢、視床下部腹内側核は満腹中枢としてはたらく。食物消化時は体温上昇しやすい',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '満腹中枢と摂食中枢を破壊するとそれぞれどうなるのか説明せよ。',
+          answerImg: [foodCenter],
+          answer:
+            '満腹中枢（視床下部外側野）を破壊すると、食事を取らなくなり痩せる。摂食中枢（視床下部腹内側核）を破壊すると、多食傾向となり肥満になる。',
+          commentary: '猫での実験',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '雄ラット性行動、雌ラット性行動の発現メカニズムを説明しなさい。',
+          answerImg: [maleAction, femaleAction],
+          answer:
+            '血中アンドロゲンが視索前野の受容体に作用し、マウント行動発現可能な状態にし、雌からのシグナル（発情臭・勧誘行動）が引き金となって雄ラット性行動（マウント行動）を発現する。血中エストロゲンや関連神経が性行動促進系を活性化・抑制系を解除することで、雌ラット性行動（ロードーシス/脊柱前彎反応）を発現する。',
+          commentary:
+            'ラットの性行動には視床下部の内側視索前野MPOA・視床下部背内側核（♂性行動の遂行）・視床下部腹内側核（♀性行動の遂行）が関与する。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '人の生涯における性を6つ答えなさい',
+          answerImg: [humanGender],
+          answer:
+            '遺伝的性・性腺の性・内性器の性・外性器の性・社会的性・性別自認(gender identity)',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: 'キスペプチンによる生殖機能を説明しなさい',
+          answerImg: [kisspeptin],
+          answer:
+            '視床下部弓状核のキスペプチンニューロンはGnRHパルスジュネレーター本体で、エストロゲンの負のフィードバックを仲介する。前腹側室周囲核のキスペプチンニューロンはGnRHのサージ分泌を促進し、エストロゲンの正のフィードバックを仲介する。',
+          commentary:
+            'キスペプチンはKiss1遺伝子の産物で、脳下垂体からのGnRHの強力な分泌促進作用をもち、思春期の開始に重要であることがわかってきた。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '脳の性分化の臨界期はいつか。',
+          answerImg: [],
+          answer: '発生20週以降（アンドロゲンシャワー説）',
+          commentary:
+            '副腎アンドロゲン分泌過剰により、男女の正常な性分化が阻害される（副腎アンドロゲンは精巣のアンドロゲンの1/5の作用しかないため）',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
