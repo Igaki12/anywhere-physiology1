@@ -69,6 +69,10 @@ import cerebellumLearning from './img/answer/cerebellumLearning.png'
 import BrodmannArea from './img/answer/BrodmannArea.png'
 import emotion from './img/answer/emotion.png'
 import drugDependence from './img/answer/drugDependence.png'
+import feedingCenter from './img/answer/feedingCenter.png'
+import drinkingBehaviorICF from './img/answer/drinkingBehaviorICF.png'
+import drinkingBehaviorECF from './img/answer/drinkingBehaviorECF.png'
+import exam20212 from './img/question/exam20212.png'
 
 // import from './img/answer/.png'
 
@@ -563,6 +567,36 @@ export const useQuestionList = () => {
           answer: '終板脈管器官OVLT・脳弓下器官SFO・中心視索前核MnPO',
           commentary: 'AV3Vの浸透圧受容ニューロンが渇き感発生に重要',
         },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '飲水行動の発現について、以下の2つの場合について説明せよ。1.細胞内液量の減少による渇き感の発生　2.細胞外液量の減少による渇き感の発生',
+          answerImg: [drinkingBehaviorICF, drinkingBehaviorECF],
+          answer:
+            '1.細胞内液量の減少は、直接または迷走神経を介して第三脳室腹側部(AV3V)の浸透圧受容ニューロンに伝えられ、中心視索前核で浸透圧情報が統合される。渇き感は大脳皮質・大脳辺縁系・他の視床下部領域に伝えられ、飲水行動が発現する。　2.細胞外液量の減少は、腎臓の腎動脈圧センサーや、頚動脈と心肺部の圧受容器で感知され、レニン・アンジオテンシン系や自律神経系経由でAV3Vに伝えられ、次に大脳皮質・大脳辺縁系・他の視床下部領域に伝えられ、飲水行動が発現する。',
+          commentary:
+            'いずれの場合も第三脳室腹側部AV3Vが浸透圧情報の入出力の統合を行い、大脳皮質・大脳辺縁系・視床下部領域などが飲水行動を誘導する。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [exam20212],
+          questionSentence:
+            '摂食中枢と満腹中枢について、下の表の空欄を埋めなさい。①と②には解剖学的な名称を、③~⑧には促進または抑制と記入すること。',
+          answerImg: [feedingCenter],
+          answer:
+            '1.視床下部外側野(LH)　2.視床下部腹内側核(VMH)　3.抑制　4.促進　5.抑制　6.促進　7.促進　8.抑制',
+          commentary:
+            '視床下部外側野は摂食中枢、視床下部腹内側核は満腹中枢としてはたらく。食物消化時は体温上昇しやすい',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
         // {
         //   detailInfo: '',
         //   questionImg: [],
