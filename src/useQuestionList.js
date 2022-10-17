@@ -78,6 +78,12 @@ import kisspeptin from './img/answer/kisspeptin.png'
 import humanGender from './img/answer/humanGender.png'
 import foodCenter from './img/answer/foodCenter.png'
 import femaleAction from './img/answer/femaleAction.png'
+import SCN from './img/answer/SCN.png'
+import PGDPGE2 from './img/answer/PGDPGE2.png'
+import narcolepsy4 from './img/answer/narcolepsy4.png'
+import narcolepsy3 from './img/answer/narcolepsy3.png'
+import narcolepsy2 from './img/answer/narcolepsy2.png'
+import narcolepsy from './img/answer/narcolepsy.png'
 
 // import from './img/answer/.png'
 
@@ -642,6 +648,85 @@ export const useQuestionList = () => {
           answer: '発生20週以降（アンドロゲンシャワー説）',
           commentary:
             '副腎アンドロゲン分泌過剰により、男女の正常な性分化が阻害される（副腎アンドロゲンは精巣のアンドロゲンの1/5の作用しかないため）',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】光は網膜で捉えられる。概日時計への光入力を行うのは( 1 )である。光情報は( 2 )を通って中枢時計である( 3 )に伝えられる。網膜あるいは(2)の障害で概日リズムはフリーランする。視交叉上核の影響を受け、( 4 )が夜間に( 5 )で合成される。(4)が広範囲の標的組織に作用することで生理機能の日周調節が行われる。',
+          answerImg: [circadianClockControl],
+          answer:
+            '(1)メラノプシン発現網膜神経節細胞　(2)網膜視床下部路　(3)視交叉上核　(4)メラトニン　(5)松果体　',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '概日リズムセンターは何か答えよ。また、その証拠を説明しなさい。',
+          answerImg: [SCN],
+          answer:
+            '概日リズムセンターは視交叉上核。視交叉上核を破壊すると概日リズムが消失するが、破壊してリズムが消失した個体に別の個体から組織を移植するとリズムが回復する。また、培養した器官でも概日リズムを発現する。',
+          commentary:
+            '網膜→（網膜-視床下部路）→視交叉上核→松果体の経路でメラトニンが合成される。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'レム睡眠とノンレム睡眠の特徴をそれぞれ説明しなさい。',
+          answerImg: [sleepingData],
+          answer:
+            '【レム睡眠】は睡眠時間の後半を中心に、全睡眠時間の25%を占める。低電位で不規則なθ波などがみられ、急速眼球運動が特徴的。首や胴部の筋肉は弛緩しており、ストーリーをもった視覚的な夢を見ている事が多く、この間に目覚めるとすっきり目覚めることができる。【ノンレム睡眠】は睡眠時間の前半を中心に、全睡眠時間の75％を占め、特徴的な高振幅徐波がみられる。筋緊張は減少し、急速眼球運動はみられない。瞬間的な映像・考え・空想が夢として現れる事が多く、この間に目覚めるとすっきりしない。',
+          commentary:
+            'その他、レム睡眠中は大脳皮質の動きが活発で、記憶が再構成・長期固定化されている（海馬θ波）と言われており、血圧（急激な変動）・呼吸数（増加）・脈拍数（増加）など自律神経が乱れる時間でもある。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '誤っているものを1つ選びなさい。',
+          choices: [
+            'プロスタグランジンD₂は睡眠物質である',
+            'メラトニンは睡眠物質である',
+            'プロスタグランジンE₂は覚醒物質である',
+            'オレキシンは覚醒物質である',
+          ],
+          answerImg: [PGDPGE2],
+          answer: 'メラトニンは睡眠物質である',
+          commentary:
+            'メラトニンは夜間に分泌促進される、概日リズム因子である。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'ナルコレプシーについて、(1)4主徴は何か　(2)ナルコレプシーで検出限界値以下となる物質は何か',
+          answerImg: [narcolepsy],
+          answer:
+            'ナルコレプシーは睡眠発作（昼間の耐え難い眠気と居眠り）・情動性脱力発作・睡眠麻痺（金縛り）・入眠時幻覚の4主徴が3ヶ月以上続く疾患で、オレキシン欠乏が原因。',
+          commentary:
+            'オレキシンニューロンの後天的な破壊（自己免疫疾患などによる）に伴う神経伝達障害による説が有力。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'ナルコレプシーとはどのような病態か。睡眠覚醒スイッチング・神経変性という2つの語句を用いて説明しなさい。',
+          answerImg: [narcolepsy2, narcolepsy3],
+          answer:
+            'ナルコレプシーは覚醒性のオレキシン神経変性により、睡眠・覚醒状態のいずれか一方の状態で安定させる睡眠覚醒スイッチングが不安定となることで、覚醒とレム睡眠の中間的な寝ぼけ状態を呈する病態。',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'ナルコレプシーの患者の睡眠時の脳波・筋肉・呼吸・眼球運動について説明せよ。',
+          answerImg: [narcolepsy4],
+          answer:
+            'ナルコレプシー患者では、眠りに入ってすぐに【脳波】が低電位不規則なθ波やPGO spikesを観測し、首や胴部の【筋肉】は弛緩し、【呼吸】は早くなり、【眼球運動】急速眼球運動が見られる(SOREMP:sleep onset REM period)',
+          commentary:
+            'ナルコレプシー患者では、眠りに入ってから15分以内にレム睡眠が観察される。その他金縛り、鮮明な悪夢を経験することも多い。',
         },
         // {
         //   detailInfo: '',
