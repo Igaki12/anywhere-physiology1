@@ -1,5 +1,9 @@
 import { useState } from 'react'
 
+import PTP from './img/answer/PTP.png'
+import LTPfeature from './img/answer/LTPfeature.png'
+import fearConditioning from './img/answer/fearConditioning.png'
+import exam20213 from './img/question/exam20213.png'
 import exam20201 from './img/question/exam20201.png'
 import motorNeuron from './img/answer/motorNeuron.png'
 import recycleNeurotransmitter from './img/answer/recycleNeurotransmitter.png'
@@ -728,14 +732,57 @@ export const useQuestionList = () => {
           commentary:
             'ナルコレプシー患者では、眠りに入ってから15分以内にレム睡眠が観察される。その他金縛り、鮮明な悪夢を経験することも多い。',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: 'LTPの3つの特徴は何か',
+          answerImg: [LTPfeature],
+          answer: '入力特異性・連合性・共同性（協同性）',
+          commentary: 'LTP発現にはNMDA受容体が関与している。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'LTP発現のメカニズムを説明せよ。また、LTP発現にテタヌス刺激が必要な理由と、電位を-70mVに固定するとLTPが起こらない理由を答えよ。',
+          answerImg: [LTP],
+          answer:
+            'テタヌス刺激によりNMDA受容体が活性化すると、細胞内にCa²⁺が流入し、細胞内シグナル伝達系が活性化（シナプス後部のAMPA受容体のリン酸化や数の増加/シナプス前部への逆行性シグナル伝達による伝達物質放出の増加）される。細胞内Ca²⁺濃度上昇によって特定遺伝子の転写も促進され、シナプスの長期増強維持や、新しいシナプス形成を促進する。このとき、【テタヌス刺激】での大きな脱分極がないと、NMDA受容体のMg²⁺ブロックが外れず、細胞内にCa²⁺が流入しないから。また、【電位を-70mVに固定する】と同じくNMDA受容体でMg²⁺ブロックが外れず、細胞内にCa²⁺が流入しないから。',
+          commentary: 'テタヌス刺激：高頻度の電気刺激',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'マウスの海馬の錐体細胞から記録を行っている時、求心性線維にテタヌス刺激を与えたところ、錐体細胞でのシナプス応答が増大し、それが一時間以上も続く現象がみられた。この現象はなにか。また、同じマウスにおいて錐体細胞の膜電位を-70mVに固定した状態で求心性線維にテタヌス刺激を与えてもこの現象は見られなかった。その理由を答えよ。',
+          answerImg: [LTP],
+          answer:
+            '長期増強LTP（早期LTP） / NMDA受容体のMg²⁺ブロックが外れず、細胞内にCa²⁺が流入しないから。',
+          commentary:
+            '長期増強は、早期LTP（1～3時間持続し、タンパク質合成は必要としない）・後期LTP（24時間以上持続し、タンパク合成を伴う）にわけられる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [exam20213],
+          questionSentence:
+            '野生型と、ある受容体をノックアウトした変異型のマウスを用いて電気生理学的解析を行った。モリス水迷路で、AとBは試行を重ねた後に足場を取り除いた際の、野生型か変異型かいずれかの軌跡である。変異型はどちらであるかを答え、その根拠をある受容体とはなにかを明らかにして説明しなさい。また、この実験から考えられる海馬の役割について説明しなさい。',
+          answerImg: [],
+          answer:
+            '変異型はBで、NMDA受容体が除かれたことによって長期増強が起こらなくなり、試行を重ねても足場の位置を記憶することができなかったため。この実験から、海馬は空間情報を記憶する役割を担っていると考えられる。',
+          commentary:
+            'モリス水迷路：水が不透明で、はじめのうちは足場がどこにあるかがわからないが、試行を重ねるとその位置が記録されていく。→空間記憶課題',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '恐怖条件付けができなくなるのは何を破壊したときか。また、恐怖条件付けのメカニズムについて、「学習・長期増強・無条件刺激・条件刺激」という言葉を使って説明しなさい。',
+          answerImg: [fearConditioning],
+          answer:
+            '扁桃体。恐怖条件付けとは、条件刺激（音など）と無条件刺激（電気ショックなど、恐れに繋がる刺激）を同時に繰り返す（条件付け）ことで、長期増強によって恐怖体験を学習し、条件刺激だけで無条件反応をとるようになる現象。',
+          commentary:
+            '扁桃体は恐怖条件付けの獲得、その後の恐怖記憶の形成、貯蔵、想起に中心的な役割をになう。',
+        },
       ],
     },
     {
