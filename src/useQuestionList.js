@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import exam20162 from './img/question/exam20162.png'
+import exam20161 from './img/question/exam20161.png'
 import PTP from './img/answer/PTP.png'
 import LTPfeature from './img/answer/LTPfeature.png'
 import fearConditioning from './img/answer/fearConditioning.png'
@@ -1402,7 +1404,7 @@ export const useQuestionList = () => {
       ],
     },
     {
-      groupTag: '2016本試',
+      groupTag: '2016本試(短答)',
       groupContents: [
         {
           detailInfo: '',
@@ -1628,15 +1630,77 @@ export const useQuestionList = () => {
             'S型はⅠ型(type 1)とも呼ばれ、遅筋に分類される。F型はⅡ型(type 2)とも呼ばれ、速筋に分類される。',
         },
 
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '問題3(1)',
+          questionImg: [exam20161],
+          questionSentence:
+            '杆体での光受容体機構を調べるために下図のような実験を行った。この実験で用いた膜の一部を取り出して行うパッチクランプの方法を答えよ',
+          answerImg: [],
+          answer: 'インサイドアウト',
+          commentary:
+            '2022年度の生理学実習で用いたパッチクランプの方法はホールセル法。',
+        },
+        {
+          detailInfo: '問題3(2)',
+          questionImg: [exam20161],
+          questionSentence:
+            '杆体での光受容体機構を調べるために下図のような実験を行った。チェンバー内の溶液は細胞内溶液または細胞外溶液のどちらに該当するか',
+          answerImg: [],
+          answer: '細胞内溶液',
+          commentary:
+            '同じパッチクランプでも、細胞膜を破壊しない方法（cell-attached recording）では溶液の調製は不要。実習で用いたホールセル法でもガラスピペット内の溶液を細胞内用液と揃える必要がある。',
+        },
+        {
+          detailInfo: '問題3(3)',
+          questionImg: [exam20161],
+          questionSentence:
+            '杆体での光受容体機構を調べるために下図のような実験を行った。チェンバー内にある物質を入れたところ、図のような電流応答が得られた。入れた物質名を答えよ。',
+          answerImg: [photoreception],
+          answer: 'cGMP',
+          commentary:
+            '細胞膜のcGMP依存性陽イオンチャネルがクランプされているため、cGMPに反応して開口する。',
+        },
+        {
+          detailInfo: '問題3(4)a~c',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】杆体は暗中において( a )しているが、それは杆体には( b )チャネルが存在するためグアニル酸シクラーゼによって合成された( c )が開くためである。',
+          answerImg: [photoreception],
+          answer: 'a.脱分極　b.cGMP依存性（陽イオン）　c.cGMP　',
+          commentary: '視細胞は暗中で脱分極し、光を受けると過分極する。',
+        },
+        {
+          detailInfo: '問題3(4)d~i',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】杆体に光が当たると( d )が光を吸収しメタロドプシンⅡと変化し、メタロドプシンⅡがトランスデューシンの( e )を( f )に変えることでトランスデューシンを活性化する。トランスデューシンは( g )を活性化し、(g)が(c)を加水分解することにより細胞内の( h )濃度が減少する。その結果、(b)チャネルが閉じて、(h)の流入が生じないため( i )応答を示す。',
+          answerImg: [photoreception],
+          answer:
+            'd.ロドプシン　e.GDP　f.GTP　g.ホスホジエステラーゼ(PDE)　h.Na⁺(陽イオン)　i.過分極',
+          commentary:
+            'cGMP依存性Na⁺チャネルはCa²⁺も通すが、即時の過分極応答にはNa⁺の移動が、グアニル酸シクラーゼを抑制しcGMP合成を阻害する作用にCa²⁺が関与している。',
+        },
+        {
+          detailInfo: '問題4-1',
+          questionImg: [exam20162],
+          questionSentence:
+            '大脳基底核疾患のひとつであるパーキンソン病は、黒質緻密部のドーパミンニューロンの脱落により生じる。黒質緻密部のドーパミンニューロンが脱落すると、淡蒼球内節・黒質網様部の活動が上昇することが知られている。淡蒼球内節・黒質網様部のニューロン活動の上昇がどのようにして生じるのかについて、正常時のD1受容体と直接路について説明せよ。',
+          answerImg: [],
+          answer:
+            'D1受容体は、黒質緻密部からのドーパミンを受け取り、直接路に関与する線条体の活動を抑制する。この線条体は淡蒼球内節・黒質網様部の活動を直接抑制しているため、D1受容体がドーパミンを受容しなくなると淡蒼球内節・黒質網様部の活動が増す。',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題4-2',
+          questionImg: [exam20162],
+          questionSentence:
+            '大脳基底核疾患のひとつであるパーキンソン病は、黒質緻密部のドーパミンニューロンの脱落により生じる。黒質緻密部のドーパミンニューロンが脱落すると、淡蒼球内節・黒質網様部の活動が上昇することが知られている。淡蒼球内節・黒質網様部のニューロン活動の上昇がどのようにして生じるのかについて、正常時のD2受容体と間接路について説明せよ。',
+          answerImg: [],
+          answer:
+            'D2受容体は、黒質緻密部からのドーパミンを受け取り、関節路に関与する線条体の活動を促進する。この線条体は淡蒼球外節の活動を抑制し、淡蒼球外節は視床下核の活動を抑制し、視床下核は淡蒼球内節・黒質網様部の活動を促進するので、D2受容体がドーパミンを受容しなくなると視床下核や淡蒼球内節・黒質網様部の活動が増す。',
+          commentary: '',
+        },
+
         // {
         //   detailInfo: '',
         //   questionImg: [],
