@@ -1669,7 +1669,7 @@ export const useQuestionList = () => {
           detailInfo: '問題3(4)a~c',
           questionImg: [],
           questionSentence:
-            '【空欄を埋めよ】杆体は暗中において( a )しているが、それは杆体には( b )チャネルが存在するためグアニル酸シクラーゼによって合成された( c )が開くためである。',
+            '【空欄を埋めよ】杆体は暗中において( a )しているが、それは杆体に存在する( b )チャネルがグアニル酸シクラーゼによって合成された( c )によって開くためである。',
           answerImg: [photoreception],
           answer: 'a.脱分極　b.cGMP依存性（陽イオン）　c.cGMP　',
           commentary: '視細胞は暗中で脱分極し、光を受けると過分極する。',
