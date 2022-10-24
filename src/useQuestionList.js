@@ -1,5 +1,9 @@
 import { useState } from 'react'
 
+import varietyMotorArea from './img/answer/varietyMotorArea.png'
+import planningAction from './img/answer/planningAction.png'
+import hippocampusKO from './img/answer/hippocampusKO.png'
+import exam20163 from './img/question/exam20163.png'
 import servo from './img/answer/servo.png'
 import exam20162 from './img/question/exam20162.png'
 import exam20161 from './img/question/exam20161.png'
@@ -1774,6 +1778,105 @@ export const useQuestionList = () => {
           commentary:
             '左手眼鏡なし→右手眼鏡なし→右手眼鏡あり→左手眼鏡なし→右手眼鏡なしの順で、右手眼鏡ありの段階で適応現象が、右手眼鏡なしの段階で逆適応現象が記録される。「運動の学習」。',
         },
+        {
+          detailInfo: '問題8(1)',
+          questionImg: [exam20163],
+          questionSentence:
+            '視覚性の提示信号をもとに左右のどちらかまたは同時にレバーを押す課題（図の上）をサルに課した。例えば、提示信号が左のみ点灯すれば、ゴー信号が点灯するまで待機し、ゴー信号の点灯後に左のレバーのみを押す試行を行う。図の下はこの課題を行っている時の大脳皮質運動野の異なる領域から記録された3つのニューロン活動をラスタープロットとヒストグラムで示したものである（ラスタープロットが密なほど、ヒストグラムが高いほどニューロン活動は高いことを示す）。ラスタープロットの上に書かれた矢印は運動が開始された時点を示す。　このとき、ニューロンA・B・Cは課題の遂行にあたりそれぞれどのような活動をするのか図をもとに説明せよ。',
+          answerImg: [],
+          answer:
+            'A.運動をするときに活動する　B.右手だけを使うときに活動する　C.右手を使うときに活動する　',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題8(2)',
+          questionImg: [exam20163],
+          questionSentence:
+            '視覚性の提示信号をもとに左右のどちらかまたは同時にレバーを押す課題（図の上）をサルに課した。例えば、提示信号が左のみ点灯すれば、ゴー信号が点灯するまで待機し、ゴー信号の点灯後に左のレバーのみを押す試行を行う。図の下はこの課題を行っている時の大脳皮質運動野の異なる領域から記録された3つのニューロン活動をラスタープロットとヒストグラムで示したものである（ラスタープロットが密なほど、ヒストグラムが高いほどニューロン活動は高いことを示す）。ラスタープロットの上に書かれた矢印は運動が開始された時点を示す。　このとき、ニューロン活動からニューロンA・B・Cは課題の遂行にそれぞれどのような役割があるのか述べよ',
+          answerImg: [planningAction],
+          answer:
+            'A.運動の企画や準備（動作への変換）　B.運動の調節　C.運動の出力',
+          commentary:
+            'Aは「レバーを押す」動作に、Bは運動の組み合わせに、Cは筋活動に関連して活動していると考えられる',
+        },
+        {
+          detailInfo: '問題8(3)',
+          questionImg: [exam20163],
+          questionSentence:
+            '視覚性の提示信号をもとに左右のどちらかまたは同時にレバーを押す課題（図の上）をサルに課した。例えば、提示信号が左のみ点灯すれば、ゴー信号が点灯するまで待機し、ゴー信号の点灯後に左のレバーのみを押す試行を行う。図の下はこの課題を行っている時の大脳皮質運動野の異なる領域から記録された3つのニューロン活動をラスタープロットとヒストグラムで示したものである（ラスタープロットが密なほど、ヒストグラムが高いほどニューロン活動は高いことを示す）。ラスタープロットの上に書かれた矢印は運動が開始された時点を示す。　このとき、ニューロンA・B・Cはそれぞれ大脳皮質のどの領域から記録されたと考えられるか答えよ。',
+          answerImg: [varietyMotorArea],
+          answer: 'A.運動前野（腹側部）　B.補足運動野　C.一次運動野',
+          commentary:
+            '視覚対象の空間的位置に関連する情報で条件付けられるときに強く活動するのは運動前野腹側部。運動前野背側部は色情報などの抽象的な情報で条件付けられるときに強く活動する。',
+        },
+        {
+          detailInfo: '問題9(1)',
+          questionImg: [],
+          questionSentence:
+            '野生型と変異型のマウスを用いて電気生理学的・行動学的解析を行った。野生型マウスの海馬CAの錐体細胞から記録を行っている時、求心性線維に高頻度のテタヌス刺激を与えたところ錐体細胞でのシナプス電位が刺激間に比べて増大し、それが一時間以上も続く現象がみられた。この現象をなんというか。',
+          answerImg: [LTP],
+          answer: '長期増強/LTP',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題9(2)',
+          questionImg: [],
+          questionSentence:
+            'あるグルタミン酸受容体を欠損させた変異型のマウスでは錐体細胞において長期増強（LTP）はみられなかった。このグルタミン酸受容体は何か。',
+          answerImg: [LTP],
+          answer: 'NMDA受容体',
+          commentary:
+            '長期増強では、NMDA受容体から流入するCa²⁺がAMPA受容体の数の増加やリン酸化を誘導する',
+        },
+        {
+          detailInfo: '問題9(3)',
+          questionImg: [],
+          questionSentence:
+            'マウスの錐体細胞において、細胞外液のCa²⁺濃度を低下させると長期増強（LTP）はみられなかった。その理由を60~70字で述べよ。',
+          answerImg: [LTP],
+          answer:
+            '長期増強の発現には、NMDA受容体によってCa²⁺が細胞内に流入し、細胞内シグナル伝達系を活性化する必要があるから。',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題9(4)',
+          questionImg: [],
+          questionSentence:
+            'マウスの錐体細胞において、-70mVに膜電位を固定した状態で求心性線維に高頻度のテタヌス刺激を与えても長期増強（LTP）はみられなかった。その理由を50~60字で述べよ。',
+          answerImg: [LTP],
+          answer:
+            '長期増強の発現には、（静止膜電位付近では）Mg²⁺でブロックされているNMDA受容体を、脱分極することで開口させる必要があるから。',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題9(5)',
+          questionImg: [exam20213],
+          questionSentence:
+            '図は、モリス水迷路における野生型マウスと変異型（NMDA受容体欠損）マウスの動きをトレースしたものである。それぞれどちらか答えよ。',
+          answerImg: [],
+          answer: 'A.野生型　B.変異型',
+          commentary:
+            '長期増強は記憶にも関与しており、Bでは浅瀬の位置情報の記憶が妨げられている',
+        },
+        {
+          detailInfo: '問題9(6)',
+          questionImg: [],
+          questionSentence:
+            '海馬は記憶に関与しているが、H.M氏やR.B氏のように海馬の損傷によって生じる典型的な症状は何か',
+          answerImg: [hippocampusKO],
+          answer: '健忘症',
+          commentary:
+            '健忘症amnesiaとは、必要な情報を思い出せなくなる症状のこと。外傷性/心因性　順行性/逆行性　全健忘/部分健忘',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
         // {
         //   detailInfo: '',
         //   questionImg: [],
