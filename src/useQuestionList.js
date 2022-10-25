@@ -1,5 +1,8 @@
 import { useState } from 'react'
 
+import rewardCycle from './img/answer/rewardCycle.png'
+import pleasureSignal from './img/answer/pleasureSignal.png'
+import dopamine from './img/answer/dopamine.png'
 import varietyMotorArea from './img/answer/varietyMotorArea.png'
 import planningAction from './img/answer/planningAction.png'
 import hippocampusKO from './img/answer/hippocampusKO.png'
@@ -1617,7 +1620,7 @@ export const useQuestionList = () => {
           detailInfo: '問題2(6)(a)~(f)',
           questionImg: [],
           questionSentence:
-            '次の文の空欄を埋めよ：筋収縮には、一回の活動電位に従って発生する( a )、適当な間隔で2個の刺激によって大きな収縮が生じる( b )、非伝導性の収縮で様々の化学物質、薬物や低温度などによっておこる可逆的な収縮( c )、不可逆的な持続収縮で筋のタンパク質が変性し筋実質が短縮状態になった( d )がある。(c)と(d)の代表的なものとしてそれぞれ(e)(f)がある。',
+            '次の文の空欄を埋めよ：筋収縮には、一回の活動電位に従って発生する( a )、適当な間隔で2個の刺激によって大きな収縮が生じる( b )、非伝導性の収縮で様々の化学物質、薬物や低温度などによっておこる可逆的な収縮( c )、不可逆的な持続収縮で筋のタンパク質が変性し筋実質が短縮状態になった( d )がある。(c)と(d)の代表的なものとしてそれぞれ( e )( f )がある。',
           answerImg: [tetanus],
           answer:
             'a.単収縮　b.加重　c.拘縮　d.硬直　e.カフェイン拘縮　f.死硬直',
@@ -1868,33 +1871,36 @@ export const useQuestionList = () => {
           commentary:
             '健忘症amnesiaとは、必要な情報を思い出せなくなる症状のこと。外傷性/心因性　順行性/逆行性　全健忘/部分健忘',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '問題10',
+          questionImg: [],
+          questionSentence:
+            '末梢受容野刺激とニューロン活動の関係を調べた結果と解釈について、次の空欄を埋めよ。・各層で記録された全てのニューロンが一つの( a )の感覚刺激にのみ応答する。・これらのニューロンはほぼ同一の( b )を持つ。・一つの垂直な( c )にあるすべてのニューロンはある部位の末梢の刺激に対してほぼ同じ( d )で発火した。...以上の実験的事実から、猫の体性感覚野には( e )的(c)が存在する事がわかった。',
+          answerImg: [column],
+          answer: '(a)種類　(b)受容野　(c)円柱/カラム　(d)潜時　(e)機能',
+          commentary:
+            '視床からの投射は、主に一次体性感覚野の3a・3b野に入力され、情報が統合=抽象化されながら受容野が拡大されながら1・2野へと伝達される',
+        },
+        {
+          detailInfo: '問題11(1)',
+          questionImg: [],
+          questionSentence:
+            '【報酬系について、空欄を埋めよ】報酬系は構成するニューロン群の( a )の放出と受容の( b )情動に基づく行動を引き起こす。たとえば、セロトニン神経系は( c )核から脳全体へと広範囲に投射している。セロトニン神経系においてセロトニン分泌量が過少であれば( d )になり、逆に過多であれば( e )となる',
+          answerImg: [rewardCycle],
+          answer: 'a.神経伝達物質　b.快　c.縫線　d.不安　e.攻撃的',
+          commentary: '詳しい根拠は不明',
+        },
+        {
+          detailInfo: '問題11(2)',
+          questionImg: [],
+          questionSentence:
+            '報酬系について、視床下部が情動行動の動機付けに関与すると考えられるのはなぜか',
+          answerImg: [pleasureSignal, dopamine],
+          answer:
+            '視床下部外側野を通るドーパミンニューロンの軸索を破壊すると、動物は摂食をやめにはするが食物に対する快楽の反応は減らない、すなわち視床下部を通るドーパミン軸索は動機付けに関与していることを発見したから。',
+          commentary:
+            'ドーパミンは快楽そのものではなく、情動行動に対しての「欲求・動機付け」に関与していると考えられるようになった。ドーパミン作動性ニューロンは黒質や腹側被蓋野VTA（中脳）に細胞体があって、視床下部を通過し前脳に投射している。',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
