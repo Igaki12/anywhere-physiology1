@@ -1901,6 +1901,63 @@ export const useQuestionList = () => {
           commentary:
             'ドーパミンは快楽そのものではなく、情動行動に対しての「欲求・動機付け」に関与していると考えられるようになった。ドーパミン作動性ニューロンは黒質や腹側被蓋野VTA（中脳）に細胞体があって、視床下部を通過し前脳に投射している。',
         },
+        {
+          detailInfo: '問題12(1)',
+          questionImg: [exam20163],
+          questionSentence:
+            '【空欄を埋めよ、アルファベットは図中と一致する。】におい物質が受容体タンパク質（図のR）に受容され、これとカップルしている( a )が活性化される。この活性化は次に( b )に伝えられ。その結果、ATPから( c )が産生される。(c)は、細胞膜に存在している( d )に直接働きかけて開口させることにより細胞内へ( e )や( f )が流入し、細胞を電気的に興奮させる。その(f)は( g )を活性化する。その結果( h )が細胞外へ流出して受容器電位応答を増幅する。順応はにおい応答によって大量に細胞内に流入した(f)や(g)に作用することによって生じる。',
+          answerImg: [],
+          answer:
+            'a.Golf　b.アデニル酸シクラーゼ　c.cAMP　d.cAMP依存性陽イオンチャネル　e.Na⁺　f.Ca²⁺　g.Cl⁻',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題12(2)',
+          questionImg: [],
+          questionSentence:
+            '（においに対する）順応とはどのような現象か？また、その意義について述べなさい。',
+          answerImg: [],
+          answer:
+            '順応とは感度を下げずに感覚細胞のダイナミックレンジを広くする意義をもつ。濃い濃度のにおいの中でも、普通の濃度の時と同じように、細かいにおいの変化をすぐに感知し、周囲の環境の変化をすぐに知ることで、危険を回避することができる。',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題13',
+          questionImg: [],
+          questionSentence:
+            '体性感覚について。内臓には侵害受容器が存在しないのに、内臓に痛みを感じることがある。どのようなメカニズムによるものなのか、述べなさい。',
+          answerImg: [dermatome],
+          answer:
+            '内臓痛は平滑筋・骨格筋の強い収縮により、局所の虚血とそれに伴う組織液の酸性化、K⁺の放出、発痛物質の蓄積などにより、内臓の痛覚線維の興奮閾値が低下し、過敏となり生じる。また、閉塞に逆らって、内容物を移送することで強い収縮や伸展が起こると、痛みが生じる。',
+          commentary: '',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
         // {
         //   detailInfo: '',
         //   questionImg: [],
