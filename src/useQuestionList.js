@@ -1,5 +1,8 @@
 import { useState } from 'react'
 
+import monoamineCholine from './img/answer/monoamineCholine.png'
+import differencesNonREMtoREM from './img/answer/differencesNonREMtoREM.png'
+import exam20164 from './img/question/exam20164.png'
 import rewardCycle from './img/answer/rewardCycle.png'
 import pleasureSignal from './img/answer/pleasureSignal.png'
 import dopamine from './img/answer/dopamine.png'
@@ -1941,24 +1944,37 @@ export const useQuestionList = () => {
             'TRPイオンチャネルファミリーには、温度を感知するのに25℃ピークのものと40℃ピークのものがあるが、体温近くの温度である33℃でピークをもつものは存在しておらず、また、25℃と40℃でピークを迎えるものの間の温度であるから、体温知覚の温度は感じない。',
           commentary: '',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '問題14(1)',
+          questionImg: [exam20164],
+          questionSentence:
+            '図は無麻酔ラットで記録したモノアミン作動性ニューロンA、およびコリン作動性ニューロンBの、覚醒・睡眠に伴う自発活動の変化を示している。記録は上から1秒当たりの自発発火頻度・単一ニューロン活動・皮質脳波・頚筋筋電図が示されている。( a )( b )( c )( d )( e )( f )は覚醒・レム睡眠・ノンレム睡眠のいずれの状態を示しているのか書きなさい。',
+          answerImg: [monoamineCholine, EEG],
+          answer:
+            'a.覚醒　b.ノンレム睡眠　c.レム睡眠　d.ノンレム睡眠　e.レム睡眠　f.覚醒',
+          commentary:
+            'ノンレム睡眠特有の高振幅徐波からある程度絞り込むことができる。モノアミン/アセチルコリン/オレキシン/ヒスタミンは覚醒、コリンはレム睡眠を司る。REM睡眠時は首や胴部の筋肉が弛緩する。',
+        },
+        {
+          detailInfo: '問題14(2)',
+          questionImg: [exam20164],
+          questionSentence:
+            '図は無麻酔ラットで記録したモノアミン作動性ニューロンA、およびコリン作動性ニューロンBの、覚醒・睡眠に伴う自発活動の変化を示している。記録は上から1秒当たりの自発発火頻度・単一ニューロン活動・皮質脳波・頚筋筋電図が示されている。AとBのニューロンは興奮するとどのような伝達物質を放出するか答えなさい。',
+          answerImg: [monoamineCholine],
+          answer: 'A.モノアミン　B.アセチルコリン',
+          commentary: '',
+        },
+        {
+          detailInfo: '問題14(3)',
+          questionImg: [],
+          questionSentence:
+            '覚醒・レム睡眠・ノンレム睡眠における、脳波・筋電図の特徴を述べなさい。',
+          answerImg: [differencesNonREMtoREM, EEG],
+          answer:
+            '【脳波】覚醒時の脳波は閉眼している時などにα波が出たり、開眼したり何かに集中したりするとα波が消えたりしている。レム睡眠時は低電位で不規則なθ波やPGO spikesなどが見られ、ノンレム睡眠時は特徴的な高振幅徐波などがみられる。 【筋電図】覚醒状態では筋緊張がみられ、レム睡眠時には首や胴部の筋肉は弛緩している。ノンレム睡眠時は全体的に筋緊張が減少しており、眼球運動はみられない。。',
+          commentary:
+            '筋緊張は覚醒状態＞ノンレム睡眠＞レム睡眠で、例外は眼球運動。',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
