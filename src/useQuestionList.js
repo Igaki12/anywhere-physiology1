@@ -1,5 +1,8 @@
 import { useState } from 'react'
 
+import typeOfAmygdala from './img/answer/typeOfAmygdala.png'
+import kluverBucy from './img/answer/kluverBucy.png'
+import exam20171 from './img/question/exam20171.png'
 import monoamineCholine from './img/answer/monoamineCholine.png'
 import differencesNonREMtoREM from './img/answer/differencesNonREMtoREM.png'
 import exam20164 from './img/question/exam20164.png'
@@ -1404,6 +1407,166 @@ export const useQuestionList = () => {
         },
         // {
         //   detailInfo: '問題7',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   choices: [],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+      ],
+    },
+    {
+      groupTag: '2017本試',
+      groupContents: [
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】体性感覚には温度や侵害刺激を感知する( a )と、筋長や関節角を感知する( b )がある。温度を感知するチャネルには( c )があり、これは温度だけでなく( d )も感知する。侵害刺激を伝える線維には( e )線維と( f )線維がある。また、内臓の痛みを、同じ脊髄に入力する( g )内の皮膚の痛みとして感じることがある。これを( h )という。',
+          choices: [],
+          answerImg: [nociception],
+          answer:
+            'a.表在感覚　b.深部感覚　c.TRP　d.化学物質　e.Aδ　f.C　g.デルマトーム　h.関連痛',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '両側の扁桃体を切除することによって発症する疾患を何というか、答えよ。',
+          answerImg: [kluverBucy],
+          answer: 'クリューヴァー・ビューシー症候群',
+          commentary: 'Kluver-Bucy syndrome。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'クリュ－ヴァー・ビューシー症候群の典型的な症状を4つ答えよ。',
+          answerImg: [kluverBucy],
+          answer:
+            '口唇傾向・過食・恐怖心の欠如・視覚失認・視覚性過敏反応・性行動の異常　のなかから4つ',
+          commentary: '扁桃体は情動回路で重要な働きを担っている。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [exam20171],
+          questionSentence:
+            '図は報酬性物体・嫌悪性物体・無意味物体に対するサル扁桃体の意味認知ニューロンと価値評価ニューロンの神経応答を記録したグラフである。AとBはそれぞれ価値評価ニューロン・意味認知ニューロンのどちらであるか、理由をつけて答えよ。',
+          answerImg: [typeOfAmygdala],
+          answer: 'A.価値評価ニューロン　B.意味認知ニューロン',
+          commentary:
+            'Aは無意味物体以外の物体に対して応答の強度を変化させることで価値評価を行っており、Bは報酬性物体あるいは嫌悪性物体のうち1つの物体にだけ応答することで物体の認知を行っている。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '飲水行動に関わる中枢の器官を3つ挙げよ。',
+          answerImg: [drinkingBehaviorICF],
+          answer: '終板脈管器官OVLT・脳弓下器官SFO・中心視索前核MnPO',
+          commentary: '3つ合わせて第三脳室腹側部AV3Vと呼ぶ。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '細胞外液の減少を感知して飲水行動を誘導する機序を説明せよ。',
+          answerImg: [drinkingBehaviorECF],
+          answer:
+            '細胞外液量の減少は腎臓・心肺の圧受容器で感知され、RAA系や自律神経系経由でAV3Vへと伝えられ、次に大脳皮質・大脳辺縁系・他の視床下部領域へと情報が伝わって飲水行動が引き起こされる。',
+          commentary:
+            '細胞外液量の減少は血圧の低下として感知される。腎臓には腎動脈圧センサーがあり、頚動脈・心肺部には高圧・低圧受容器がある。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '細胞内液量の減少を感知して飲水行動を誘導する機序を説明せよ。',
+          answerImg: [drinkingBehaviorICF],
+          answer:
+            '第三脳室腹側部AV3Vの浸透圧受容ニューロンが血漿浸透圧の上昇を感知し、MnPOで浸透圧情報の入出力の統合が行われた後、大脳皮質・大脳辺縁系・他の視床下部領域へと情報が伝わって飲水行動が引き起こされる。',
+          commentary:
+            '細胞内液量の減少は血漿浸透圧の上昇として感知される。脳室周囲器官グリア細胞にはNaxチャネルが存在し、体液中のNa⁺濃度が上昇すると活性化したNaxチャネル発現グリア細胞からエポキシエイコサトリエン酸が放出され、TRPV4を発現する神経細胞を活性化させることで水分摂取行動・塩分摂取抑制行動・Na⁺利尿が誘発される。',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   choices: [],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   choices: [],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   choices: [],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
         //   questionImg: [],
         //   questionSentence:
         //     '',
