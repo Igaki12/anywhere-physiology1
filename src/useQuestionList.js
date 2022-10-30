@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
-import unidirectionalConduction from './img/answer/unidirectionalCondution.png'
+import retinalGanglion from './img/answer/retinalGanglion.png'
+import unidirectionalConduction from './img/answer/unidirectionalConduction.png'
 import basalGangliaSystems from './img/answer/basalGangliaSystems.png'
 import exam20172 from './img/question/exam20172.png'
 import typeOfAmygdala from './img/answer/typeOfAmygdala.png'
@@ -1533,7 +1534,7 @@ export const useQuestionList = () => {
           answer:
             '腹側経路は1次視覚野から側頭葉を経由する経路で、物体の色や形を識別する。背側経路は1次視覚野から頭頂葉を経由する経路で、主に物体の動きを感知する。',
           commentary:
-            '腹側経路は小細胞経路ともよばれ、外側膝状体のミジェット神経節細胞から1次視覚野へ入力される。背側経路は大細胞経路とも呼ばれ、外側膝状体のパラソル神経節細胞から1次視覚野へ入力される。',
+            '腹側経路は小細胞経路ともよばれ、網膜神経節細胞のミジェット神経節細胞から1次視覚野へ入力される。背側経路は大細胞経路とも呼ばれ、網膜神経節細胞のパラソル神経節細胞から1次視覚野へ入力される。',
         },
         {
           detailInfo: '',
@@ -1576,24 +1577,26 @@ export const useQuestionList = () => {
             '暗時はホスホジエステラーゼPDEが活性化されていないため、cGMPが十分に存在し、cGMP依存性陽イオンチャネルが開口しているので脱分極している。',
           commentary: '',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'ON型双極細胞における興奮伝達から活動電位のメカニズムについて、説明せよ。',
+          answerImg: [mGluR6],
+          answer:
+            '視細胞が光を受けて過分極すると、グルタミン酸の放出が減少し、双極細胞のmGluR6受容体の活性が下がり、共役しているGタンパク質(G0)が不活化され、TRPM1チャネルが開くことで脱分極する。',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: 'ON型網膜神経節細胞の受容野について、説明せよ',
+          answerImg: [retinalGanglion],
+          answer:
+            '中心にオンの刺激、周辺にオフの刺激を受けたときに最も活動が活発になる、中心-周辺拮抗型受容野。',
+          commentary:
+            '網膜神経節細胞は網膜から脳への唯一の出力細胞で、グルタミン酸受容体をもちグルタミン酸作動性ニューロン。M型神経節細胞は大型で外側膝状体大細胞層へ出力し、P型神経節細胞は小型で外側膝状体小細胞層へ出力される。',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
