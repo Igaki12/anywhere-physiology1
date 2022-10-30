@@ -1,5 +1,8 @@
 import { useState } from 'react'
 
+import unidirectionalConduction from './img/answer/unidirectionalCondution.png'
+import basalGangliaSystems from './img/answer/basalGangliaSystems.png'
+import exam20172 from './img/question/exam20172.png'
 import typeOfAmygdala from './img/answer/typeOfAmygdala.png'
 import kluverBucy from './img/answer/kluverBucy.png'
 import exam20171 from './img/question/exam20171.png'
@@ -1490,6 +1493,171 @@ export const useQuestionList = () => {
           commentary:
             '細胞内液量の減少は血漿浸透圧の上昇として感知される。脳室周囲器官グリア細胞にはNaxチャネルが存在し、体液中のNa⁺濃度が上昇すると活性化したNaxチャネル発現グリア細胞からエポキシエイコサトリエン酸が放出され、TRPV4を発現する神経細胞を活性化させることで水分摂取行動・塩分摂取抑制行動・Na⁺利尿が誘発される。',
         },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '嗅細胞と味細胞の違いを述べよ。',
+          answerImg: [olfactorySynapse, tasteBuds],
+          answer:
+            '嗅細胞が受容したにおい情報は篩板を通過し嗅球で統合し中枢へ伝達するのに対して、味細胞は味蕾内で複数の味情報の応答の組み合わせにより味を感知し中枢へ伝える。',
+          commentary:
+            '参考：ラベルドライン理論（特異的な味覚情報を送る）、アクロスファイバー理論（複雑な味覚情報を送る）',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'レム睡眠とノンレム睡眠の違いを、脳波・筋電図・夢・目覚め・眠りの深さについてかけ。',
+          answerImg: [differencesNonREMtoREM],
+          answer:
+            'レム睡眠では、脳波は低電位で不規則的なθ波やPGOspikesが特徴的で、首や胴部の筋肉は弛緩しきっている。急速眼球運動にあわせてストーリー性のある視覚的な夢をみていて、眠りは浅く、この間に目覚めると気分が良く、はつらつとしている。ノンレム睡眠では、脳波は特徴的な高振幅徐波を示し、筋緊張は覚醒状態とくらべると少ない。瞬間的に映像・考え・空想などが現れる夢を見ることが多く、この間に目覚めるとぼおっとして記憶喪失のような状態となる。よって、ノンレム睡眠中は眠りが深い。',
+          commentary:
+            'その他、レム睡眠中はアセチルコリン作動性ニューロンが活発に活動しており、呼吸数や脈拍が（ノンレム睡眠と比べて）高く、血圧が乱高下する。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】小脳への入力は、脳幹網様体などに起始核をもつ( a )線維と、( b )に起始核をもち下小脳脚を通過する( c )線維によって行われる。(a)線維は小脳皮質内で顆粒細胞とシナプスを形成し、( d )線維を伝ってプルキンエ細胞に入力する。(c)線維と(d)線維が同時に活性化されると、(d)線維とプルキンエ細胞間のシナプス伝達効率が一定期間低下する。この現象を( e )といい、この時の(c)線維からの入力信号を( f )信号と呼ぶ。',
+          answerImg: [cerebellum, cerebellumLearning],
+          answer:
+            'a.苔状　b.下オリーブ核　c.登上　d.平行　e.長期抑圧LTD　f.教師',
+          commentary: '小脳からの出力はプルキンエ細胞が唯一。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '一次視覚野から高次視覚野への2つの投射経路とその役割について述べよ。',
+          answerImg: [visualPathway],
+          answer:
+            '腹側経路は1次視覚野から側頭葉を経由する経路で、物体の色や形を識別する。背側経路は1次視覚野から頭頂葉を経由する経路で、主に物体の動きを感知する。',
+          commentary:
+            '腹側経路は小細胞経路ともよばれ、外側膝状体のミジェット神経節細胞から1次視覚野へ入力される。背側経路は大細胞経路とも呼ばれ、外側膝状体のパラソル神経節細胞から1次視覚野へ入力される。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '軸索での活動電位の伝播について、通常活動電位は減衰せず（不減衰伝導）、細胞体から神経終末へ一方向に伝わっていく（一方向伝導）。この機構について、細胞膜でのイオンチャネルの活動に着目して説明せよ。',
+          answerImg: [unidirectionalConduction],
+          answer:
+            '軸索では、活動電位が伝わると局所的な活動電位が発生し、これが連鎖していくことで活動電位が減衰することなく伝播していく。このとき、活動電位の発生に必須の電位依存性Na⁺チャネルが長い不応期を持つため、通常は活動電位が逆流することなく一方向に伝わっていく。',
+          commentary:
+            '軸索の活動電位は両方向伝導の性質をもつが、生体では活動電位は樹状突起からのみ入力されるため、軸索を一方向に伝わっていく。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [exam20172],
+          questionSentence:
+            '大脳基底核の直接路と間接路について、それぞれを構成するニューロン活動の増減と経路の機能から、それぞれ何系と呼ばれているか。',
+          answerImg: [basalGangliaSystems],
+          answer: '直接路：脱抑制系、間接路：抑制強化系',
+          commentary:
+            '直接路はアクセル（筋活動の抑制を抑制）、間接路はブレーキ（筋活動の抑制を促進）にたとえられる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '骨格筋の興奮収縮連関(E-C coupling)の機構について、次の語句を用いて説明せよ。【語句：T管・筋小胞体・トロポニン】',
+          answerImg: [excitationContractionCoupling],
+          answer:
+            'T管を通じて活動電位が筋細胞内へ伝導され、triadにおいて隣接する筋小胞体のCa²⁺放出チャネルから筋形質中にCa²⁺が放出される。Ca²⁺がトロポニンに結合すると、ミオシンとアクチンによる収縮が始まる。',
+          commentary:
+            '骨格筋の収縮Contractionと筋細胞膜の活動電位Excitationとの連関',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '暗時に杆体細胞が脱分極している理由を記述せよ。',
+          answerImg: [opticReceptor],
+          answer:
+            '暗時はホスホジエステラーゼPDEが活性化されていないため、cGMPが十分に存在し、cGMP依存性陽イオンチャネルが開口しているので脱分極している。',
+          commentary: '',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
         // {
         //   detailInfo: '',
         //   questionImg: [],
