@@ -1618,48 +1618,50 @@ export const useQuestionList = () => {
           commentary:
             '定位反応：外部から何らかの刺激が提示されると、そちらの方向へ視線などを向ける行動をとること。視覚・聴覚・体性感覚情報が上丘に収束して制御を行っている。',
         },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '伸張反射について、次の語句に続く形で説明しなさい。【筋が引き伸ばされると...】',
+          answerImg: [stretchReflex],
+          answer:
+            '筋が引き伸ばされると、筋紡錘からの興奮がⅠa線維を通して脊髄へ伝えられ、同名筋や協同筋を支配するα運動ニューロンを興奮させる。',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '伸張反射が単シナプス性で自原性反射といえる理由を説明せよ。',
+          answerImg: [stretchReflex],
+          answer:
+            '伸張反射では脊髄に入るⅠa群線維が直接α運動ニューロンとシナプスを形成しているので、単シナプス性といえる。また、伸張反射では筋紡錘の同名筋を支配するα運動ニューロンを興奮させるため、自原性反射といえる。',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'マウス海馬の神経細胞にテタヌス刺激を行ったところ、シナプス応答の増大が数時間以上持続した。この現象を何というか。また、テタヌス刺激とは何か、簡潔に説明せよ。',
+          answerImg: [LTP],
+          answer: '現象：長期増強(LTP)　テタヌス刺激：高頻度の電気刺激',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '蝸牛の有毛細胞について、感覚毛の屈曲から神経伝達物質放出までの機構を説明せよ。また、放出された神経伝達物質を受け取る細胞は何か、答えよ。',
+          answerImg: [hairCell],
+          answer:
+            '感覚毛が適方向に屈曲すると先端の機械受容器チャネルが開き、内リンパ液からK⁺が細胞内へ流入する。この脱分極により、電位依存性Ca²⁺チャネルが開口し、シナプス小胞から神経伝達物質（グルタミン酸）が放出される。この神経伝達物質はラセン神経節ニューロン（の神経突起）が受容する。',
+          commentary: '',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
         //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
+        //     '筋肉で生じる',
         //   answerImg: [],
         //   answer: '',
         //   commentary: '',
