@@ -1422,7 +1422,7 @@ export const useQuestionList = () => {
       ],
     },
     {
-      groupTag: '2017本試',
+      groupTag: '2017本試(再現)',
       groupContents: [
         {
           detailInfo: '',
@@ -1657,24 +1657,28 @@ export const useQuestionList = () => {
             '感覚毛が適方向に屈曲すると先端の機械受容器チャネルが開き、内リンパ液からK⁺が細胞内へ流入する。この脱分極により、電位依存性Ca²⁺チャネルが開口し、シナプス小胞から神経伝達物質（グルタミン酸）が放出される。この神経伝達物質はラセン神経節ニューロン（の神経突起）が受容する。',
           commentary: '',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '筋肉で生じる',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '誘発筋電図について、皮膚の電気刺激によってH波とM波が生じる機序について説明せよ。また、刺激強度を増すとH波が消滅した理由について、簡潔に説明せよ。',
+          answerImg: [electromyogram],
+          answer:
+            '電気刺激がⅠa群線維に伝わって脊髄に入り、α運動ニューロンを通じて筋肉を興奮させる経路でH波は生じ、電気刺激がα運動ニューロンに伝わり筋肉を興奮させる経路でM波が生じた。刺激強度を増すとα運動ニューロンから脊髄へ伝播する活動電位とH波の経路で伝わる活動電位が衝突し、筋電図でH波がみられなくなる。',
+          commentary:
+            'H波はⅠa群線維→α運動線維→筋、M波はα運動線維→筋。活動電位が衝突すると不応期の関係で両方とも消滅する。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '【空欄を埋めよ】運動神経終末では脱分極により、電位依存性( a )チャネルが開口することで細胞内に(a)が流入し、シナプス小胞がシナプス前膜に融合することで、神経伝達物質である( b )が神経筋接合部のシナプス間隙に( c )放出される。運動終板の(b)受容体チャネルは開口すると( c )イオンを受動輸送させ、電位依存性Na⁺チャネルが開口して活動電位が発生する。シナプス間隙に放出された(b)は速やかに( d )によって処理され、再びシナプス小胞に輸送される。',
+          answerImg: [NMJ],
+          answer:
+            'a.Ca²⁺　b.アセチルコリン　c.陽イオン　d.コリンアセチルトランスフェラーゼ(ChAT)',
+          commentary:
+            '神経伝達物質は放出されると速やかにシナプス間隙から除去される。アセチルコリンなら分解され、グルタミン酸・GABA・グリシン・モノアミンは回収される。',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
@@ -1754,7 +1758,7 @@ export const useQuestionList = () => {
       ],
     },
     {
-      groupTag: '2016本試(短答)',
+      groupTag: '2016本試',
       groupContents: [
         {
           detailInfo: '',
