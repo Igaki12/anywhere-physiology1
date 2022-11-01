@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+import nonDecrementalConduction from './img/answer/nonDecrementalConduction.png'
 import retinalGanglion from './img/answer/retinalGanglion.png'
 import unidirectionalConduction from './img/answer/unidirectionalConduction.png'
 import basalGangliaSystems from './img/answer/basalGangliaSystems.png'
@@ -1672,12 +1673,66 @@ export const useQuestionList = () => {
           detailInfo: '',
           questionImg: [],
           questionSentence:
-            '【空欄を埋めよ】運動神経終末では脱分極により、電位依存性( a )チャネルが開口することで細胞内に(a)が流入し、シナプス小胞がシナプス前膜に融合することで、神経伝達物質である( b )が神経筋接合部のシナプス間隙に( c )放出される。運動終板の(b)受容体チャネルは開口すると( c )イオンを受動輸送させ、電位依存性Na⁺チャネルが開口して活動電位が発生する。シナプス間隙に放出された(b)は速やかに( d )によって処理され、再びシナプス小胞に輸送される。',
-          answerImg: [NMJ],
+            '【空欄を埋めよ】運動神経終末が脱分極すると、電位依存性( a )チャネルが開口することで細胞内に(a)が流入し、シナプス小胞がシナプス前膜に融合することで神経伝達物質である( b )が神経筋接合部のシナプス間隙に( c )放出される。運動終板の(b)受容体チャネルは開口すると( c )イオンを受動輸送し、電位依存性Na⁺チャネルが開口して活動電位が発生する。シナプス間隙に放出された(b)は速やかに( d )によって処理され、再びシナプス小胞に輸送される。',
+          answerImg: [NMJ, recycleNeurotransmitter],
           answer:
             'a.Ca²⁺　b.アセチルコリン　c.陽イオン　d.コリンアセチルトランスフェラーゼ(ChAT)',
           commentary:
             '神経伝達物質は放出されると速やかにシナプス間隙から除去される。アセチルコリンなら分解され、グルタミン酸・GABA・グリシン・モノアミンは回収される。',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence:
+        //     '',
+        //   choices: [],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+      ],
+    },
+    {
+      groupTag: '2017追試',
+      groupContents: [
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '活動電位の生成機構を説明せよ',
+          answerImg: [actionPotential],
+          answer:
+            '電気刺激により電位依存性Na⁺チャネルが開口するとNa⁺が細胞内へ流入し膜電位は脱分極する。このNa⁺チャネルは速やかに不活化し、遅延整流性K⁺チャネルの開口でK⁺が細胞外へ流出すると膜電位は再分極される。',
+          commentary: '',
+        },
+
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '軸索において活動電位の伝播が不減衰である理由を説明せよ',
+          answerImg: [nonDecrementalConduction],
+          answer:
+            '軸索では、伝わった活動電位が電位依存性Na⁺チャネルの閾値を超えると活動電位を発生させ、さらに近くの細胞膜で活動電位を発生させることで、局所的な活動電位の発生が伝わっていく。この活動電位の大きさが減衰せず一定であるから。',
+          commentary: '樹状突起や細胞体では減衰する',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '軸索は刺激に対して両方向へ伝導する性質を持っているのに、通常は片方向へしか伝導しない理由を説明せよ',
+          answerImg: [unidirectionalConduction],
+          answer:
+            '通常は細胞体から軸索へ活動電位が伝わり、局所的な活動電位の発生が軸索を伝わっていくが、活動電位発生後の不応期により伝わる方向と逆方向の細胞膜は脱分極できない（しにくい）ため。',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '化学シナプスでの興奮伝達について説明しなさい',
+          answerImg: [recycleNeurotransmitter],
+          answer:
+            '活動電位がシナプス前終末に伝達されると、電位依存性Ca²⁺チャネルが開口しCa²⁺が流入することで、シナプス小胞のシナプトタグミンがCa²⁺と結合しシナプス前膜にシナプス小胞が融合し、神経伝達物質の開口放出が行われる。シナプス後部の受容体に神経伝達物質が結合すると陽イオンチャネルが開口し、興奮が伝達されていく。',
+          commentary: '',
         },
         // {
         //   detailInfo: '',
@@ -1720,37 +1775,6 @@ export const useQuestionList = () => {
         //   questionImg: [],
         //   questionSentence:
         //     '',
-        //   choices: [],
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   choices: [],
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   choices: [],
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   choices: [],
         //   answerImg: [],
         //   answer: '',
         //   commentary: '',

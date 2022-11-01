@@ -108,22 +108,14 @@ export const Setting = ({
       console.log('1回だけ表示される')
     }
   }
-  // ここからCookieを使った設定の引継ぎ
-
-  // if (jsCookie.get('questionOrder')) {
-  //   savedSettingDetail.questionOrder = jsCookie.get('questionOrder')
-  // }
-
-  // if (jsCookie.get('questionRange')) {
-  //   savedSettingDetail.questionRange = jsCookie.get('questionRange').split(',')
-  // }
-  // if (jsCookie.get('wordFilter')) {
-  //   savedSettingDetail.wordFilter = jsCookie.get('wordFilter').split(',')
-  // }
-  // if (jsCookie.get('history')) {
-  //   remainingNum = jsCookie.get('history').split(',').length - 1
-  //   console.log(jsCookie.get('history').split(','))
-  // }
+  const scrollToTop = () => {
+    // let element = document.documentElement
+    // let bottom = element.scrollHeight - element.clientHeight
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
   return (
     <>
       <Box
@@ -186,6 +178,9 @@ export const Setting = ({
                 nextQuestion(settingDetail)
                 makeSetting()
                 saveHistory(history[history.length - 1], settingDetail)
+                setTimeout(() => {
+                  scrollToTop()
+                }, 1000)
               }}
             >
               はじめから
@@ -214,6 +209,7 @@ export const Setting = ({
                 // 現在非同期バグが発生しており、ロードしたsettingをこの形でないと反映できない。がんばれ、未来の俺！
                 setTimeout(() => {
                   updateAllSettings(loadData.status)
+                  scrollToTop()
                 }, 2000)
               }}
             >
