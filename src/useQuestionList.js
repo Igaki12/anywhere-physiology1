@@ -759,7 +759,8 @@ export const useQuestionList = () => {
           questionSentence: 'LTPの3つの特徴は何か',
           answerImg: [LTPfeature],
           answer: '入力特異性・連合性・共同性（協同性）',
-          commentary: 'LTP発現にはNMDA受容体が関与している。',
+          commentary:
+            'LTP発現にはNMDA受容体が関与している。ヘブの法則とは、「ニューロンAとニューロンBを発火させると2つのニューロンの結合が強まる」ということ。記憶とは適切なニューロン同士の結合力の変化である',
         },
         {
           detailInfo: '',
@@ -1208,7 +1209,7 @@ export const useQuestionList = () => {
           answerImg: [prismAdaptation],
           answer: 'プリズム適応',
           commentary:
-            '小脳の主要な機能のひとつ。外部や身体内部からの感覚入力に合わせて、運動の向きや大きさなどを調整していく',
+            '小脳の主要な機能のひとつ。運動を繰り返す間に、長期抑圧LTDに基づいて運動の向きや大きさなどを調整していく→誤差学習。大脳基底核で報酬・懲罰経験を通じて行動を最適化していく学習は強化学習と呼ばれる。',
         },
         {
           detailInfo: '問題5(2)',
@@ -1586,7 +1587,8 @@ export const useQuestionList = () => {
           answerImg: [mGluR6],
           answer:
             '視細胞が光を受けて過分極すると、グルタミン酸の放出が減少し、双極細胞のmGluR6受容体の活性が下がり、共役しているGタンパク質(G0)が不活化され、TRPM1チャネルが開くことで脱分極する。',
-          commentary: '',
+          commentary:
+            '双極細胞は網膜内顆粒層で杆体/錐体細胞からの信号を神経節細胞に繋げる役目をする。ON型双極細胞は光がONの時に脱分極',
         },
         {
           detailInfo: '',
@@ -1676,7 +1678,7 @@ export const useQuestionList = () => {
             '【空欄を埋めよ】運動神経終末が脱分極すると、電位依存性( a )チャネルが開口することで細胞内に(a)が流入し、シナプス小胞がシナプス前膜に融合することで神経伝達物質である( b )が神経筋接合部のシナプス間隙に( c )放出される。運動終板の(b)受容体チャネルは開口すると( c )イオンを受動輸送し、電位依存性Na⁺チャネルが開口して活動電位が発生する。シナプス間隙に放出された(b)は速やかに( d )によって処理され、再びシナプス小胞に輸送される。',
           answerImg: [NMJ, recycleNeurotransmitter],
           answer:
-            'a.Ca²⁺　b.アセチルコリン　c.陽イオン　d.コリンアセチルトランスフェラーゼ(ChAT)',
+            'a.Ca²⁺　b.アセチルコリン　c.陽イオン　d.アセチルコリンエステラーゼ(AChE)',
           commentary:
             '神経伝達物質は放出されると速やかにシナプス間隙から除去される。アセチルコリンなら分解され、グルタミン酸・GABA・グリシン・モノアミンは回収される。',
         },
@@ -1692,95 +1694,95 @@ export const useQuestionList = () => {
         // },
       ],
     },
-    {
-      groupTag: '2017追試',
-      groupContents: [
-        {
-          detailInfo: '',
-          questionImg: [],
-          questionSentence: '活動電位の生成機構を説明せよ',
-          answerImg: [actionPotential],
-          answer:
-            '電気刺激により電位依存性Na⁺チャネルが開口するとNa⁺が細胞内へ流入し膜電位は脱分極する。このNa⁺チャネルは速やかに不活化し、遅延整流性K⁺チャネルの開口でK⁺が細胞外へ流出すると膜電位は再分極される。',
-          commentary: '',
-        },
+    // {
+    //   groupTag: '2017追試',
+    //   groupContents: [
+    //     {
+    //       detailInfo: '',
+    //       questionImg: [],
+    //       questionSentence: '活動電位の生成機構を説明せよ',
+    //       answerImg: [actionPotential],
+    //       answer:
+    //         '電気刺激により電位依存性Na⁺チャネルが開口するとNa⁺が細胞内へ流入し膜電位は脱分極する。このNa⁺チャネルは速やかに不活化し、遅延整流性K⁺チャネルの開口でK⁺が細胞外へ流出すると膜電位は再分極される。',
+    //       commentary: '',
+    //     },
 
-        {
-          detailInfo: '',
-          questionImg: [],
-          questionSentence:
-            '軸索において活動電位の伝播が不減衰である理由を説明せよ',
-          answerImg: [nonDecrementalConduction],
-          answer:
-            '軸索では、伝わった活動電位が電位依存性Na⁺チャネルの閾値を超えると活動電位を発生させ、さらに近くの細胞膜で活動電位を発生させることで、局所的な活動電位の発生が伝わっていく。この活動電位の大きさが減衰せず一定であるから。',
-          commentary: '樹状突起や細胞体では減衰する',
-        },
-        {
-          detailInfo: '',
-          questionImg: [],
-          questionSentence:
-            '軸索は刺激に対して両方向へ伝導する性質を持っているのに、通常は片方向へしか伝導しない理由を説明せよ',
-          answerImg: [unidirectionalConduction],
-          answer:
-            '通常は細胞体から軸索へ活動電位が伝わり、局所的な活動電位の発生が軸索を伝わっていくが、活動電位発生後の不応期により伝わる方向と逆方向の細胞膜は脱分極できない（しにくい）ため。',
-          commentary: '',
-        },
-        {
-          detailInfo: '',
-          questionImg: [],
-          questionSentence: '化学シナプスでの興奮伝達について説明しなさい',
-          answerImg: [recycleNeurotransmitter],
-          answer:
-            '活動電位がシナプス前終末に伝達されると、電位依存性Ca²⁺チャネルが開口しCa²⁺が流入することで、シナプス小胞のシナプトタグミンがCa²⁺と結合しシナプス前膜にシナプス小胞が融合し、神経伝達物質の開口放出が行われる。シナプス後部の受容体に神経伝達物質が結合すると陽イオンチャネルが開口し、興奮が伝達されていく。',
-          commentary: '',
-        },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence:
-        //     '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-      ],
-    },
+    //     {
+    //       detailInfo: '',
+    //       questionImg: [],
+    //       questionSentence:
+    //         '軸索において活動電位の伝播が不減衰である理由を説明せよ',
+    //       answerImg: [nonDecrementalConduction],
+    //       answer:
+    //         '軸索では、伝わった活動電位が電位依存性Na⁺チャネルの閾値を超えると活動電位を発生させ、さらに近くの細胞膜で活動電位を発生させることで、局所的な活動電位の発生が伝わっていく。この活動電位の大きさが減衰せず一定であるから。',
+    //       commentary: '樹状突起や細胞体では減衰する',
+    //     },
+    //     {
+    //       detailInfo: '',
+    //       questionImg: [],
+    //       questionSentence:
+    //         '軸索は刺激に対して両方向へ伝導する性質を持っているのに、通常は片方向へしか伝導しない理由を説明せよ',
+    //       answerImg: [unidirectionalConduction],
+    //       answer:
+    //         '通常は細胞体から軸索へ活動電位が伝わり、局所的な活動電位の発生が軸索を伝わっていくが、活動電位発生後の不応期により伝わる方向と逆方向の細胞膜は脱分極できない（しにくい）ため。',
+    //       commentary: '',
+    //     },
+    //     {
+    //       detailInfo: '',
+    //       questionImg: [],
+    //       questionSentence: '化学シナプスでの興奮伝達について説明しなさい',
+    //       answerImg: [recycleNeurotransmitter],
+    //       answer:
+    //         '活動電位がシナプス前終末に伝達されると、電位依存性Ca²⁺チャネルが開口しCa²⁺が流入することで、シナプス小胞のシナプトタグミンがCa²⁺と結合しシナプス前膜にシナプス小胞が融合し、神経伝達物質の開口放出が行われる。シナプス後部の受容体に神経伝達物質が結合すると陽イオンチャネルが開口し、興奮が伝達されていく。',
+    //       commentary: '',
+    //     },
+    // {
+    //   detailInfo: '',
+    //   questionImg: [],
+    //   questionSentence:
+    //     '',
+    //   answerImg: [],
+    //   answer: '',
+    //   commentary: '',
+    // },
+    // {
+    //   detailInfo: '',
+    //   questionImg: [],
+    //   questionSentence:
+    //     '',
+    //   answerImg: [],
+    //   answer: '',
+    //   commentary: '',
+    // },
+    // {
+    //   detailInfo: '',
+    //   questionImg: [],
+    //   questionSentence:
+    //     '',
+    //   answerImg: [],
+    //   answer: '',
+    //   commentary: '',
+    // },
+    // {
+    //   detailInfo: '',
+    //   questionImg: [],
+    //   questionSentence:
+    //     '',
+    //   answerImg: [],
+    //   answer: '',
+    //   commentary: '',
+    // },
+    // {
+    //   detailInfo: '',
+    //   questionImg: [],
+    //   questionSentence:
+    //     '',
+    //   answerImg: [],
+    //   answer: '',
+    //   commentary: '',
+    // },
+    //   ],
+    // },
     {
       groupTag: '2016本試',
       groupContents: [
@@ -2051,7 +2053,7 @@ export const useQuestionList = () => {
           detailInfo: '問題3(4)d~i',
           questionImg: [],
           questionSentence:
-            '【空欄を埋めよ】杆体に光が当たると( d )が光を吸収しメタロドプシンⅡと変化し、メタロドプシンⅡがトランスデューシンの( e )を( f )に変えることでトランスデューシンを活性化する。トランスデューシンは( g )を活性化し、(g)が(c)を加水分解することにより細胞内の( h )濃度が減少する。その結果、(b)チャネルが閉じて、(h)の流入が生じないため( i )応答を示す。',
+            '【空欄を埋めよ】杆体に光が当たると( d )が光を吸収しメタロドプシンⅡと変化し、メタロドプシンⅡがトランスデューシンの( e )を( f )に変えることでトランスデューシンを活性化する。トランスデューシンは( g )を活性化し、(g)がcGMPを加水分解することにより細胞内の( h )濃度が減少する。その結果、cGMP依存性陽イオンチャネルが閉じて、(h)の流入が生じないため( i )応答を示す。',
           answerImg: [photoreception],
           answer:
             'd.ロドプシン　e.GDP　f.GTP　g.ホスホジエステラーゼ(PDE)　h.Na⁺(陽イオン)　i.過分極',
@@ -2066,7 +2068,7 @@ export const useQuestionList = () => {
           answerImg: [],
           answer:
             'D1受容体は、黒質緻密部からのドーパミンを受け取り、直接路に関与する線条体の活動を抑制する。この線条体は淡蒼球内節・黒質網様部の活動を直接抑制しているため、D1受容体がドーパミンを受容しなくなると淡蒼球内節・黒質網様部の活動が増す。',
-          commentary: '',
+          commentary: '直接路は脱抑制系とも。',
         },
         {
           detailInfo: '問題4-2',
@@ -2075,14 +2077,14 @@ export const useQuestionList = () => {
             '大脳基底核疾患のひとつであるパーキンソン病は、黒質緻密部のドーパミンニューロンの脱落により生じる。黒質緻密部のドーパミンニューロンが脱落すると、淡蒼球内節・黒質網様部の活動が上昇することが知られている。淡蒼球内節・黒質網様部のニューロン活動の上昇がどのようにして生じるのかについて、正常時のD2受容体と間接路について説明せよ。',
           answerImg: [],
           answer:
-            'D2受容体は、黒質緻密部からのドーパミンを受け取り、関節路に関与する線条体の活動を促進する。この線条体は淡蒼球外節の活動を抑制し、淡蒼球外節は視床下核の活動を抑制し、視床下核は淡蒼球内節・黒質網様部の活動を促進するので、D2受容体がドーパミンを受容しなくなると視床下核や淡蒼球内節・黒質網様部の活動が増す。',
-          commentary: '',
+            'D2受容体は、黒質緻密部からのドーパミンを受け取り、間接路に関与する線条体の活動を促進する。この線条体は淡蒼球外節の活動を抑制し、淡蒼球外節は視床下核の活動を抑制し、視床下核は淡蒼球内節・黒質網様部の活動を促進するので、D2受容体がドーパミンを受容しなくなると視床下核や淡蒼球内節・黒質網様部の活動が増す。',
+          commentary: '間接路は抑制強化系とも。',
         },
         {
           detailInfo: '問題5',
           questionImg: [],
           questionSentence:
-            '伸張反射について、以下の語句を用いて説明せよ。【語句:筋紡錘・ゴルジ腱受容器・Ⅰa群線維・Ⅱb群線維・抑制性介在ニューロン・α運動ニューロン・単シナプス性・多シナプス性・同名筋・自原性・自原抑制】　筋が引き伸ばされると...',
+            '伸張反射について、以下の語句を用いて説明せよ。【語句:筋紡錘・ゴルジ腱受容器・Ⅰa群線維・Ⅰb群線維・抑制性介在ニューロン・α運動ニューロン・単シナプス性・多シナプス性・同名筋・自原性・自原抑制】　筋が引き伸ばされると...',
           answerImg: [stretchReflex],
           answer:
             '筋が引き伸ばされると、筋紡錘も伸張され、発生した興奮を1a群線維に伝達する。1a群線維は、脊髄内で同名筋を支配するα運動ニューロンに直接シナプス結合し、これを興奮させ、同名筋を収縮させる。伸張反射は同名筋に最も強く作用するので自原性反射とよばれ、また1a群線維がα運動ニューロンに直接結合しているので、単シナプス性反射である。',
