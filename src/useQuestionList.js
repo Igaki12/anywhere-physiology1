@@ -2275,12 +2275,12 @@ export const useQuestionList = () => {
         },
         {
           detailInfo: '問題12(1)',
-          questionImg: [exam20163],
+          questionImg: [exam20211],
           questionSentence:
             '【空欄を埋めよ、アルファベットは図中と一致する。】におい物質が受容体タンパク質（図のR）に受容され、これとカップルしている( a )が活性化される。この活性化は次に( b )に伝えられ。その結果、ATPから( c )が産生される。(c)は、細胞膜に存在している( d )に直接働きかけて開口させることにより細胞内へ( e )や( f )が流入し、細胞を電気的に興奮させる。その(f)は( g )を活性化する。その結果( h )が細胞外へ流出して受容器電位応答を増幅する。順応はにおい応答によって大量に細胞内に流入した(f)や(g)に作用することによって生じる。',
           answerImg: [olfactory],
           answer:
-            'a.Golf　b.アデニル酸シクラーゼ　c.cAMP　d.cAMP依存性陽イオンチャネル　e.Na⁺　f.Ca²⁺　g.Cl⁻',
+            'a.Golf　b.アデニル酸シクラーゼ　c.cAMP　d.cAMP依存性陽イオンチャネル　e.Na⁺　f.Ca²⁺　g.Cl⁻　h.グルタミン酸？',
           commentary: '',
         },
         {
