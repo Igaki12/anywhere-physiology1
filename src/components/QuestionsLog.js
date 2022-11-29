@@ -740,13 +740,13 @@ export const QuestionsLog = ({
           onClick={() => {
             nextQuestion(appName)
             setIsAnswered(false)
-            // setTimeout(() => {
-            let element = document.documentElement
-            window.scrollTo({
-              top: element.scrollHeight - element.clientHeight,
-              behavior: 'smooth',
-            })
-            // }, 500)
+            setTimeout(() => {
+              let element = document.documentElement
+              window.scrollTo({
+                top: element.scrollHeight - element.clientHeight,
+                behavior: 'smooth',
+              })
+            }, 500)
           }}
         >
           次の問題へ
