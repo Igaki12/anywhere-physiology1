@@ -278,7 +278,7 @@ export const History = ({
                             );
                           }}
                         >
-                          <ArrowDownIcon boxSize={'1.2em'} mr="0.5" ml="-1" />
+                          {/* <ArrowDownIcon boxSize={'1.2em'} mr="0.5" ml="-1" /> */}
                           {'残り '}
                           {log.remaining.length}問
                         </Button>
