@@ -1,71 +1,77 @@
-import './App.css'
-import { Box, Heading, Badge, Flex, Text, useToast } from '@chakra-ui/react'
-import { Setting } from './components/Setting'
-import { QuestionsLog } from './components/QuestionsLog'
-import { ControlPanel } from './components/ControlPanel'
-import { useQuestionList } from './useQuestionList'
-import { useSetting } from './hooks/useSetting'
-import { useHistory } from './hooks/useHistory'
-import { ChoicePanel } from './components/ChoicePanel'
-import { useTechnicalTerm } from './useTechnicalTerm'
-// import jsCookie from 'js-cookie'
+import './App.css';
+import {
+  Box,
+  Heading,
+  Badge,
+  Flex,
+  Text,
+  useToast,
+  Button,
+  Divider,
+  Wrap,
+  WrapItem,
+} from '@chakra-ui/react';
+import { Setting } from './components/Setting';
+import { QuestionsLog } from './components/QuestionsLog';
+import { ControlPanel } from './components/ControlPanel';
+import { useQuestionList } from './useQuestionList';
+import { useStorage } from './hooks/useStorage';
+import { useTechnicalTerm } from './useTechnicalTerm';
+import { useLog } from './hooks/useLog';
+import { useState } from 'react';
+import { SearchWord } from './components/SearchWord';
+import { History } from './components/History.js';
 
 function App() {
-  const toast = useToast()
-  const { showQuestionList } = useQuestionList()
-  const questionList = showQuestionList()
-  const { showTechnicalTerm } = useTechnicalTerm()
-  const technicalTerm = showTechnicalTerm()
+  const toast = useToast();
+  const [selected, setSelected] = useState(0);
+  const { showQuestionList } = useQuestionList();
+  const questionList = showQuestionList();
+  const { showTechnicalTerm } = useTechnicalTerm();
+  const technicalTerm = showTechnicalTerm();
+  const { loadLog } = useStorage();
+  const [isAnswered, setIsAnswered] = useState(false);
   const {
-    showSettingDetail,
-    updateQuestionOrder,
-    toggleQuestionRange,
-    updateQuestionMode,
-    makeSetting,
-    addWordFilter,
-    deleteWordFilter,
-    updateAllSettings,
-  } = useSetting()
-  let settingDetail = showSettingDetail()
-  const {
-    showHistory,
-    selectQuestionList,
+    showLog,
+    toggleRange,
+    toggleAllRange,
+    changeOrder,
+    startNewLesson,
+    toggleReview,
     nextQuestion,
-    checkAnswer,
-    hideAnswer,
-    reviewQuestion,
-    reviewAskingQuestion,
-    loadHistory,
-  } = useHistory()
-  const history = showHistory()
-  const thisAppNameTag = 'anywhere-physiology1'
+    startLoadedLesson,
+    reviewLoadedLesson,
+  } = useLog();
+  const log = showLog();
+  // const history = showHistory();
+  const appName = 'anywhere-physiology1';
   // ここからWebStorageを利用した設定の引継ぎ
-  let loadData = {
-    app: `${thisAppNameTag}`,
-    latestUpdate: new Date().getTime(),
-  }
-  if (localStorage.getItem(thisAppNameTag)) {
-    loadData = JSON.parse(localStorage.getItem(thisAppNameTag))
-  }
-  const saveHistory = (latestHistory, newSetting) => {
-    let savingHistory = ''
-    if (latestHistory && latestHistory.remainingQuestionList) {
-      savingHistory = latestHistory.questionNum + ','
-      latestHistory.remainingQuestionList.forEach((question) => {
-        savingHistory += question.id
-        savingHistory += ','
-      })
-      savingHistory = savingHistory.substring(0, savingHistory.length - 1)
-    }
-    let jsonData = {
-      app: `${thisAppNameTag}`,
-      latestUpdate: new Date().getTime(),
-      status: newSetting,
-      history: savingHistory,
-    }
-    localStorage.setItem(thisAppNameTag, JSON.stringify(jsonData))
-    console.log(localStorage.getItem(thisAppNameTag))
-  }
+  // let loadData = {
+  //   app: `${thisAppNameTag}`,
+  //   latestUpdate: new Date().getTime(),
+  // };
+  // if (localStorage.getItem(thisAppNameTag)) {
+  //   loadData = JSON.parse(localStorage.getItem(thisAppNameTag));
+  // }
+  // const saveHistory = (latestHistory, newSetting) => {
+  //   let savingHistory = '';
+  //   if (latestHistory && latestHistory.remainingQuestionList) {
+  //     savingHistory = latestHistory.questionNum + ',';
+  //     latestHistory.remainingQuestionList.forEach(question => {
+  //       savingHistory += question.id;
+  //       savingHistory += ',';
+  //     });
+  //     savingHistory = savingHistory.substring(0, savingHistory.length - 1);
+  //   }
+  //   let jsonData = {
+  //     app: `${thisAppNameTag}`,
+  //     latestUpdate: new Date().getTime(),
+  //     status: newSetting,
+  //     history: savingHistory,
+  //   };
+  //   localStorage.setItem(thisAppNameTag, JSON.stringify(jsonData));
+  //   console.log(localStorage.getItem(thisAppNameTag));
+  // };
   return (
     <>
       <Heading mt={'3'} ml="3" color="teal" mb={0}>
@@ -82,79 +88,91 @@ function App() {
           colorScheme="teal"
           variant={'outline'}
         >
-          Ver.1.5
+          Ver.2.0(仮)
         </Badge>
         <Badge m={1} mt="0" borderRadius="full" px="2" colorScheme="teal">
-          第1生理学
+          第一生理学
         </Badge>
       </Flex>
 
-      {settingDetail.isSet ? (
+      {log.startTime !== '' ? (
         <></>
       ) : (
-        <Box maxW={'lg'} mr="auto" ml={'auto'}>
+        <Box mr="auto" ml={'auto'} justifyContent="center">
           <Setting
+            maxW={'lg'}
             toast={toast}
+            selected={selected}
+            setSelected={setSelected}
             questionList={questionList}
-            loadData={loadData}
-            history={history}
-            saveHistory={saveHistory}
-            showSettingDetail={showSettingDetail}
-            updateQuestionOrder={updateQuestionOrder}
-            toggleQuestionRange={toggleQuestionRange}
-            updateQuestionMode={updateQuestionMode}
-            selectQuestionList={selectQuestionList}
-            nextQuestion={nextQuestion}
-            makeSetting={makeSetting}
-            addWordFilter={addWordFilter}
-            deleteWordFilter={deleteWordFilter}
-            updateAllSettings={updateAllSettings}
-            loadHistory={loadHistory}
+            log={log}
+            toggleRange={toggleRange}
+            toggleAllRange={toggleAllRange}
+            changeOrder={changeOrder}
+            startNewLesson={startNewLesson}
+            startLoadedLesson={startLoadedLesson}
             technicalTerm={technicalTerm}
+            appName={appName}
+            loadLog={loadLog}
           />
+          <Wrap justify={'center'} mt="80px">
+            <WrapItem minW={'2xs'} maxW="xs">
+              <History
+                loadLog={loadLog}
+                questionList={questionList}
+                appName={appName}
+                startLoadedLesson={startLoadedLesson}
+                reviewLoadedLesson={reviewLoadedLesson}
+              />
+            </WrapItem>
+            <WrapItem w={'sm'}>
+              <SearchWord
+                toast={toast}
+                technicalTerm={technicalTerm}
+                questionList={questionList}
+              />
+            </WrapItem>
+          </Wrap>
+
+          <Divider
+            orientation="horizontal"
+            maxW={'lg'}
+            mt="50px"
+            mr="auto"
+            ml="auto"
+          />
+          <Text fontSize="xs" textColor={'blackAlpha.700'} textAlign="center">
+            Supported by T.Wada
+          </Text>
+          <Text fontSize="xs" textColor={'blackAlpha.700'} textAlign="center">
+            ©2022- IgaTatApps
+          </Text>
         </Box>
       )}
-      {settingDetail.isSet ? (
-        <Box bgColor={'blackAlpha.100'} mt="-100px" pt={'100px'} minH="1500px">
-          <Box maxW="2xl" mr="auto" ml={'auto'}>
-            {/* <ResultBar
-            showHistory={showHistory}
-            showSettingDetail={showSettingDetail}
-          /> */}
-            <QuestionsLog
-              // questionList={questionList}
-              toast={toast}
-              loadData={loadData}
-              showHistory={showHistory}
-              nextQuestion={nextQuestion}
-              checkAnswer={checkAnswer}
-              // hideAnswer={hideAnswer}
-              showSettingDetail={showSettingDetail}
-              reviewQuestion={reviewQuestion}
-              reviewAskingQuestion={reviewAskingQuestion}
-              saveHistory={saveHistory}
-              technicalTerm={technicalTerm}
-            />
-            {settingDetail.mode === 'practice' &&
-            history[history.length - 1].askingQuestion.choices.length > 1 ? (
-              <ChoicePanel />
-            ) : (
-              <></>
-            )}
-            <Box h={'300px'} width="100px"></Box>
-            <ControlPanel
-              showSettingDetail={showSettingDetail}
-              showHistory={showHistory}
-            />
-          </Box>
+      {log.startTime !== '' ? (
+        <Box maxW="2xl" mr="auto" ml={'auto'}>
+          <QuestionsLog
+            isAnswered={isAnswered}
+            setIsAnswered={setIsAnswered}
+            toast={toast}
+            questionList={questionList}
+            log={log}
+            loadLog={loadLog}
+            nextQuestion={nextQuestion}
+            toggleReview={toggleReview}
+            technicalTerm={technicalTerm}
+            appName={appName}
+          />
+          <Box h={'300px'} width="100px"></Box>
+          <ControlPanel log={log} isAnswered={isAnswered} />
         </Box>
       ) : (
         <></>
       )}
     </>
-  )
+  );
 }
 //   )
 // }
 
-export default App
+export default App;

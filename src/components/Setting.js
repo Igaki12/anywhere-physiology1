@@ -26,100 +26,109 @@ import {
   Flex,
   Spacer,
   Skeleton,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 import {
   CheckCircleIcon,
   InfoIcon,
   QuestionIcon,
   WarningIcon,
-} from '@chakra-ui/icons'
-import '../App.css'
-import { SearchWord } from './SearchWord'
-import { useState } from 'react'
+} from '@chakra-ui/icons';
+import '../App.css';
+import { SearchWord } from './SearchWord';
+import { useState } from 'react';
 // import jsCookie from 'js-cookie'
-import titleImg from '../img/titleImg.png'
+import titleImg from '../img/titleImg.png';
 export const Setting = ({
   toast,
+  selected,
+  setSelected,
   questionList,
-  loadData,
-  history,
-  saveHistory,
-  showSettingDetail,
-  updateQuestionOrder,
-  toggleQuestionRange,
-  updateQuestionMode,
-  selectQuestionList,
-  nextQuestion,
-  makeSetting,
-  addWordFilter,
-  deleteWordFilter,
-  updateAllSettings,
-  loadHistory,
+  appName,
+  loadLog,
+  log,
   technicalTerm,
+  toggleRange,
+  toggleAllRange,
+  changeOrder,
+  startNewLesson,
+  startLoadedLesson,
 }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const settingDetail = showSettingDetail()
-  const [checkMsg, setCheckMsg] = useState()
-  const checkSelection = () => {
-    let selectedQuestionList = []
-    questionList.forEach((group) => {
-      if (settingDetail.questionRange.indexOf(group.groupTag) === -1) {
-        console.log('この文章が2回表示される')
-        return
-      }
-      group.groupContents.forEach((question) => {
-        let flag = 0
-        if (settingDetail.wordFilter.length === 0) {
-          flag = 1
-        }
-        settingDetail.wordFilter.forEach((word) => {
-          if (question.detailInfo && question.detailInfo.indexOf(word) > -1)
-            flag = 1
-          if (
-            question.questionSentence &&
-            question.questionSentence.indexOf(word) > -1
-          )
-            flag = 1
-          if (question.answer && question.answer.indexOf(word) > -1) flag = 1
-          if (question.commentary && question.commentary.indexOf(word) > -1)
-            flag = 1
-          if (
-            question.choices &&
-            question.choices.every((choice) => choice.indexOf(word) === -1) ===
-              false
-          )
-            flag = 1
-        })
-        if (flag === 0) return
-        selectedQuestionList.push(question)
-      })
-    })
-    console.log('selectedQuestionList:')
-    console.log(selectedQuestionList)
-    if (
-      settingDetail.wordFilter.length > 0 &&
-      selectedQuestionList.length > 0
-    ) {
-      setCheckMsg('現在' + selectedQuestionList.length + '件の質問を選択中')
-    } else if (selectedQuestionList.length === 0) {
-      setCheckMsg('条件を満たした質問が存在しません')
-    } else {
-      setCheckMsg()
-      console.log('1回だけ表示される')
-    }
-  }
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [renderSign, setRenderSign] = useState(0);
+  // const settingDetail = showSettingDetail()
+  // const [checkMsg, setCheckMsg] = useState();
+  // const checkSelection = () => {
+  //   let selectedQuestionList = []
+  //   questionList.forEach((group) => {
+  //     if (settingDetail.questionRange.indexOf(group.groupTag) === -1) {
+  //       console.log('この文章が2回表示される')
+  //       return
+  //     }
+  //     group.groupContents.forEach((question) => {
+  //       let flag = 0
+  //       if (settingDetail.wordFilter.length === 0) {
+  //         flag = 1
+  //       }
+  //       settingDetail.wordFilter.forEach((word) => {
+  //         if (question.detailInfo && question.detailInfo.indexOf(word) > -1)
+  //           flag = 1
+  //         if (
+  //           question.questionSentence &&
+  //           question.questionSentence.indexOf(word) > -1
+  //         )
+  //           flag = 1
+  //         if (question.answer && question.answer.indexOf(word) > -1) flag = 1
+  //         if (question.commentary && question.commentary.indexOf(word) > -1)
+  //           flag = 1
+  //         if (
+  //           question.choices &&
+  //           question.choices.every((choice) => choice.indexOf(word) === -1) ===
+  //             false
+  //         )
+  //           flag = 1
+  //       })
+  //       if (flag === 0) return
+  //       selectedQuestionList.push(question)
+  //     })
+  //   })
+  //   console.log('selectedQuestionList:')
+  //   console.log(selectedQuestionList)
+  //   if (
+  //     settingDetail.wordFilter.length > 0 &&
+  //     selectedQuestionList.length > 0
+  //   ) {
+  //     setCheckMsg('現在' + selectedQuestionList.length + '件の質問を選択中')
+  //   } else if (selectedQuestionList.length === 0) {
+  //     setCheckMsg('条件を満たした質問が存在しません')
+  //   } else {
+  //     setCheckMsg()
+  //     console.log('1回だけ表示される')
+  //   }
+  // }
   const scrollToTop = () => {
     // let element = document.documentElement
     // let bottom = element.scrollHeight - element.clientHeight
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
-    })
-  }
+    });
+  };
+  const howManyQuestions = () => {
+    setSelected(
+      questionList.reduce((prevGroup, curGroup, index) => {
+        if (log.range && log.range.indexOf(curGroup.groupTag) !== -1) {
+          return prevGroup + curGroup.groupContents.length;
+        }
+        return prevGroup;
+      }, 0)
+    );
+  };
   return (
     <>
       <Box
         maxW="lg"
+        mr={'auto'}
+        ml="auto"
         minH={'150px'}
         transitionDelay="3s"
         className="Headline1"
@@ -131,8 +140,6 @@ export const Setting = ({
             onClick={onOpen}
             colorScheme="blackAlpha"
             variant={'solid'}
-            // borderWidth="2px"
-            // borderColor="white"
             m={0}
             w={'40px'}
             h="40px"
@@ -153,11 +160,10 @@ export const Setting = ({
           fallback={<Skeleton height={'100px'} />}
         />
         <Flex ml={4} mr="4">
-          {checkMsg === '条件を満たした質問が存在しません' ? (
+          {selected !== 0 ? (
             <Button
               colorScheme="teal"
               variant="variant"
-              // borderRadius={'full'}
               borderWidth="2px"
               borderColor="white"
               isDisabled
@@ -173,25 +179,24 @@ export const Setting = ({
               borderColor="whiteAlpha"
               variant="solid"
               onClick={() => {
-                updateQuestionMode('training')
-                selectQuestionList(questionList, settingDetail)
-                nextQuestion(settingDetail)
-                makeSetting()
-                saveHistory(history[history.length - 1], settingDetail)
-                setTimeout(() => {
-                  scrollToTop()
-                }, 1000)
+                startNewLesson(questionList, appName);
+                scrollToTop();
+                howManyQuestions();
+                // setTimeout(() => {
+                //   saveLog(appName, log);
+                // }, 500);
               }}
             >
               はじめから
             </Button>
           )}
           <Spacer />
-          {loadData &&
-          loadData !== {} &&
-          loadData.history &&
-          loadData.status &&
-          loadData.history.split(',').length > 1 ? (
+          {loadLog(appName) &&
+          loadLog(appName).logs &&
+          loadLog(appName).logs[0] &&
+          loadLog(appName).logs[0].remaining &&
+          loadLog(appName).logs[0].remaining.length > 0 &&
+          loadLog(appName).logs[0].startTime ? (
             <Button
               bgGradient="linear(to bottom right, green.300, green.800)"
               color={'white'}
@@ -201,19 +206,23 @@ export const Setting = ({
               borderColor="whiteAlpha"
               opacity={'0.9'}
               onClick={() => {
-                loadHistory(loadData.history, questionList)
-                updateAllSettings(loadData.status)
-                nextQuestion(loadData.status)
-                makeSetting()
-                saveHistory(history[history.length - 1], loadData.status)
-                // 現在非同期バグが発生しており、ロードしたsettingをこの形でないと反映できない。がんばれ、未来の俺！
+                startLoadedLesson(
+                  questionList,
+                  appName,
+                  loadLog(appName).logs[0].startTime
+                );
                 setTimeout(() => {
-                  updateAllSettings(loadData.status)
-                  scrollToTop()
-                }, 2000)
+                  window.scrollTo({
+                    bottom: 0,
+                    behavior: 'smooth',
+                  });
+                }, 1000);
               }}
             >
-              続きから(あと{loadData.history.split(',').length - 1}問)
+              続きから(あと
+              {loadLog(appName).logs[0].remaining.length +
+                (loadLog(appName).logs[0].asking ? 1 : 0)}
+              問)
             </Button>
           ) : (
             <Button
@@ -221,7 +230,6 @@ export const Setting = ({
               color={'white'}
               variant="solid"
               isDisabled
-              // borderRadius={'full'}
             >
               続きから再開
             </Button>
@@ -259,6 +267,9 @@ export const Setting = ({
             </List>
             <Divider orientation="horizontal" mt={3} mb="1" />
             <Text>アップデート履歴</Text>
+            <Text fontSize={'md'} fontWeight="bold" mb="2" mt={2}>
+              11-27_Ver2.0-包括的アップデート...コード部分を作り直し、WebStorageとの接続を強化、軽量化、見直しシステムの変更など
+            </Text>
             <Text fontSize={'sm'}>10-03_Ver1.5-頻出キーワード確認を追加</Text>
             <Text fontSize={'sm'}>10-02_Ver1.4-キーワード検索を便利に</Text>
             <Text fontSize={'sm'}>09-16_Ver1.3-ボタンを透明に</Text>
@@ -289,7 +300,7 @@ export const Setting = ({
         </ModalContent>
       </Modal>
       <Box mr={'auto'} ml="auto" maxW={'sm'}>
-        {checkMsg === '条件を満たした質問が存在しません' ? (
+        {/* {checkMsg === '条件を満たした質問が存在しません' ? (
           <Alert status="error" fontWeight={'semibold'} maxW="lg">
             <AlertIcon />
             {checkMsg}
@@ -305,26 +316,26 @@ export const Setting = ({
               <></>
             )}
           </>
-        )}
+        )} */}
 
-        <RadioGroup defaultValue={settingDetail.questionOrder}>
+        <RadioGroup defaultValue={log.order}>
           <Stack spacing={5} direction="row" p={2}>
             <Radio
+              size={'lg'}
               colorScheme="red"
               value="random"
               onChange={() => {
-                updateQuestionOrder('random')
-                // saveSetting(settingDetail)
+                changeOrder('random');
               }}
             >
               ランダム出題
             </Radio>
             <Radio
+              size={'lg'}
               colorScheme="green"
               value="ascend"
               onChange={() => {
-                updateQuestionOrder('ascend')
-                // saveSetting(settingDetail)
+                changeOrder('ascend');
               }}
             >
               順番通り出題
@@ -333,47 +344,78 @@ export const Setting = ({
         </RadioGroup>
         <CheckboxGroup
           colorScheme="green"
-          defaultValue={settingDetail.questionRange}
+          //  defaultValue={log.range}
         >
           <Stack
             w={'sm'}
-            spacing={[2, 4]}
+            spacing={[2, 2]}
             direction={['column']}
-            bg="blackAlpha.100"
+            bg="whiteAlpha.800"
             p={2}
-            pl="4"
             mb="5"
+            mr={0}
+            ml={0}
           >
-            {questionList.map((group, index) => (
-              <Checkbox
-                value={group.groupTag}
-                key={index}
-                onChange={() => {
-                  toggleQuestionRange(group.groupTag)
-                  checkSelection()
-                  // saveSetting(settingDetail)
+            {questionList.map((group, index) => {
+              return log.range.includes(group.groupTag) ? (
+                <Checkbox
+                  isChecked={true}
+                  bgColor={'gray.100'}
+                  size={'md'}
+                  key={index}
+                  p={2}
+                  pl="4"
+                  onChange={() => {
+                    toggleRange(group.groupTag);
+                    setRenderSign(renderSign + 1);
+                  }}
+                >
+                  {group.groupTag}(
+                  {group.groupContents ? group.groupContents.length : '0'}問)
+                </Checkbox>
+              ) : (
+                <Checkbox
+                  isChecked={false}
+                  size={'md'}
+                  key={index}
+                  p={2}
+                  pl="4"
+                  onChange={() => {
+                    toggleRange(group.groupTag);
+                    setRenderSign(renderSign + 1);
+                  }}
+                >
+                  {group.groupTag}(
+                  {group.groupContents ? group.groupContents.length : '0'}問)
+                </Checkbox>
+              );
+            })}
+
+            {questionList &&
+            log.range &&
+            questionList.every(group => log.range.includes(group.groupTag)) ? (
+              <Button
+                isActive={true}
+                onClick={() => {
+                  toggleAllRange();
+                  setRenderSign(renderSign + 1);
                 }}
               >
-                {group.groupTag}(
-                {group.groupContents ? group.groupContents.length : '0'}問)
-              </Checkbox>
-            ))}
+                すべて選択解除
+              </Button>
+            ) : (
+              <Button
+                onClick={() => {
+                  toggleAllRange(questionList);
+                  setRenderSign(renderSign + 1);
+                }}
+              >
+                すべて選択
+              </Button>
+            )}
           </Stack>
         </CheckboxGroup>
       </Box>
-      <SearchWord
-        toast={toast}
-        showSettingDetail={showSettingDetail}
-        addWordFilter={addWordFilter}
-        deleteWordFilter={deleteWordFilter}
-        questionList={questionList}
-        checkSelection={checkSelection}
-        technicalTerm={technicalTerm}
-      />
-      <Divider orientation="horizontal" maxW={'lg'} />
-      <Text fontSize="xs" textColor={'blackAlpha.500'} ml="4">
-        ©2022- IgaTatApps
-      </Text>
     </>
-  )
-}
+  );
+};

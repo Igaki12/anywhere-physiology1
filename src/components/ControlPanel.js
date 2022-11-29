@@ -18,21 +18,24 @@ import {
   CircularProgressLabel,
   Flex,
   Box,
-} from '@chakra-ui/react'
-import { SettingsIcon, ChevronDownIcon } from '@chakra-ui/icons'
-export const ControlPanel = ({ showSettingDetail, showHistory }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  let settingDetail = showSettingDetail()
-  let history = showHistory()
+  IconButton,
+  Center,
+} from '@chakra-ui/react';
+import { SettingsIcon, ChevronDownIcon, RepeatIcon } from '@chakra-ui/icons';
+export const ControlPanel = ({ log, isAnswered }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure(false);
   const scrollToTheBottom = () => {
-    let element = document.documentElement
-    let bottom = element.scrollHeight - element.clientHeight
+    let element = document.documentElement;
+    let bottom = element.scrollHeight - element.clientHeight;
     window.scrollTo({
       top: bottom,
       behavior: 'smooth',
-    })
-  }
-  let isAnsweredPoint = history[history.length - 1].isAnswered ? 0 : 1
+    });
+  };
+  let achievementRate = Math.floor(
+    (100 * (log.asked.length + (isAnswered ? 1 : 0))) /
+      (log.asked.length + log.remaining.length + 1)
+  );
   return (
     <>
       <Stack
@@ -44,8 +47,7 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
         right={'5'}
         alignItems={'end'}
       >
-        {history[history.length - 1].remainingQuestionList.length > 0 ||
-        history[history.length - 1].isAnswered === false ? (
+        {log.remaining.length > 0 || isAnswered === false ? (
           <Button
             // color={'gray.600'}
             borderColor={'white'}
@@ -55,7 +57,10 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
             // bgColor={'white'}
             h="45px"
             w={'45px'}
-            onClick={onOpen}
+            onClick={() => {
+              onOpen();
+              console.log(isOpen);
+            }}
             colorScheme="blackAlpha"
             boxShadow="dark-lg"
           >
@@ -87,62 +92,59 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
           <ModalHeader>Settings</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text>現在のモード:</Text>
-            <Tag colorScheme="teal" m={1}>
-              {settingDetail.mode}
-            </Tag>
             <Text>出題パターン:</Text>
             <Tag colorScheme="teal" m={1}>
-              {settingDetail.questionOrder}
+              {log.order}
             </Tag>
-            <Text>出題範囲:</Text>
-            {settingDetail.questionRange.map((year, index) => (
+            <Text mt={2}>出題範囲:</Text>
+            {log.range.map((year, index) => (
               <Tag colorScheme="teal" m="1" key={index}>
                 {year}
               </Tag>
             ))}
-            <Text>単語絞り込み:</Text>
-            {settingDetail.wordFilter.map((word, index) => (
-              <Tag colorScheme="teal" m="1" key={index}>
-                {word}
-              </Tag>
-            ))}
+            <Text mt={2}>単語絞り込み:</Text>
+            {log.wordFilter && log.wordFilter.length > 0 ? (
+              log.wordFilter.map((word, index) => (
+                <Tag colorScheme="teal" m="1" key={index}>
+                  {word}
+                </Tag>
+              ))
+            ) : (
+              <Text fontSize={'sm'} ml={4}>
+                なし
+              </Text>
+            )}
             <Divider orientation="horizontal" mt={3} mb="1" />
-            <Text>現在の成績:</Text>
-            {/* <Text fontWeight={'bold'} pl="2">
-              現在{history[history.length - 1].questionNum}問目 / 残り
-              {history[history.length - 1].remainingQuestionList.length}問
-            </Text> */}
-            <Flex ml={'4'} mt={3} mb="-2" alignItems={'center'}>
+            <Text mt={2}>現在の成績:</Text>
+            <Flex ml={'4'} mt={0} mb="3" alignItems={'center'}>
               <CircularProgress
                 color="teal"
                 trackColor="gray.200"
-                value={
-                  (100 *
-                    (history[history.length - 1].questionNum -
-                      isAnsweredPoint)) /
-                  (history[history.length - 1].questionNum +
-                    history[history.length - 1].remainingQuestionList.length)
-                }
+                value={achievementRate}
               >
                 <CircularProgressLabel>
-                  {Math.floor(
-                    (100 *
-                      (history[history.length - 1].questionNum -
-                        isAnsweredPoint)) /
-                      (history[history.length - 1].questionNum +
-                        history[history.length - 1].remainingQuestionList
-                          .length),
-                  )}
-                  %
+                  {achievementRate}%
                 </CircularProgressLabel>
               </CircularProgress>
               <Box ml={2}>
                 <Text fontWeight={'bold'} pl="2">
-                  現在{history[history.length - 1].questionNum}問目 / 残り
-                  {history[history.length - 1].remainingQuestionList.length}問
+                  現在{log.asked.length + 1}問目 / 残り
+                  {log.remaining.length}問
                 </Text>
               </Box>
+            </Flex>
+            <Text mt={2}>見直しリスト：</Text>
+            <Flex mt={0} ml="5">
+              <IconButton
+                colorScheme={'green'}
+                opacity="0.7"
+                variant="solid"
+                aria-label="review this question"
+                icon={<RepeatIcon boxSize={'1.5em'} className="App-logo" />}
+              />
+              <Center fontWeight={'bold'} fontSize={'1em'} pl={3}>
+                × {log.review.length} 問
+              </Center>
             </Flex>
           </ModalBody>
 
@@ -186,32 +188,5 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
         </Button>
       </Stack>
     </>
-
-    // <Stack
-    //   bg={'teal'}
-    //   p="2"
-    //   bottom={'0'}
-    //   position={'fixed'}
-    //   w="100%"
-    //   mt={'auto'}
-    //   direction="row"
-    // >
-    //   <Button colorScheme="teal" variant="solid">
-    //     <ArrowBackIcon />
-    //   </Button>
-    //   <Spacer />
-    //   <Button
-    //     colorScheme="teal"
-    //     variant="solid"
-    //     minW={'150px'}
-    //     letterSpacing="0.1em"
-    //   >
-    //     Next
-    //   </Button>
-    //   <Spacer />
-    //   <Button colorScheme="teal" variant="solid">
-    //     <CheckIcon />
-    //   </Button>
-    // </Stack>
-  )
-}
+  );
+};
