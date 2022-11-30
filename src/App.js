@@ -1,4 +1,4 @@
-import './App.css';
+import './App.css'
 import {
   Box,
   Heading,
@@ -10,27 +10,27 @@ import {
   Divider,
   Wrap,
   WrapItem,
-} from '@chakra-ui/react';
-import { Setting } from './components/Setting';
-import { QuestionsLog } from './components/QuestionsLog';
-import { ControlPanel } from './components/ControlPanel';
-import { useQuestionList } from './useQuestionList';
-import { useStorage } from './hooks/useStorage';
-import { useTechnicalTerm } from './useTechnicalTerm';
-import { useLog } from './hooks/useLog';
-import { useState } from 'react';
-import { SearchWord } from './components/SearchWord';
-import { History } from './components/History.js';
+} from '@chakra-ui/react'
+import { Setting } from './components/Setting'
+import { QuestionsLog } from './components/QuestionsLog'
+import { ControlPanel } from './components/ControlPanel'
+import { useQuestionList } from './useQuestionList'
+import { useStorage } from './hooks/useStorage'
+import { useTechnicalTerm } from './useTechnicalTerm'
+import { useLog } from './hooks/useLog'
+import { useState } from 'react'
+import { SearchWord } from './components/SearchWord'
+import { History } from './components/History.js'
 
 function App() {
-  const toast = useToast();
-  const [selected, setSelected] = useState(0);
-  const { showQuestionList } = useQuestionList();
-  const questionList = showQuestionList();
-  const { showTechnicalTerm } = useTechnicalTerm();
-  const technicalTerm = showTechnicalTerm();
-  const { loadLog } = useStorage();
-  const [isAnswered, setIsAnswered] = useState(false);
+  const toast = useToast()
+  const [selected, setSelected] = useState(0)
+  const { showQuestionList } = useQuestionList()
+  const questionList = showQuestionList()
+  const { showTechnicalTerm } = useTechnicalTerm()
+  const technicalTerm = showTechnicalTerm()
+  const { loadLog } = useStorage()
+  const [isAnswered, setIsAnswered] = useState(false)
   const {
     showLog,
     toggleRange,
@@ -41,10 +41,10 @@ function App() {
     nextQuestion,
     startLoadedLesson,
     reviewLoadedLesson,
-  } = useLog();
-  const log = showLog();
+  } = useLog()
+  const log = showLog()
   // const history = showHistory();
-  const appName = 'anywhere-physiology1';
+  const appName = 'anywhere-physiology1'
   // ここからWebStorageを利用した設定の引継ぎ
   // let loadData = {
   //   app: `${thisAppNameTag}`,
@@ -116,7 +116,7 @@ function App() {
             loadLog={loadLog}
           />
           <Wrap justify={'center'} mt="80px">
-            <WrapItem minW={'2xs'} maxW="xs">
+            <WrapItem w={'xs'}>
               <History
                 loadLog={loadLog}
                 questionList={questionList}
@@ -125,7 +125,7 @@ function App() {
                 reviewLoadedLesson={reviewLoadedLesson}
               />
             </WrapItem>
-            <WrapItem w={'sm'}>
+            <WrapItem minW={'sm'}>
               <SearchWord
                 toast={toast}
                 technicalTerm={technicalTerm}
@@ -170,9 +170,9 @@ function App() {
         <></>
       )}
     </>
-  );
+  )
 }
 //   )
 // }
 
-export default App;
+export default App
