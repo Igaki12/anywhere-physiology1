@@ -13,9 +13,19 @@ import {
   Spacer,
   Box,
   Button,
-} from '@chakra-ui/react';
-import { ChevronDownIcon, SearchIcon } from '@chakra-ui/icons';
-import { useRef, useState } from 'react';
+  Divider,
+  Modal,
+  useDisclosure,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  ModalHeader,
+  ModalContent,
+  ModalOverlay,
+} from '@chakra-ui/react'
+import { ArrowDownIcon, ChevronDownIcon, SearchIcon } from '@chakra-ui/icons'
+import { useRef, useState } from 'react'
+import { isValidInputTimeValue } from '@testing-library/user-event/dist/utils'
 
 export const SearchWord = ({
   toast,
@@ -26,10 +36,12 @@ export const SearchWord = ({
   // checkSelection,
   technicalTerm,
 }) => {
-  const [predictionText, setPredictionText] = useState();
+  const [renderSign, setRenderSign] = useState()
+  const [inputValue, setInputValue] = useState()
+  const { isOpen, onOpen, onClose } = useDisclosure()
   // const [predictionNum, setPredictionNum] = useState(0)
   // const settingDetail = showSettingDetail();
-  const inputEl = useRef(null);
+  const initialRef = useRef(null)
   // const addWordFilterTag = () => {
   //   if (
   //     inputEl.current &&
@@ -317,6 +329,7 @@ export const SearchWord = ({
           p="1"
           bgColor={'whiteAlpha.800'}
           pt="20px"
+          pb={8}
         >
           <Box
             w={'100%'}
@@ -335,7 +348,7 @@ export const SearchWord = ({
             頻出キーワードを確認　
             <ChevronDownIcon boxSize="1.5em" />
           </Box>
-          <Wrap justify={'center'} pt="2" pb="8">
+          <Wrap justify={'center'} pt="2" pb="2">
             {technicalTerm
               .reduce((prevTermBox, curTermBox) => {
                 let newTag = {
@@ -351,52 +364,52 @@ export const SearchWord = ({
                           prevQuestion +
                           curTermBox.term.reduce((prevTerm, curTerm) => {
                             if (prevTerm > 0) {
-                              return 1;
+                              return 1
                             } else {
                               if (
                                 question.detailInfo &&
                                 question.detailInfo.indexOf(curTerm) > -1
                               )
-                                return 1;
+                                return 1
                               else if (
                                 question.questionSentence &&
                                 question.questionSentence.indexOf(curTerm) > -1
                               )
-                                return 1;
+                                return 1
                               else if (
                                 question.answer &&
                                 question.answer.indexOf(curTerm) > -1
                               )
-                                return 1;
+                                return 1
                               else if (
                                 question.commentary &&
                                 question.commentary.indexOf(curTerm) > -1
                               )
-                                return 1;
+                                return 1
                               else if (
                                 question.choices &&
                                 question.choices.every(
-                                  choice => choice.indexOf(curTerm) === -1
+                                  (choice) => choice.indexOf(curTerm) === -1,
                                 ) === false
                               )
-                                return 1;
+                                return 1
                               else {
-                                return 0;
+                                return 0
                               }
                             }
                           }, 0)
-                        );
+                        )
                       }, 0)
-                    );
+                    )
                   }, 0),
-                };
+                }
                 let newTagArray = [...prevTermBox, newTag].sort(
-                  (a, b) => b.count - a.count
-                );
+                  (a, b) => b.count - a.count,
+                )
                 if (newTagArray.length > 15) {
-                  return newTagArray.splice(0, 15);
+                  return newTagArray.splice(0, 15)
                 } else {
-                  return newTagArray;
+                  return newTagArray
                 }
               }, [])
               .map((tag, tagIndex) => {
@@ -420,23 +433,90 @@ export const SearchWord = ({
                           duration: 30000,
                           isClosable: true,
                           position: 'top-right',
-                        });
+                        })
                       }}
                     >
-                      {/* <SearchIcon mr="1" /> */}
                       {tag.term}
                       {' ('}
                       {tag.count}
                       {')'}
                     </Button>
                   </WrapItem>
-                );
+                )
               })}
+            {technicalTerm && technicalTerm.length > 15 ? (
+              <WrapItem p={2}>...</WrapItem>
+            ) : (
+              <></>
+            )}
           </Wrap>
+          <Divider mt={'50px'} />
+          <Button
+            borderRadius={'full'}
+            variant="solid"
+            mt="3"
+            mr="5%"
+            ml="5%"
+            w="90%"
+            colorScheme="blue"
+            onClick={onOpen}
+          >
+            <SearchIcon boxSize={'1.2em'} mr="1" ml="1" />
+            他の単語について検索
+          </Button>
+          <Modal initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader>検索</ModalHeader>
+              <ModalCloseButton />
+              <ModalBody pb={6}>
+                <Input
+                  ref={initialRef}
+                  value={inputValue}
+                  onChange={(event) => setInputValue(event.target.value)}
+                  placeholder="keyword to search for..."
+                  w="xs"
+                  position={'fixed'}
+                />
+                {technicalTerm
+                  .reduce((prevGroup, curGroup, groupIndex) => {
+                    if (
+                      inputValue &&
+                      inputValue !== '' &&
+                      curGroup.term.find(
+                        (term) => term.indexOf(inputValue) !== -1,
+                      ) &&
+                      groupIndex < 30
+                    ) {
+                      console.log(inputValue, prevGroup)
+                      return [
+                        ...prevGroup,
+                        {
+                          term: curGroup.term,
+                          explanation: curGroup.explanation,
+                        },
+                      ]
+                    }
+                    return prevGroup
+                  }, [])
+                  .map((termGroup, termIndex) => (
+                    <Button>{termGroup}</Button>
+                  ))}
+              </ModalBody>
+
+              <ModalFooter mt="10">
+                <Button colorScheme="green" mr={3}>
+                  <ArrowDownIcon fontSize="1.2em" mr="0.5" ml="-1" />
+                  問題をはじめる
+                </Button>
+                <Button onClick={onClose}>Cancel</Button>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
         </Box>
       ) : (
         <></>
       )}
     </>
-  );
-};
+  )
+}
