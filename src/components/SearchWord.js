@@ -22,6 +22,7 @@ import {
   ModalHeader,
   ModalContent,
   ModalOverlay,
+  Badge,
 } from '@chakra-ui/react'
 import { ArrowDownIcon, ChevronDownIcon, SearchIcon } from '@chakra-ui/icons'
 import { useRef, useState } from 'react'
@@ -426,9 +427,6 @@ export const SearchWord = ({
                           title: `${tag.terms.join(' / ')}`,
                           description: `${tag.explanation}`,
                           status: 'info',
-                          // containerStyle: {
-                          //   maxWidth: 'sm',
-                          // },
                           variant: 'left-accent',
                           duration: 30000,
                           isClosable: true,
@@ -477,29 +475,100 @@ export const SearchWord = ({
                   placeholder="keyword to search for..."
                   w="xs"
                   position={'fixed'}
+                  bgColor="white"
                 />
+
                 <Box mt="50px">
                   {technicalTerm
                     .reduce((prevGroup, curGroup, groupIndex) => {
                       if (
                         inputValue &&
                         inputValue !== '' &&
-                        curGroup.term.find(
-                          (term) => term.indexOf(inputValue) !== -1,
-                        ) &&
-                        groupIndex < 30
+                        (curGroup.term.find(
+                          (term) =>
+                            term.match(new RegExp(inputValue, 'i')) !== null,
+                        ) ||
+                          curGroup.explanation.match(
+                            new RegExp(inputValue, 'i'),
+                          ) !== null)
                       ) {
                         console.log(inputValue, prevGroup)
-                        return [
-                          ...prevGroup,
-                          {
-                            term: curGroup.term,
-                            explanation: curGroup.explanation,
-                          },
-                        ]
+                        if (prevGroup && prevGroup.length < 10) {
+                          return [
+                            ...prevGroup,
+                            {
+                              term: curGroup.term,
+                              explanation: curGroup.explanation,
+                              isOpen: false,
+                              count: questionList.reduce((prevGroup, group) => {
+                                return (
+                                  prevGroup +
+                                  group.groupContents.reduce(
+                                    (prevQuestion, question) => {
+                                      return (
+                                        prevQuestion +
+                                        curGroup.term.reduce(
+                                          (prevTerm, curTerm) => {
+                                            if (prevTerm > 0) {
+                                              return 1
+                                            } else {
+                                              if (
+                                                question.detailInfo &&
+                                                question.detailInfo.indexOf(
+                                                  curTerm,
+                                                ) > -1
+                                              )
+                                                return 1
+                                              else if (
+                                                question.questionSentence &&
+                                                question.questionSentence.indexOf(
+                                                  curTerm,
+                                                ) > -1
+                                              )
+                                                return 1
+                                              else if (
+                                                question.answer &&
+                                                question.answer.indexOf(
+                                                  curTerm,
+                                                ) > -1
+                                              )
+                                                return 1
+                                              else if (
+                                                question.commentary &&
+                                                question.commentary.indexOf(
+                                                  curTerm,
+                                                ) > -1
+                                              )
+                                                return 1
+                                              else if (
+                                                question.choices &&
+                                                question.choices.every(
+                                                  (choice) =>
+                                                    choice.indexOf(curTerm) ===
+                                                    -1,
+                                                ) === false
+                                              )
+                                                return 1
+                                              else {
+                                                return 0
+                                              }
+                                            }
+                                          },
+                                          0,
+                                        )
+                                      )
+                                    },
+                                    0,
+                                  )
+                                )
+                              }, 0),
+                            },
+                          ]
+                        }
                       }
                       return prevGroup
                     }, [])
+                    .sort((a, b) => b.count - a.count)
                     .map((termGroup, termIndex) => (
                       <Button
                         key={termIndex}
@@ -508,19 +577,129 @@ export const SearchWord = ({
                         borderRadius="full"
                         m={'1'}
                         maxW="100%"
+                        onClick={() => {
+                          toast({
+                            title: `${termGroup.term.join(' / ')}`,
+                            description: `${termGroup.explanation}`,
+                            status: 'info',
+                            variant: 'left-accent',
+                            duration: 30000,
+                            isClosable: true,
+                            position: 'top-right',
+                          })
+                        }}
                       >
                         {termGroup.term[0].length > 15
                           ? termGroup.term[0].slice(0, 15) + '...'
                           : termGroup.term[0]}
                       </Button>
                     ))}
+                  {technicalTerm.reduce((prevTermBox, curTermBox, index) => {
+                    if (
+                      inputValue &&
+                      inputValue !== '' &&
+                      (curTermBox.term.find(
+                        (term) =>
+                          term.match(new RegExp(inputValue, 'i')) !== null,
+                      ) ||
+                        curTermBox.explanation.match(
+                          new RegExp(inputValue, 'i'),
+                        ) !== null)
+                    ) {
+                      return [...prevTermBox, curTermBox.term[0]]
+                    }
+                    return prevTermBox
+                  }, []).length > 10
+                    ? '　...'
+                    : ''}
+                  <Divider mt="50px" />
+                  {questionList.map((group, groupIndex) => {
+                    let resultList = group.groupContents.reduce(
+                      (prevQuestion, curQuestion, questionIndex) => {
+                        if (!inputValue) {
+                          return []
+                        }
+                        if (
+                          curQuestion.detailInfo &&
+                          curQuestion.detailInfo.match(
+                            new RegExp(inputValue, 'i'),
+                          ) !== null
+                        ) {
+                          return [...prevQuestion, curQuestion]
+                        } else if (
+                          curQuestion.questionSentence &&
+                          curQuestion.questionSentence.match(
+                            new RegExp(inputValue, 'i'),
+                          ) !== null
+                        ) {
+                          return [...prevQuestion, curQuestion]
+                        } else if (
+                          curQuestion.answer &&
+                          curQuestion.answer.match(
+                            new RegExp(inputValue, 'i'),
+                          ) !== null
+                        ) {
+                          return [...prevQuestion, curQuestion]
+                        } else if (
+                          curQuestion.commentary &&
+                          curQuestion.commentary.match(
+                            new RegExp(inputValue, 'i'),
+                          ) !== null
+                        ) {
+                          return [...prevQuestion, curQuestion]
+                        } else if (
+                          curQuestion.choices &&
+                          curQuestion.choices.find(
+                            (choice) =>
+                              choice.match(new RegExp(inputValue, 'i')) !==
+                              null,
+                          )
+                        ) {
+                          return [...prevQuestion, curQuestion]
+                        }
+                        return prevQuestion
+                      },
+                      [],
+                    )
+                    return (
+                      <>
+                        <Flex m={1} mt="3">
+                          <Badge
+                            colorScheme="blue"
+                            size="sm"
+                            variant="solid"
+                            borderRadius="full"
+                            pr="2"
+                            pl="2"
+                            mr="2"
+                          >
+                            {group.groupTag}
+                          </Badge>
+                          <Text fontSize={'xs'}> {resultList.length} Hits</Text>
+                        </Flex>
+                        {resultList.map((question, questionIndex) => {
+                          if (questionIndex > 5) {
+                            return <></>
+                          }
+                          if (questionIndex === 5) {
+                            return <Text>...</Text>
+                          }
+                          return (
+                            <Box bgColor="gray.100" fontSize="xs" mb="1" p={1}>
+                              {question.questionSentence}
+                            </Box>
+                          )
+                        })}
+                      </>
+                    )
+                  })}
                 </Box>
               </ModalBody>
 
               <ModalFooter mt="10">
-                <Button colorScheme="green" mr={3}>
+                <Button colorScheme="blue" mr={3}>
                   <ArrowDownIcon fontSize="1.2em" mr="0.5" ml="-1" />
-                  問題をはじめる
+                  問題を解く
                 </Button>
                 <Button onClick={onClose}>Cancel</Button>
               </ModalFooter>
