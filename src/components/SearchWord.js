@@ -696,7 +696,7 @@ export const SearchWord = ({
                 </Box>
               </ModalBody>
 
-              <ModalFooter mt="10">
+              <ModalFooter mt="10" mb="200px">
                 <Button colorScheme="blue" mr={3}>
                   <ArrowDownIcon fontSize="1.2em" mr="0.5" ml="-1" />
                   問題を解く
