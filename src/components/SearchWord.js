@@ -478,30 +478,43 @@ export const SearchWord = ({
                   w="xs"
                   position={'fixed'}
                 />
-                {technicalTerm
-                  .reduce((prevGroup, curGroup, groupIndex) => {
-                    if (
-                      inputValue &&
-                      inputValue !== '' &&
-                      curGroup.term.find(
-                        (term) => term.indexOf(inputValue) !== -1,
-                      ) &&
-                      groupIndex < 30
-                    ) {
-                      console.log(inputValue, prevGroup)
-                      return [
-                        ...prevGroup,
-                        {
-                          term: curGroup.term,
-                          explanation: curGroup.explanation,
-                        },
-                      ]
-                    }
-                    return prevGroup
-                  }, [])
-                  .map((termGroup, termIndex) => (
-                    <Button>{termGroup}</Button>
-                  ))}
+                <Box mt="50px">
+                  {technicalTerm
+                    .reduce((prevGroup, curGroup, groupIndex) => {
+                      if (
+                        inputValue &&
+                        inputValue !== '' &&
+                        curGroup.term.find(
+                          (term) => term.indexOf(inputValue) !== -1,
+                        ) &&
+                        groupIndex < 30
+                      ) {
+                        console.log(inputValue, prevGroup)
+                        return [
+                          ...prevGroup,
+                          {
+                            term: curGroup.term,
+                            explanation: curGroup.explanation,
+                          },
+                        ]
+                      }
+                      return prevGroup
+                    }, [])
+                    .map((termGroup, termIndex) => (
+                      <Button
+                        key={termIndex}
+                        colorScheme="blue"
+                        variant="outline"
+                        borderRadius="full"
+                        m={'1'}
+                        maxW="100%"
+                      >
+                        {termGroup.term[0].length > 15
+                          ? termGroup.term[0].slice(0, 15) + '...'
+                          : termGroup.term[0]}
+                      </Button>
+                    ))}
+                </Box>
               </ModalBody>
 
               <ModalFooter mt="10">
