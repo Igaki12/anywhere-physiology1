@@ -118,7 +118,7 @@ export const History = ({
                           .reduce((prevLog, curLog, index) => {
                             let curDate = new Date()
                             curDate.setTime(curLog.startTime)
-                            console.log(curLog.asked.length)
+                            // console.log(curLog.asked.length)
                             if (
                               curDate.getMonth() === date.getMonth() &&
                               curDate.getDate() === date.getDate()
@@ -147,7 +147,7 @@ export const History = ({
                               .reduce((prevLog, curLog, index) => {
                                 let curDate = new Date()
                                 curDate.setTime(curLog.startTime)
-                                console.log(curLog.asked.length)
+                                // console.log(curLog.asked.length)
                                 if (
                                   curDate.getMonth() === date.getMonth() &&
                                   curDate.getDate() === date.getDate()
@@ -167,7 +167,7 @@ export const History = ({
                                 .reduce((prevLog, curLog, index) => {
                                   let curDate = new Date()
                                   curDate.setTime(curLog.startTime)
-                                  console.log(curLog.asked.length)
+                                  // console.log(curLog.asked.length)
 
                                   return prevLog + curLog.asked.length
                                 }, 0))
@@ -216,7 +216,7 @@ export const History = ({
                           )
                         })}
                       </Collapse>
-                      {log.range.length > 2 ? (
+                      {log.range.length > 8 ? (
                         <Button
                           size="sm"
                           onClick={() => {

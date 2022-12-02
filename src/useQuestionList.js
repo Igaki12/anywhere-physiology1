@@ -113,6 +113,8 @@ import narcolepsy from './img/answer/narcolepsy.png'
 // import from './img/answer/.png'
 
 export const useQuestionList = () => {
+  const appName = 'anywhere-physiology1'
+  const jpName = '第一生理学'
   const [questionList, setQuestionList] = useState([
     // ここに問題のリストを記述(選択式の場合は[0]に正解択をいれた配列をつくる)
     {
@@ -2379,5 +2381,7 @@ export const useQuestionList = () => {
   }
   return {
     showQuestionList,
+    appName,
+    jpName,
   }
 }
