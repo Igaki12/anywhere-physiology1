@@ -468,15 +468,25 @@ export const SearchWord = ({
               <ModalHeader>検索</ModalHeader>
               <ModalCloseButton />
               <ModalBody pb={6}>
-                <Input
-                  ref={initialRef}
-                  value={inputValue}
-                  onChange={(event) => setInputValue(event.target.value)}
-                  placeholder="keyword to search for..."
-                  w="xs"
+                <InputGroup
                   position={'fixed'}
                   bgColor="white"
-                />
+                  w="xs"
+                  zIndex={'1001'}
+                  borderRadius="sm"
+                >
+                  <InputLeftElement
+                    pointerEvents="none"
+                    children={<SearchIcon color="gray.300" />}
+                  />
+                  <Input
+                    ref={initialRef}
+                    value={inputValue}
+                    onChange={(event) => setInputValue(event.target.value)}
+                    placeholder="keyword to search for..."
+                    w="xs"
+                  />
+                </InputGroup>
 
                 <Box mt="50px">
                   {technicalTerm
