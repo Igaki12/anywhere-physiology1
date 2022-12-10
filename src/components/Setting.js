@@ -55,56 +55,6 @@ export const Setting = ({
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [renderSign, setRenderSign] = useState(0);
-  // const settingDetail = showSettingDetail()
-  // const [checkMsg, setCheckMsg] = useState();
-  // const checkSelection = () => {
-  //   let selectedQuestionList = []
-  //   questionList.forEach((group) => {
-  //     if (settingDetail.questionRange.indexOf(group.groupTag) === -1) {
-  //       console.log('この文章が2回表示される')
-  //       return
-  //     }
-  //     group.groupContents.forEach((question) => {
-  //       let flag = 0
-  //       if (settingDetail.wordFilter.length === 0) {
-  //         flag = 1
-  //       }
-  //       settingDetail.wordFilter.forEach((word) => {
-  //         if (question.detailInfo && question.detailInfo.indexOf(word) > -1)
-  //           flag = 1
-  //         if (
-  //           question.questionSentence &&
-  //           question.questionSentence.indexOf(word) > -1
-  //         )
-  //           flag = 1
-  //         if (question.answer && question.answer.indexOf(word) > -1) flag = 1
-  //         if (question.commentary && question.commentary.indexOf(word) > -1)
-  //           flag = 1
-  //         if (
-  //           question.choices &&
-  //           question.choices.every((choice) => choice.indexOf(word) === -1) ===
-  //             false
-  //         )
-  //           flag = 1
-  //       })
-  //       if (flag === 0) return
-  //       selectedQuestionList.push(question)
-  //     })
-  //   })
-  //   console.log('selectedQuestionList:')
-  //   console.log(selectedQuestionList)
-  //   if (
-  //     settingDetail.wordFilter.length > 0 &&
-  //     selectedQuestionList.length > 0
-  //   ) {
-  //     setCheckMsg('現在' + selectedQuestionList.length + '件の質問を選択中')
-  //   } else if (selectedQuestionList.length === 0) {
-  //     setCheckMsg('条件を満たした質問が存在しません')
-  //   } else {
-  //     setCheckMsg()
-  //     console.log('1回だけ表示される')
-  //   }
-  // }
   const scrollToTop = () => {
     // let element = document.documentElement
     // let bottom = element.scrollHeight - element.clientHeight
@@ -268,7 +218,7 @@ export const Setting = ({
             <Divider orientation="horizontal" mt={3} mb="1" />
             <Text>アップデート履歴</Text>
             <Text fontSize={'md'} fontWeight="bold" mb="2" mt={2}>
-              11-27_Ver2.0-包括的アップデート...コード部分を作り直し、WebStorageとの接続を強化、軽量化、見直しシステムの変更など
+              11-27_Ver2.0-包括的アップデート...コード部分を作り直し、WebStorageとの接続を強化、軽量化、見直しシステムの変更、検索システムの変更など
             </Text>
             <Text fontSize={'sm'}>10-03_Ver1.5-頻出キーワード確認を追加</Text>
             <Text fontSize={'sm'}>10-02_Ver1.4-キーワード検索を便利に</Text>

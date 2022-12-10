@@ -96,7 +96,7 @@ export const History = ({
                   logIndex !== 0 ? (
                     <></>
                   ) : (
-                    <Flex m={1}>
+                    <Flex m={1} justifyContent="center">
                       <Badge
                         colorScheme={'green'}
                         variant="solid"
@@ -109,7 +109,7 @@ export const History = ({
                           '/' +
                           ('00' + date.getDate()).slice(-2)}
                       </Badge>
-                      <Text fontSize={'xs'} mr={2} ml="1">
+                      <Text fontSize={'xs'} mr={2} ml="2">
                         計
                         {loadLog(appName)
                           .logs.filter((log, index) => {
@@ -216,7 +216,7 @@ export const History = ({
                           )
                         })}
                       </Collapse>
-                      {log.range.length > 8 ? (
+                      {log.range.join().length > 30 ? (
                         <Button
                           size="sm"
                           onClick={() => {
