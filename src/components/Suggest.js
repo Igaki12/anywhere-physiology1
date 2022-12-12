@@ -13,7 +13,78 @@ import {
   Spacer,
 } from '@chakra-ui/react'
 
-export const Suggest = ({ loadLog, questionList, appName }) => {
+export const Suggest = ({
+  loadLog,
+  questionList,
+  appName,
+  startSelectedLesson,
+}) => {
+  const reviewLog = (order) => {
+    console.log(order)
+    return questionList.reduce(
+      (prevGroup, group, groupIndex) => {
+        console.log(prevGroup)
+        if (
+          loadLog(appName) &&
+          loadLog(appName).logs &&
+          loadLog(appName).logs.find(
+            (log, logIndex) =>
+              log.review &&
+              log.range &&
+              log.review.length > 0 &&
+              log.range.length > 0 &&
+              group.groupContents &&
+              group.groupContents.length > 0 &&
+              log.review.find(
+                (id) =>
+                  log.range[parseInt(id.slice(0, 3))] === group.groupTag &&
+                  parseInt(id.slice(-3)) < group.groupContents.length,
+              ),
+          )
+        ) {
+          prevGroup.range.push(group.groupTag)
+        }
+        prevGroup.remaining = group.groupContents.reduce(
+          (prevQuestion, question, questionIndex) => {
+            if (
+              loadLog(appName) &&
+              loadLog(appName).logs &&
+              loadLog(appName).logs.find(
+                (log, logIndex) =>
+                  log.review &&
+                  log.range &&
+                  log.review.length > 0 &&
+                  log.range.length > 0 &&
+                  log.review.find(
+                    (id) =>
+                      log.range[parseInt(id.slice(0, 3))] === group.groupTag &&
+                      parseInt(id.slice(-3)) === questionIndex,
+                  ),
+              )
+            ) {
+              let newId =
+                ('000' + prevGroup.range.indexOf(group.groupTag)).slice(-3) +
+                ('000' + questionIndex).slice(-3)
+              return [...prevQuestion, newId]
+            }
+            return prevQuestion
+          },
+          prevGroup.remaining,
+        )
+        return prevGroup
+      },
+      {
+        startTime: '',
+        order: order && order === 'random' ? 'random' : 'ascend',
+        range: [],
+        wordFilter: ['見直しリストより'],
+        asked: [],
+        asking: '',
+        remaining: [],
+        review: [],
+      },
+    )
+  }
   return (
     <Box minH={'150px'} w="100%" p={1} pt="20px" bgColor="whiteAlpha.700">
       <Box
@@ -67,7 +138,7 @@ export const Suggest = ({ loadLog, questionList, appName }) => {
                     )
                   })
                 ) {
-                  console.log(groupIndex)
+                  // console.log(groupIndex)
                   return [
                     ...prevGroup,
                     {
@@ -89,7 +160,7 @@ export const Suggest = ({ loadLog, questionList, appName }) => {
                               )
                             })
                           ) {
-                            console.log(questionIndex)
+                            // console.log(questionIndex)
                             return prevQuestion + 1
                           }
                           return prevQuestion
@@ -117,11 +188,33 @@ export const Suggest = ({ loadLog, questionList, appName }) => {
           </CardBody>
           <CardFooter>
             <Flex w="100%">
-              <Button colorScheme="whiteAlpha" variant="solid" size={'sm'}>
+              <Button
+                colorScheme="whiteAlpha"
+                variant="solid"
+                size={'sm'}
+                onClick={() => {
+                  startSelectedLesson(
+                    questionList,
+                    appName,
+                    reviewLog('random'),
+                  )
+                }}
+              >
                 ランダムに出題
               </Button>
               <Spacer />
-              <Button colorScheme="whiteAlpha" variant="solid" size={'sm'}>
+              <Button
+                colorScheme="whiteAlpha"
+                variant="solid"
+                size={'sm'}
+                onClick={() => {
+                  startSelectedLesson(
+                    questionList,
+                    appName,
+                    reviewLog('ascend'),
+                  )
+                }}
+              >
                 順番通りに出題
               </Button>
             </Flex>

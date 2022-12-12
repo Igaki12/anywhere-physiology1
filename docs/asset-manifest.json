@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-physiology1/static/css/main.6180b9dc.css",
-    "main.js": "/anywhere-physiology1/static/js/main.0cdbec25.js",
+    "main.js": "/anywhere-physiology1/static/js/main.58a00adc.js",
     "static/media/dermatome.png": "/anywhere-physiology1/static/media/dermatome.6e24a69f17ab07dc5375.png",
     "static/media/titleImg.png": "/anywhere-physiology1/static/media/titleImg.e633e13be9a33b2521a8.png",
     "static/media/NMJ.png": "/anywhere-physiology1/static/media/NMJ.8a85e3ecdd09ba499083.png",
@@ -114,10 +114,10 @@
     "static/media/exam20202.png": "/anywhere-physiology1/static/media/exam20202.058567b02717f0f67710.png",
     "index.html": "/anywhere-physiology1/index.html",
     "main.6180b9dc.css.map": "/anywhere-physiology1/static/css/main.6180b9dc.css.map",
-    "main.0cdbec25.js.map": "/anywhere-physiology1/static/js/main.0cdbec25.js.map"
+    "main.58a00adc.js.map": "/anywhere-physiology1/static/js/main.58a00adc.js.map"
   },
   "entrypoints": [
     "static/css/main.6180b9dc.css",
-    "static/js/main.0cdbec25.js"
+    "static/js/main.58a00adc.js"
   ]
 }

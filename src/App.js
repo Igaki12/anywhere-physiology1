@@ -109,6 +109,7 @@ function App() {
                   loadLog={loadLog}
                   questionList={questionList}
                   appName={appName}
+                  startSelectedLesson={startSelectedLesson}
                 />
               </WrapItem>
             ) : (
